@@ -1,0 +1,405 @@
+const questionBeginner: string[] =  [
+    '県はいくつある？',
+    '1番辛いのは？',
+    'スマートフォンを略して？',
+    '大正は何年続いた？',
+    'ヨーロッパにある国は？',
+    '魚類は？',
+    'カエルを英語で？',
+    '2017年流行語大賞は？',
+    '雲を英語で？',
+    '勤労感謝の日がある月は？',
+    'YouTube金の盾はチャンネル登録者が何万人になればもらえる？',
+    '松江市は何県？',
+    '1番高いのは？',
+    '1番多い苗字は？',
+    '次の中から日本で1番多いものはどれか？',
+    '空気の成分で1番多いのは？',
+    'この中で人口が1番多い国は？',
+    'パチンコに入ってもいい年齢は？',
+    'ランクル300とは？',
+    '東京オリンピックは何年に開催された？',
+    '「嚔」の読み方は？',
+    'この中でカフェインが1番多い飲み物は？',
+    '武蔵小杉はどこにある？',
+    '1番多くの人に使われているのは？',
+    'マンモスはいついた？',
+    '「」の顔も3度まで 「」に入るのは？',
+    'ポテトチップスの味にないものは？',
+    '恐竜でないのは？',
+    'この中で歴代発行部数が1番多い漫画は？',
+    'ボールを蹴るスポーツは？'
+]
+
+const answerBeginner: { select: string; judge: boolean; }[][] = [
+    
+    [
+        {
+            select:'43',
+            judge: true
+        },   
+        {
+            select:'ウルトラデスソース',
+            judge: true
+        },
+        {
+            select:'スマホ',
+            judge: true
+        },
+        {
+            select:'15年',
+            judge: true
+        },
+        {
+            select:'フランス',
+            judge: true
+        },
+        {
+            select:'サメ',
+            judge: true
+        },
+        {
+            select:'frog',
+            judge: true
+        },
+        {
+            select:'「インスタ映え」',
+            judge: true
+        },
+        {
+            select:'cloud',
+            judge: true
+        },
+        {
+            select:'11月',
+            judge: true
+        },
+        {
+            select:'50万人',
+            judge: false
+        },
+        {
+            select:'鳥取県',
+            judge: false
+        },
+        {
+            select:'ピサの斜塔',
+            judge: false
+        },
+        {
+            select:'山田',
+            judge: false
+        },
+        {
+            select:'コンビニ',
+            judge: false
+        },
+        {
+            select:'二酸化炭素',
+            judge: false
+        },
+        {
+            select:'インド',
+            judge: false
+        },
+        {
+            select:'16歳',
+            judge: false
+        },
+        {
+            select:'芸人',
+            judge: false
+        },
+        {
+            select:'1960年',
+            judge: false
+        },
+        {
+            select:'かばん',
+            judge: false
+        },
+        {
+            select:'コーヒー',
+            judge: false
+        },
+        {
+            select:'埼玉県',
+            judge: false
+        },
+        {
+            select:'Facebook',
+            judge: false
+        },
+        {
+            select:'200万年前',
+            judge: false
+        },
+        {
+            select:'昇',
+            judge: false
+        },
+        {
+            select:'鯛めし',
+            judge: false
+        },
+        {
+            select:'マイアサウラ',
+            judge: false
+        },
+        {
+            select:'『ドラえもん』',
+            judge: false
+        },
+        {
+            select:'ゲートボール',
+            judge: false
+        }
+    ],
+    [
+        {
+            select: '45',
+            judge: false
+        },
+        {
+            select: 'メガデスソース',
+            judge: false
+        },
+        {
+            select: 'スフォン',
+            judge: false
+        },
+        {
+            select: '20年',
+            judge: false
+        },
+        {
+            select: '日本',
+            judge: false
+        },
+        {
+            select: 'シャチ',
+            judge: false
+        },
+        {
+            select: 'flog',
+            judge: false
+        },
+        {
+            select: '「ひふみん」',
+            judge: false
+        },
+        {
+            select: 'clowd',
+            judge: false
+        },
+        {
+            select: '10月',
+            judge: false
+        },
+        {
+            select: '100万人',
+            judge: true
+        },
+        {
+            select: '島根県',
+            judge: true
+        },
+        {
+            select: 'スカイツリー',
+            judge: true
+        },
+        {
+            select: '佐藤',
+            judge: true
+        },
+        {
+            select: '美容院',
+            judge: true
+        },
+        {
+            select: '窒素',
+            judge: true
+        },
+        {
+            select: '中国',
+            judge: true
+        },
+        {
+            select: '18歳',
+            judge: true
+        },
+        {
+            select: '車',
+            judge: true
+        },
+        {
+            select: '1964年',
+            judge: true
+        },
+        {
+            select: 'あくび',
+            judge: false
+        },
+        {
+            select: '抹茶',
+            judge: false
+        },
+        {
+            select: '東京都',
+            judge: false
+        },
+        {
+            select: 'Instagram',
+            judge: false
+        },
+        {
+            select: '900万年前',
+            judge: false
+        },
+        {
+            select: '神',
+            judge: false
+        },
+        {
+            select: '笹だんご',
+            judge: false
+        },
+        {
+            select: 'ディロフォサウルス',
+            judge: false
+        },
+        {
+            select: '『ジョジョの奇妙な冒険』',
+            judge: false
+        },
+        {
+            select: 'スカッシュ',
+            judge: false
+        }
+    ],
+    [
+        {
+            select: '47',
+            judge: false
+        },
+        {
+            select: 'サドンデスソース',
+            judge: false
+        },
+        {
+            select: 'スマー',
+            judge: false
+        },
+        {
+            select: '18年',
+            judge: false
+        },
+        {
+            select: 'アメリカ',
+            judge: false
+        },
+        {
+            select: 'クジラ',
+            judge: false
+        },
+        {
+            select: 'kaeru',
+            judge: false
+        },
+        {
+            select: '「プレミアムフライデー」',
+            judge: false
+        },
+        {
+            select: 'kumo',
+            judge: false
+        },
+        {
+            select: '12月',
+            judge: false
+        },
+        {
+            select: '10万人',
+            judge: false
+        },
+        {
+            select: '徳島県',
+            judge: false
+        },
+        {
+            select: 'エッフェル塔',
+            judge: false
+        },
+        {
+            select: '鈴木',
+            judge: false
+        },
+        {
+            select: 'ラーメン屋',
+            judge: false
+        },
+        {
+            select: '酸素',
+            judge: false
+        },
+        {
+            select: 'アメリカ',
+            judge: false
+        },
+        {
+            select: '20歳',
+            judge: false
+        },
+        {
+            select: '銃',
+            judge: false
+        },
+        {
+            select: '1962年',
+            judge: false
+        },
+        {
+            select: 'くしゃみ',
+            judge: true
+        },
+        {
+            select: '玉露',
+            judge: true
+        },
+        {
+            select: '神奈川県',
+            judge: true
+        },
+        {
+            select: 'Twitter',
+            judge: true
+        },
+        {
+            select: '400万年前',
+            judge: true
+        },
+        {
+            select: '仏',
+            judge: true
+        },
+        {
+            select: '親子丼',
+            judge: true
+        },
+        {
+            select: 'プテラノドン',
+            judge: true
+        },
+        {
+            select: '『ゴルゴ13』',
+            judge: true
+        },
+        {
+            select: 'フットサル',
+            judge: true
+        }
+    ] 
+
+]
+
+export { questionBeginner, answerBeginner }

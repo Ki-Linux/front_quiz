@@ -1,12 +1,51 @@
-import { shallowMount } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 import HelloWorld from "@/components/HelloWorld.vue";
+import form from "@/views/form.vue";
+import MainData from '@/components/MainData.vue';
+import App from '@/components/App.vue';
 
 describe("HelloWorld.vue", () => {
   it("renders props.msg when passed", () => {
     const msg = "new message";
-    const wrapper = shallowMount(HelloWorld, {
+    const wrapper = mount(HelloWorld, {
       propsData: { msg },
     });
     expect(wrapper.text()).toMatch(msg);
   });
 });
+
+describe('form', () => {
+  it("form", () => {
+    const wrapper = mount(form);
+    wrapper.setData({
+      emerge: ""
+    })
+    const emerge = wrapper.find('p');
+    expect(emerge.exists()).toBe("")
+  })
+})
+
+describe('MainData', () => {
+  it.only("MainData", () => {
+    const wrapper = mount(MainData);
+    wrapper.get('button').trigger('click')
+    expect(wrapper.text()).toMatch('1')
+  })
+})
+
+
+
+
+/*test.only("test App Component", function() {
+  const wrapper = mount(App);
+  
+  expect(wrapper.text()).toBe('Hello World');
+  expect(wrapper.text()).toMatch('World');
+  console.log(wrapper.vm);
+});
+
+test('two plus two is four', () => {
+  expect(2 + 2).toBe(4);
+});*/
+
+
