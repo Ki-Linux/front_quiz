@@ -129,7 +129,7 @@ $breakpoint: (
   }
 }
 
-$footerwide: 0 60px;
+$footerwide: 0 60px;//定義
 /*960~*/
 @include pc {
   *#home {
@@ -149,7 +149,7 @@ $footerwide: 0 60px;
       font-size: 30px;
       padding: $footerwide;
 
-      $size: 50%;
+      $size: 50%;//定義
       &:first-of-type {
         position: absolute;
         right: $size;
@@ -165,9 +165,11 @@ $footerwide: 0 60px;
 @include tbmax {
   *#home {
     margin-top: 85px;
+
     h1 { 
       font-size: 40px;
     }
+
   }
   
   .quizDes p { 
@@ -177,20 +179,24 @@ $footerwide: 0 60px;
   footer { 
     flex-direction: column;
     padding: 30px $footerwide;
+
     a {
       font-size: 30px;
       padding:20px 0;
     }
+
   }
-  
+
 }
 /*~480*/
 @include s {
   *#home {
     margin-top: 70px;
+
     h1 { 
       font-size: 35px;
     }
+
   }
 
   .quizDes p { 
@@ -200,65 +206,97 @@ $footerwide: 0 60px;
   footer { 
     flex-direction: column;
     padding: 30px $footerwide;
+
     a {
       font-size: 25px;
       padding:10px 0;
     }
+
   }
+
 }
 /*全体*/
 .buttonAverage {
   margin-top: 90px;
+
   button {
     font-size: 65px;
     padding: 7px 19px;
     background-color: rgba(234, 241, 234, 0.678);
   }
+
 }
 
 /*.buttonaverageタグの中身のクラス*/
+$colors: (
+  y: rgb(110, 110, 84),
+  g: rgb(63, 134, 117),
+  r: rgba(156, 0, 0)
+);
+
+@function yellow_color($color) {
+  @return #{map-get($colors, $color)}
+};
+
+@function green_color($color) {
+  @return #{map-get($colors, $color)}
+};
+
+@function red_color($color) {
+  @return #{map-get($colors, $color)}
+};
+
 .beginButton {
-  $yellow: rgb(110, 110, 84);
+
   button {
-    color: $yellow;
+    color: yellow_color(y);
   }
+
   ul > li {
-    color: $yellow;
+    color: yellow_color(y);
   }
+
 } 
 
 .intButton {
-  $green: rgb(63, 134, 117); 
+
   button {
-    color: $green;
+    color: green_color(g);
   }
+
   ul > li {
-    color: $green;
+    color: green_color(g);
   }
+
 } 
 
 .advancedButton {
-  $red: rgba(156, 0, 0);
+
   button {
-    color: $red;
+    color: red_color(r);
   }
+
   ul > li {
-    color: $red;
+    color: red_color(r);
   }
+
 } 
 
 /*普通にタグについているクラス*/  
 .buttonAverage ul {
   font-size: 40px;
   margin-bottom: 120px;
+
   &:first-of-type {
     color: rgb(163, 163, 127);
   }
+
   li {
     &:nth-of-type(2) {
       margin-left: 0.5em;
     }
   }
+
 }
 
 footer { 
@@ -266,13 +304,17 @@ footer {
   display: flex;
   align-items: center;
   width: 100%;
+  
   a {
     vertical-align: middle;
     color: white;
     text-decoration: none;
+
     ul {
       display: inline-block;
     }
+
   }
+
 }
 </style>
