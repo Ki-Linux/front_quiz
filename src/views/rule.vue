@@ -32,6 +32,11 @@ import { Component, Vue } from 'vue-property-decorator';
 @Component
 export default class rule extends Vue{
     //head
+    mounted() {
+        const title = "いろいろ3択クイズ[ご利用に関して]"
+        document.title = title
+    }
+
     head!: {
         title: {
             inner: "いろいろ3択クイズ[ご利用に関して]"
