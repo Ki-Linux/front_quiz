@@ -103,125 +103,176 @@ export default class Home extends Vue {
   }
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
+$breakpoint: (
+  s: 'screen and (max-width: 480px)',
+  tbmin: '(min-width: 481px)',
+  tbmax: 'screen and (max-width: 959px)',
+  pc: 'screen and (min-width: 960px)'
+);
+
+@mixin pc {
+  @media #{map-get($breakpoint, pc)} {
+    @content;
+  }
+}
+
+@mixin tbmax {
+  @media #{map-get($breakpoint, tbmax)} and #{map-get($breakpoint, tbmin)} {
+    @content;
+  }
+}
+
+@mixin s {
+  @media #{map-get($breakpoint, s)} {
+    @content;
+  }
+}
+
+$footerwide: 0 60px;
 /*960~*/
-@media screen and (min-width: 960px) {
+@include pc {
   *#home {
     margin-top: 100px;
+      h1 { 
+        font-size: 70px;
+      }
   }
-  #home h1 { 
-    font-size: 70px;
-  }
+
   .quizDes p { 
     font-size: 30px;
   }
+
   footer { 
     padding: 140px 0;
-  }
-  footer a {
-    font-size: 30px;
-    padding:0 60px;
-  }
-  footer a:first-of-type {
-    position: absolute;
-    right: 50%;
-  }
-  footer a:last-of-type {
-    position: absolute;
-    left: 50%;
+    a {
+      font-size: 30px;
+      padding: $footerwide;
+
+      $size: 50%;
+      &:first-of-type {
+        position: absolute;
+        right: $size;
+      }
+      &:last-of-type {
+        position: absolute;
+        left: $size;
+      }
+    }
   }
 }
 /*481~959*/
-@media screen and (min-width: 481px) and (max-width: 959px) {
+@include tbmax {
   *#home {
     margin-top: 85px;
+    h1 { 
+      font-size: 40px;
+    }
   }
-  #home h1 { 
-    font-size: 40px;
-  }
+  
   .quizDes p { 
     font-size: 18px;
   }
+
   footer { 
     flex-direction: column;
-    padding: 30px 0 60px;
+    padding: 30px $footerwide;
+    a {
+      font-size: 30px;
+      padding:20px 0;
+    }
   }
-  footer a {
-    font-size: 30px;
-    padding:20px 0;
-  }
+  
 }
 /*~480*/
-@media screen and (max-width: 480px) {
+@include s {
   *#home {
     margin-top: 70px;
+    h1 { 
+      font-size: 35px;
+    }
   }
-  #home h1 { 
-    font-size: 35px;
-  }
+
   .quizDes p { 
     font-size: 14px;
   }
-   footer { 
+
+  footer { 
     flex-direction: column;
-    padding: 30px 0 60px;
-  }
-  footer a {
-    font-size: 25px;
-    padding:10px 0;
+    padding: 30px $footerwide;
+    a {
+      font-size: 25px;
+      padding:10px 0;
+    }
   }
 }
 /*全体*/
 .buttonAverage {
   margin-top: 90px;
+  button {
+    font-size: 65px;
+    padding: 7px 19px;
+    background-color: rgba(234, 241, 234, 0.678);
+  }
 }
-.buttonAverage button {
-  font-size: 65px;
-  padding: 7px 19px;
-  background-color: rgba(234, 241, 234, 0.678);
-}
+
 /*.buttonaverageタグの中身のクラス*/
-.beginButton button {
-  color: rgb(110, 110, 84);
-}
-.beginButton ul > li {
-  color: rgb(110, 110, 84);
-}
-.intButton button {
-  color: rgb(63, 134, 117);
-}
-.intButton ul > li {
-  color: rgb(63, 134, 117);
-}
-.advancedButton button {
-  color: rgba(156, 0, 0);
-}
-.advancedButton ul > li {
-  color: rgba(156, 0, 0);
-}
+.beginButton {
+  $yellow: rgb(110, 110, 84);
+  button {
+    color: $yellow;
+  }
+  ul > li {
+    color: $yellow;
+  }
+} 
+
+.intButton {
+  $green: rgb(63, 134, 117); 
+  button {
+    color: $green;
+  }
+  ul > li {
+    color: $green;
+  }
+} 
+
+.advancedButton {
+  $red: rgba(156, 0, 0);
+  button {
+    color: $red;
+  }
+  ul > li {
+    color: $red;
+  }
+} 
+
 /*普通にタグについているクラス*/  
 .buttonAverage ul {
   font-size: 40px;
   margin-bottom: 120px;
+  &:first-of-type {
+    color: rgb(163, 163, 127);
+  }
+  li {
+    &:nth-of-type(2) {
+      margin-left: 0.5em;
+    }
+  }
 }
-.buttonAverage ul:first-of-type {
-  color: rgb(163, 163, 127);
-}
-.buttonAverage ul > li:nth-of-type(2) {
-  margin-left: 0.5em;
-}
+
 footer { 
   background-color: rgb(135, 135, 209);
   display: flex;
   align-items: center;
   width: 100%;
-}
-footer  a {
-  vertical-align: middle;
-  color: white;
-  text-decoration: none;
-}
-footer a > ul {
-  display: inline-block;
+  a {
+    vertical-align: middle;
+    color: white;
+    text-decoration: none;
+    ul {
+      display: inline-block;
+    }
+  }
 }
 </style>
