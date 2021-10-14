@@ -75,6 +75,10 @@ export default class beginner extends Vue{
         .catch(function (error) {
             console.log(error)
         });
+
+        setTimeout(function() {
+            location.reload();
+        },1000);
     }
 }
 </script>
