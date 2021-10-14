@@ -25,6 +25,11 @@ import axios from 'axios';
 @Component
 export default class Home extends Vue {
   //headの部分
+  mounted() {
+    const title = "いろいろ3択クイズ"
+    document.title = title
+  }
+
   head!: {
     title: {
       inner: "いろいろ3択クイズ"

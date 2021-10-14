@@ -8,7 +8,8 @@ import VueHead from 'vue-head'
 
 Vue.config.productionTip = false
 
-Vue.use(VueAxios, axios, $router, VueHead)
+Vue.use(VueAxios, axios, $router)
+Vue.use(VueHead)
 
 new Vue({
   router,

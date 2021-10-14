@@ -34,6 +34,11 @@ import axios from 'axios';
 @Component
 export default class Form extends Vue {
     //headの部分
+    mounted() {
+        const title = "いろいろ3択クイズ[お問い合わせ]"
+        document.title = title
+    }
+
     head!: {
         title: {
             inner: "いろいろ3択クイズ[お問い合わせ]"

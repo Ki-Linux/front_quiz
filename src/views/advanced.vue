@@ -26,6 +26,11 @@ import axios from 'axios';
 })
 export default class beginner extends Vue{
     //headの部分
+    mounted() {
+        const title = "いろいろ3択クイズ[上級]"
+        document.title = title
+    }
+
     head!: {
         title: {
             inner: "いろいろ3択クイズ[上級]"
