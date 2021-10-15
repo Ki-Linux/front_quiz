@@ -105,7 +105,7 @@ export default class Home extends Vue {
 </script>
 <style scoped lang="scss">
 $breakpoint: (
-  s: 'screen and (max-width: 480px)',
+  sp: 'screen and (max-width: 480px)',
   tbmin: '(min-width: 481px)',
   tbmax: 'screen and (max-width: 959px)',
   pc: 'screen and (min-width: 960px)'
@@ -123,8 +123,8 @@ $breakpoint: (
   }
 }
 
-@mixin s {
-  @media #{map-get($breakpoint, s)} {
+@mixin sp {
+  @media #{map-get($breakpoint, sp)} {
     @content;
   }
 }
@@ -189,7 +189,7 @@ $footerwide: 0 60px;//定義
 
 }
 /*~480*/
-@include s {
+@include sp {
   *#home {
     margin-top: 70px;
 
