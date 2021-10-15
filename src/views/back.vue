@@ -63,6 +63,7 @@ $p_size: 10px;
     }
   }
 }
+
 /*481~959*/ 
 @media screen and (min-width: 481px) and (max-width: 959px) {
   #complete {
@@ -76,19 +77,21 @@ $p_size: 10px;
     }
   }
 } 
+
 /*~480*/
 @media screen and (max-width: 480px){
   #complete {
     h1 {
       font-size: $h1_size * 5;
     }
-    
+
     p {
       font-size: $p_size;
       margin: $p_width;
     }
   }
 }
+
 /*全体*/
 #complete {
   margin: 50px 15px 0;
