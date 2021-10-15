@@ -41,7 +41,7 @@ ul {
 .back {
   font-size: 20px;
 
-  input[type="button"] {
+  button {
     display: inline-block;
     background-color: rgba(234, 241, 234, 0.678);
     margin-bottom: 150px;

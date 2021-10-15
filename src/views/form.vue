@@ -24,7 +24,7 @@
         <input type="submit" value="送信"><!-- 送信 -->
     </form>
     <div class="back"><!-- トップページへ -->
-        <input @click="toTop" type="button" value="トップページに戻る">
+        <button @click="toTop">トップページに戻る</button>
     </div>
 </div>
 </template>
