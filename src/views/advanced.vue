@@ -58,14 +58,18 @@ export default class beginner extends Vue{
     public ansAdv: { select: string; judge: boolean; }[][] = answerAdvanced;
     public ParentTitleNumber = 0;
     public ParentTrueNumber = 0;
+
     public count(titleNumber: number): void {
         this.ParentTitleNumber = titleNumber;
     }
+
     public trueCount(trueLength: number): void {
         this.ParentTrueNumber = trueLength;
     }
+
     public postIp(): void {
         this.$router.push({path: '/'});
+
         axios.post('https://servicenewquiz.azurewebsites.net/post/ad', {
             postNumber: this.ParentTrueNumber
         })
@@ -79,6 +83,7 @@ export default class beginner extends Vue{
         setTimeout(function() {
             location.reload();
         },1000);
+        
     }
 }
 </script>

@@ -65,9 +65,11 @@ export default class Form extends Vue {
     private checked = false;
     public emerge = "";
     public notSend = "";
+
     public toSend(): void {
         const beTrue = () => {
             this.$router.push({path: '/back'});
+
             axios.post('https://servicenewquiz.azurewebsites.net/post/send', {
                 postText: this.text,
                 postAddress: '/from/'+ this.address
@@ -79,7 +81,9 @@ export default class Form extends Vue {
                 console.log(error)
             });
         }
+
         if(confirm('送信してもよろしいですか？')) {
+
             switch(this.address) {
                 case "":
                     if(this.text === "") {
@@ -89,11 +93,13 @@ export default class Form extends Vue {
                     }
                 break;
             default:
+
                 if(this.checked === true) {
                     beTrue();
                 }else{
                     this.emerge = "「同意する」にチェックをしてください。";
                 }
+
             }
         }
     }
@@ -103,6 +109,7 @@ export default class Form extends Vue {
             this.written = false;
         }
     }
+    
     public toTop(): void {
         this.$router.push({path: '/'});
     }

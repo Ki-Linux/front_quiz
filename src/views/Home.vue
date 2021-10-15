@@ -41,6 +41,7 @@ export default class Home extends Vue {
       { rel: "apple-touch-icon", href: "../public/apple-touch-icon.png" }
     ]
   }
+
   //本文
   public urlName: { levelName: string; url: string; apiA: number; }[] = [  //ボタンとリンクの情報
     {
@@ -59,6 +60,7 @@ export default class Home extends Vue {
       apiA: 0
     }
   ]
+
   public toMain(index: number): void {//押したボタンに応じたリンク先へ
     switch(index) {
       case 0:
@@ -72,21 +74,26 @@ export default class Home extends Vue {
       break;
     }
   }
+
   public mounted(): void {
     //title
     const title = "いろいろ3択クイズ"
     document.title = title
+
     //scroll
     scrollTo(0, 0);
+
     //平均点の表示
     for(let i = 0; i < this.urlName.length; i++){
       axios.get(this.urlName[i].url)
       .then((response) => {
+
         const Api = JSON.parse(JSON.stringify(response.data));
         let sum = 0;
         for(let i = 0; i < Api.length; i++){
           sum += Api[i].totalNumber;
         }
+
         const ApiAverage = (Math.round(sum/Api.length * 100)) / 10;
         for(let I = 0; I < this.urlName.length; I++){
           switch(i) {
@@ -95,6 +102,7 @@ export default class Home extends Vue {
             break;
           }
         }
+        
       })
       .catch((err) => {
         alert(err);
