@@ -62,7 +62,6 @@ export default class rule extends Vue{
 <style scoped lang="scss">
 #rule {
     margin: 0 20px;
-
     .use {
         margin-top: 50px;
     }
@@ -73,7 +72,6 @@ export default class rule extends Vue{
 
     ul {
         font-size: 20px;
-
         li {
             margin-bottom: 20px;
 
@@ -85,11 +83,9 @@ export default class rule extends Vue{
     }
 
     .back {
-
         input {
             padding: 3px 13px;
         }
-
     }
 
 }
