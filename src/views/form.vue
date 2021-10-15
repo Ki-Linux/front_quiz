@@ -67,7 +67,7 @@ export default class Form extends Vue {
             this.$router.push({path: '/back'});
             axios.post('https://servicenewquiz.azurewebsites.net/post/send', {
                 postText: this.text,
-                postAddress: this.address
+                postAddress: '/from/'+ this.address
             })
             .then(function (response) {
                 console.log(response);
