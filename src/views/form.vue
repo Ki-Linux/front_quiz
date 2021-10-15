@@ -106,8 +106,25 @@ export default class Form extends Vue {
 }
 </script>
 <style scoped lang="scss">
+$breakpoint: (
+    no_more_tb: 'screen and (max-width: 565px)',
+    pc: 'screen and (min-width: 566px)'
+);
+
+@mixin no_more_tb {
+  @media #{map-get($breakpoint, no_more_tb)} {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media #{map-get($breakpoint, pc)} {
+    @content;
+  }
+}
+
 /*566~*/
-@media screen and (min-width: 566px) {
+@include pc {
     #form form {
         textarea {
             font-size: 19px;
@@ -121,8 +138,9 @@ export default class Form extends Vue {
         }
     }
 }
+
 /*~565*/
-@media screen and (max-width: 565px){
+@include no_more_tb {
     #form form {
         textarea {
             width: 300px;
@@ -137,14 +155,13 @@ export default class Form extends Vue {
         }
     }
 }
+
 /*全体*/
 #form {
     margin: 40px 30px 0;
-    .titleDes {
-        p {
+    .titleDes p {
             font-size: 20px;
             margin: 20px 0 50px;
-        }
     }
 
     form {

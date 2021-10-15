@@ -45,35 +45,48 @@ export default class back extends Vue {
   }
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
+$h1_size: 5px;
+$p_width: 10px 0 40px;
+$p_size: 10px;
+
 /*960~*/ 
 @media screen and (min-width: 960px) {
-  #complete h1 {
-    font-size: 45px;
-  }
-  #complete p {
-    font-size: 30px;
-    margin: 10px 0 40px;
+  #complete {
+    h1 {
+      font-size: $h1_size * 9;
+    }
+
+    p {
+      font-size: $p_size * 3;
+      margin: $p_width;
+    }
   }
 }
 /*481~959*/ 
 @media screen and (min-width: 481px) and (max-width: 959px) {
-  #complete h1 {
-    font-size: 30px;
+  #complete {
+    h1 {
+      font-size: $h1_size * 6;
+    }
+
+    p {
+      font-size: $p_size * 2;
+      margin: $p_width;
+    }
   }
-  #complete p {
-    font-size: 20px;
-    margin: 10px 0 40px;
-  }
-}
+} 
 /*~480*/
 @media screen and (max-width: 480px){
-  #complete h1 {
-    font-size: 25px;
-  }
-  #complete p {
-    font-size: 15px;
-    margin: 10px 0 40px;
+  #complete {
+    h1 {
+      font-size: $h1_size * 5;
+    }
+    
+    p {
+      font-size: $p_size;
+      margin: $p_width;
+    }
   }
 }
 /*全体*/
