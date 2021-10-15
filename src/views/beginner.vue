@@ -49,11 +49,6 @@ export default class beginner extends Vue{
         ]
     }
 
-    //scroll
-    created(): void {
-        scrollTo(0, 0);
-    }
-
     //本文
     public level = "初級";
     public queBegin: string[] = questionBeginner;

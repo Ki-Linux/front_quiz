@@ -37,10 +37,6 @@ export default class back extends Vue {
       { rel: "apple-touch-icon", href: "../public/apple-touch-icon.png" }
     ]
   }
-  //scroll
-  created(): void {
-    scrollTo(0, 0);
-  }
         
   //本文
   public toHome(): void {
