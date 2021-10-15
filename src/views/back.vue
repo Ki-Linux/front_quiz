@@ -86,7 +86,7 @@ $p_size: 10px;
     }
 
     p {
-      font-size: $p_size;
+      font-size: $p_size + 5;
       margin: $p_width;
     }
   }
