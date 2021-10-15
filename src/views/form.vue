@@ -197,6 +197,7 @@ $breakpoint: (
         }
 
         input[type="submit"] {
+            -webkit-appearance: none;
             background-color: rgba(234, 241, 234, 0.678);
             margin: 30px 0 70px;
             font-size: 20px;
