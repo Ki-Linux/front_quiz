@@ -9,7 +9,7 @@
                 <li id="liSecond">結果<br>{{ ParentTrueNumber }}問<span>/10問</span> 正解</li>
             </ul>
             <form class="back">
-                <input type="button" @click="postIp" value="トップページに戻る">
+                <button @click="postIp">トップページに戻る</button>
             </form>
         </div>
     </div>

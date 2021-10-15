@@ -3,7 +3,7 @@
         <h1>送信を完了いたしました。</h1>
         <p>ご協力ありがとうございました！</p>
         <div class="back">
-            <input type="button" @click="toHome" value="トップページに戻る">
+            <button @click="toHome">トップページに戻る</button>
         </div>
     </div>
 </template>
