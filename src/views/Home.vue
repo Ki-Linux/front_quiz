@@ -13,8 +13,8 @@
         </ul>
       </div>
       <footer><!-- 利用規約とお問い合わせ -->
-        <a href="/rule"><ul><li>ご利用に関して</li><li>プライバシーポリシー</li></ul> </a>
-        <a href="/form">お問い合わせ</a>
+        <router-link class="router" to="/rule"><ul><li>ご利用に関して</li><li>プライバシーポリシー</li></ul></router-link>
+        <router-link class="router" to="/form">お問い合わせ</router-link>
       </footer>
     </div>
 </template>
@@ -145,7 +145,7 @@ $footerwide: 0 60px;//定義
 
   footer { 
     padding: 140px 0;
-    a {
+    .router {
       font-size: 30px;
       padding: $footerwide;
 
@@ -180,7 +180,7 @@ $footerwide: 0 60px;//定義
     flex-direction: column;
     padding: 30px $footerwide;
 
-    a {
+    .router {
       font-size: 30px;
       padding:20px 0;
     }
@@ -207,7 +207,7 @@ $footerwide: 0 60px;//定義
     flex-direction: column;
     padding: 30px $footerwide;
 
-    a {
+    .router {
       font-size: 25px;
       padding:10px 0;
     }
@@ -305,7 +305,7 @@ footer {
   align-items: center;
   width: 100%;
   
-  a {
+  a.router {
     vertical-align: middle;
     color: white;
     text-decoration: none;
