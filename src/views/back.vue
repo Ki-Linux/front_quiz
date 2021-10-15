@@ -15,6 +15,9 @@ export default class back extends Vue {
   mounted() {
     const title = "いろいろ3択クイズ"
     document.title = title
+
+    //scroll
+    scrollTo(0, 0);
   }
 
   head!: {

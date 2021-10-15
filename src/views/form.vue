@@ -37,6 +37,9 @@ export default class Form extends Vue {
     mounted() {
         const title = "いろいろ3択クイズ[お問い合わせ]"
         document.title = title
+
+        //scroll
+        scrollTo(0, 0);
     }
 
     head!: {

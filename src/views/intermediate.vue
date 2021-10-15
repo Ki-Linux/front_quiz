@@ -49,10 +49,6 @@ export default class beginner extends Vue{
             { rel: "apple-touch-icon", href: "../public/apple-touch-icon.png" }
         ]
     }
-    //scroll
-    created(): void {
-        scrollTo(0, 0);
-    }
     //本文
     public level = "中級";
     public queInt: string[] = questionIntermediate;
