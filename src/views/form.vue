@@ -109,7 +109,7 @@ export default class Form extends Vue {
             this.written = false;
         }
     }
-    
+
     public toTop(): void {
         this.$router.push({path: '/'});
     }
@@ -170,7 +170,7 @@ $breakpoint: (
 #form {
     margin: 40px 30px 0;
     .titleDes p {
-            font-size: 20px;
+            font-size: 17px;//20
             margin: 20px 0 50px;
     }
 
@@ -204,7 +204,6 @@ $breakpoint: (
         }
 
         input[type="submit"] {
-            -webkit-appearance: none;
             background-color: rgba(234, 241, 234, 0.678);
             margin: 30px 0 70px;
             font-size: 20px;
