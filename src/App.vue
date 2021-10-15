@@ -63,6 +63,7 @@ ul {
   }
 
   .toNext input[type="button"] {
+    -webkit-appearance: none;
     color:rgb(71, 71, 71);
     background-color: rgb(226, 230, 247);
     margin: 20px 0;
@@ -71,6 +72,7 @@ ul {
   .select {
     margin: 25px 0;
     input[type="button"] {
+      -webkit-appearance: none;
       padding: 5px 10px;
       background-color: rgb(246, 250, 245);
     }
