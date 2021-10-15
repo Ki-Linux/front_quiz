@@ -17,19 +17,28 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
 @Component
 export default class Main extends Vue {
+    mounted() {
+        //scroll
+        scrollTo(0, 0);
+    }
+
     public titleNumber = 1;
     private only = true;
     public showAnswer = false;
     private trueLength = 0;
     public NextEnd = "次の問題へ";
+
     @Prop()
     public question!: string[];
     @Prop()
+
     public Answer!: { select: string; judge: boolean; }[][];
+
     get Random(): number {
         const rnd = Math.floor(Math.random() * this.question.length);
         return rnd
     }
+
     change(Random: number): void {
         this.titleNumber++;
         this.$emit('child', this.titleNumber);
@@ -42,6 +51,7 @@ export default class Main extends Vue {
             this.NextEnd = "結果へ";
         }
     }
+    
     TrueFalse(index: number, Random: number): void {
         if(this.only === true) {
             this.only = false;
