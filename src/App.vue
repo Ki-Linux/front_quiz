@@ -174,7 +174,7 @@ $first_size: 30px;
         font-size: $first_size;
         padding-left: 240px;
       }
-      
+
       #liSecond {
         font-size: 50px;
       }
