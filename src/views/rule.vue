@@ -88,10 +88,9 @@ export default class rule extends Vue{
 
         input {
             padding: 3px 13px;
-            margin-bottom: 100px;
         }
 
     }
-    
+
 }
 </style>

@@ -105,66 +105,83 @@ export default class Form extends Vue {
     }
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
 /*566~*/
 @media screen and (min-width: 566px) {
-    #form form > textarea {
-        font-size: 19px;
-    }
-    #form form > input:first-of-type {
-        width: 330px;
-        padding-left: 5px;
-        font-size: 20px;
+    #form form {
+        textarea {
+            font-size: 19px;
+        }
+        input {
+            &:first-of-type {
+                width: 330px;
+                padding-left: 5px;
+                font-size: 20px;
+            }
+        }
     }
 }
 /*~565*/
 @media screen and (max-width: 565px){
-    #form form > textarea {
-        width: 300px;
-        font-size: 19px;
-    }
-    #form form > input:first-of-type {
-        width: 300px;
-        padding-left: 5px;
-        font-size: 20px;
+    #form form {
+        textarea {
+            width: 300px;
+            font-size: 19px;
+        }
+        input {
+            &:first-of-type {
+                width: 300px;
+                padding-left: 5px;
+                font-size: 20px;
+            }
+        }
     }
 }
 /*全体*/
 #form {
     margin: 40px 30px 0;
-}
-#form .titleDes p {
-    font-size: 20px;
-    margin: 20px 0 50px;
-}
-#form form > p:first-of-type {
-    font-size: 20px;
-}
-#form form > .agreement p:nth-of-type(2) {
-    color: red;
-    font-size: 20px;
-}
-#form form > .agreement {
-    margin-top: 20px;
-}
-#form form > .agreement a {
-    white-space: pre;
-}
-#form form > .agreement span {
-    font-size: 20px;
-}
-#form form > p:nth-of-type(2) {
-    font-size: 18px;
-    margin-top: 20px;
-}
-#form form > .agreement input {
-    transform: scale(1.5);
-    width: 20px;
-}
-#form form > input[type="submit"] {
-    background-color: rgba(234, 241, 234, 0.678);
-    margin: 30px 0 70px;
-    font-size: 20px;
-    padding: 4px 30px;
+    .titleDes {
+        p {
+            font-size: 20px;
+            margin: 20px 0 50px;
+        }
+    }
+
+    form {
+        p {
+            &:first-of-type {
+                font-size: 20px;
+            }
+            &:nth-of-type(2) {
+                font-size: 18px;
+                margin-top: 20px;
+            }
+        }
+
+        .agreement {
+            margin-top: 20px;
+            p:nth-of-type(2) {
+                color: red;
+                font-size: 20px;
+            }
+            a {
+                white-space: pre;
+            }
+            span {
+                font-size: 20px;
+            }
+            input {
+                transform: scale(1.5);
+                width: 20px;
+            }
+        }
+
+        input[type="submit"] {
+            background-color: rgba(234, 241, 234, 0.678);
+            margin: 30px 0 70px;
+            font-size: 20px;
+            padding: 4px 30px;
+        }
+    }
 }
 </style>
