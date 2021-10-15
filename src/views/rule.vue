@@ -59,27 +59,39 @@ export default class rule extends Vue{
     }
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
 #rule {
     margin: 0 20px;
-}
-#rule .use {
-    margin-top: 50px;
-}
-#rule .privacy {
-    margin-top: 70px;
-}
-#rule ul {
-    font-size: 20px;
-}
-#rule ul > li {
-    margin-bottom: 20px;
-}
-#rule ul > li a {
-    white-space: pre;
-}
-   
-#rule .back > input {
-    padding: 3px 13px;
+
+    .use {
+        margin-top: 50px;
+    }
+
+    .privacy {
+        margin-top: 70px;
+    }
+
+    ul {
+        font-size: 20px;
+
+        li {
+            margin-bottom: 20px;
+
+            a {
+                white-space: pre;
+            }
+
+        }
+    }
+
+    .back {
+
+        input {
+            padding: 3px 13px;
+            margin-bottom: 100px;
+        }
+
+    }
+    
 }
 </style>
