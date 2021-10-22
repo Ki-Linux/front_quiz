@@ -1,5 +1,6 @@
 <template>
     <div id="home">
+      <p>try</p>
       <h1>いろいろ３択クイズ</h1><!--title -->
       <div class="quizDes"><!-- 概要 -->
         <p>いくつもの問の中から10問がランダムで出題されます。<br>クイズの内容はいろいろです。</p>
