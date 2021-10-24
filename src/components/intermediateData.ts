@@ -13,7 +13,7 @@ const questionIntermediate: string[] = [
     'ティッシュを英語にすると？',
     '「黄昏」は何て読む？',
     'アイスの商品名として日本に実際にあったものは？',
-    '2016年にテレビで放送されたアニメは？',
+    '2018年にテレビで放送されたアニメは？',
     '1年は何分？',
     'YouTubeの歴代ミュージックビデオで再生回数が日本国内1位は？',
     '『ドラえもん』のひみつ道具の登場回数1位は？',
@@ -91,7 +91,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '『HUNTER✕HUNTER』',
+            select: '『鬼滅の刃』',
             judge: false
         },
         {
@@ -213,7 +213,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '『ラブライブ！サンシャイン！！』',
+            select: '『サンリオ男子』',
             judge: true
         },
         {
