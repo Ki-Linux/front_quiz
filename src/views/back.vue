@@ -13,29 +13,9 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class back extends Vue {
   //headの部分
   mounted() {
-    const title = "いろいろ3択クイズ"
-    document.title = title
 
     //scroll
     scrollTo(0, 0);
-  }
-
-  head!: {
-    title: {
-      inner: "いろいろ3択クイズ"
-    },
-    meta: [
-      { name: "description", content: "テーマは食べもの、観光地、漫画など...いろいろ！いくつもの問の中から10問がランダムで出題されます。３つの難易度が搭載！あなたは何問正解できる？" },
-      { name: "viewport", content: "width=device-width,initial-scale=1" },
-      { charset: "UTF-8" },
-      { name: "application-name", content: "いろいろ3択クイズ" },
-      { name: "format-detection", content: "email=no, telephone=no, address=no" },
-      { name: "robots", content: "noindex, nofollow" },
-    ],
-    link: [
-      { rel: "icon", href: "../public/favicon.ico" },
-      { rel: "apple-touch-icon", href: "../public/apple-touch-icon.png" }
-    ]
   }
         
   //本文

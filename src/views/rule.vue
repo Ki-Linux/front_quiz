@@ -33,28 +33,8 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class rule extends Vue{
     //head
     mounted() {
-        const title = "いろいろ3択クイズ[ご利用に関して]"
-        document.title = title
-
         //scroll
         scrollTo(0, 0);
-    }
-
-    head!: {
-        title: {
-            inner: "いろいろ3択クイズ[ご利用に関して]"
-        },
-        meta: [
-            { name: "description", content: "いろいろ3択クイズのご利用について。テーマは食べもの、観光地、漫画など...いろいろ！いくつもの問の中から10問がランダムで出題されます。３つの難易度が搭載！" },
-            { name: "viewport", content: "width=device-width,initial-scale=1" },
-            { charset: "UTF-8" },
-            { name: "application-name", content: "いろいろ3択クイズ" },
-            { name: "format-detection", content: "email=no, telephone=no, address=no" },
-        ],
-        link: [
-            { rel: "icon", href: "../public/favicon.ico" },
-            { rel: "apple-touch-icon", href: "../public/apple-touch-icon.png" }
-        ]
     }
     //本文
     public toTop():void {
