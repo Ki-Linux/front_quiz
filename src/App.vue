@@ -3,6 +3,41 @@
    <router-view/>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    createTitleDesc: function(routeInstance){
+      if(routeInstance.meta.title) {
+        let setTitle = routeInstance.meta.title;
+
+        document.title = setTitle;
+      } else {
+        document.title = 'いろいろ3択クイズ'
+      }
+
+      if(routeInstance.meta.desc) {
+        let setDesc = routeInstance.meta.desc;
+        document.querySelector("meta[name='description']").setAttribute('content', setDesc)
+      } else {
+        document.querySelector("meta[name='description']").setAttribute('content', 'description is not set')
+      }
+    }
+  },
+
+  mounted: function() {
+    let routeInstance = this.$route;
+    this.createTitleDesc(routeInstance);
+  },
+
+  watch: {
+    '$route' (routeInstance, from) {
+      this.createTitleDesc(routeInstance);
+    }
+  }
+
+}
+</script>
+
 <style script lang="scss"> 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
