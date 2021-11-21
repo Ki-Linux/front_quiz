@@ -70,7 +70,7 @@ export default class Form extends Vue {
             switch(this.address) {
                 case "":
                     if(this.text === "") {
-                        this.notSend = "内容がないため、送信できません。"; 
+                        this.notSend = "内容がないため送信できません。"; 
                     }else {
                         beTrue();
                     }
