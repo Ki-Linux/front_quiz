@@ -49,7 +49,7 @@ export default class beginner extends Vue{
             postNumber: this.ParentTrueNumber
         })
         .then(function (response) {
-            console.log(response + "ab");
+            console.log(response + "abc");
         })
         .catch(function (error) {
             console.log(error)
