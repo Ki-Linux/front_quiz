@@ -44,7 +44,7 @@ export default class beginner extends Vue{
     public postIp(): void {
         this.$router.push({path: '/'});
 
-        axios.post('https://servicenewquiz.azurewebsites.net/post/ad', {
+        axios.post('http://localhost:3000/post/ad', {
             postNumber: this.ParentTrueNumber
         })
         .then(function (response) {
