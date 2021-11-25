@@ -46,6 +46,12 @@ const routes: Array<RouteConfig> = [
     component: () => import('../views/rule.vue'),
     meta: { title: 'いろいろ3択クイズ[ご利用に関して]'}
   },
+  {
+    path: '/add',
+    name: 'Add',
+    component: () => import('../views/add.vue'),
+    meta: { title: '新規登録' }
+  }
 ]
 
 const router = new VueRouter({
