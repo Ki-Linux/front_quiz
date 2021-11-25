@@ -50,7 +50,7 @@ const routes: Array<RouteConfig> = [
     path: '/add',
     name: 'Add',
     component: () => import('../views/add.vue'),
-    meta: { title: '新規登録' }
+    meta: { title: 'いろいろ3択クイズ[新規登録]' }
   }
 ]
 
