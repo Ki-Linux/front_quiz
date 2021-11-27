@@ -62,10 +62,10 @@
 
                 })
                 .then((response) => {
-                    console.log(response);
+                    console.log("response");
                 })
                 .catch((error) => {
-                    console.log(error);
+                    console.log("error");
                 });
             }
 
@@ -86,6 +86,12 @@
                 .catch((error) => {
                     console.log(error);
                 })
+
+                setTimeout(() => {
+                    location.reload();
+                },1000)          
+
+
             },2000)
             
 
