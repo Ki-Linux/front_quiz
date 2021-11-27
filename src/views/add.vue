@@ -61,10 +61,10 @@
                 postPassword: this.password
 
                 })
-                .then(function (response) {
+                .then((response) => {
                     console.log(response);
                 })
-                .catch(function (error) {
+                .catch((error) => {
                     console.log(error);
                 });
             }
@@ -74,19 +74,19 @@
             }
 
             setTimeout(() => {
+                console.log("sendTrue")
                 axios.get('/sendTrue')
                 .then((response) => {
-                    const judge = response.data;
+                    console.log('res success on /sendTrue');
+                    this.showNothing = response.data;
+  
 
-                    if(judge) {
-                        this.showNothing = "このユーザーネームはすでに登録してあります。"
-                    }
 
                 })
                 .catch((error) => {
                     console.log(error);
                 })
-            },1000)
+            },2000)
             
 
         }
