@@ -73,6 +73,22 @@
                 canPost();
             }
 
+            setTimeout(() => {
+                axios.get('/sendTrue')
+                .then((response) => {
+                    const judge = response.data;
+
+                    if(judge) {
+                        this.showNothing = "このユーザーネームはすでに登録してあります。"
+                    }
+
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+            },1000)
+            
+
         }
     }
 </script>
