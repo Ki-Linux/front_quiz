@@ -3,13 +3,14 @@
         <h1>新規登録</h1>
         <div class="user">
             <h2>ユーザーニックネーム</h2>
-            <input type="text" v-model="name">
+            <input type="text" maxlength="10" v-model="name">
         </div>
         <div class="password">
             <h2>パスワード</h2>
-            <input type="text" v-model="password">
+            <input type="password" maxlength="10" v-model="password">
         </div>
         <div class="setup">
+            <p>{{ showNothing }}</p>
             <button @click="setup">登録する</button>
         </div>
     </div>
@@ -21,9 +22,10 @@
     @Component
     export default class add extends Vue {
 
-        public name = '';
+        public name = "";
         public password = "";
         public Written = false;
+        public showNothing = "";
 
         setup(): void {
             console.log('set up can');
@@ -38,14 +40,17 @@
             } else if(this.name === "" && this.password === "") {
 
                 console.log("nothing both");
+                this.showNothing = "ユーザーニックネームとパスワードが入力されていません。";
 
             } else if(this.name === "") {
 
                 console.log("nothing name");
+                this.showNothing = "ユーザーニックネームが入力されていません。"
 
             } else if(this.password === "") {
 
                 console.log("nothing password");
+                this.showNothing = "パスワードが入力されていません。"
 
             }
 
@@ -55,13 +60,18 @@
                 postName: this.name,
                 postPassword: this.password
 
+                })
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
                 });
             }
 
             if(this.Written === true) {
                 canPost();
             }
-            
 
         }
     }
