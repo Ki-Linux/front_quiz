@@ -31,13 +31,8 @@
 
             axios.post('/post/namePost', {
                 postName: this.name,
-                postPasswrod: this.password
-            })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
+                postPassword: this.password
+
             });
 
         }
