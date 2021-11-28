@@ -90,13 +90,23 @@
                     this.wordTrue = response.data;
 
                     if(this.wordTrue) {
-                        $router.push('/extraHome');
-                    }
+                    $router.push('/extraHome');
+                } 
 
                 })
                 .catch((error) => {
                     console.log(error);
                 })
+
+
+                if(!this.noWritten) {
+                    this.noWritten = "ユーザーニックネームまたはパスワードが違います。"
+                }
+
+                setTimeout(()=> {
+
+                    location.reload();
+                },1000);
             }
 
             setTimeout(judgeYes,1000);
