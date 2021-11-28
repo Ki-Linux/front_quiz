@@ -35,6 +35,7 @@ describe('form', () => {
 
 //add.vue
 import add from '@/views/add.vue';
+import myEdit from '@/components/myEdit.vue';
 
 describe('can show"setup can"', () => {
   it('setup can', () => {
@@ -65,6 +66,22 @@ it('false to true by click', () => {
   expect(wrapper.exists()).toBe(true)
 })
 
+
+//myEdit.vue
+describe('myedit.vue', () => {
+  const wrapper = shallowMount(myEdit);
+  it("name myEdit", () => {
+
+    wrapper.get('.user input').trigger('input')
+    console.log(wrapper.emitted('to-parent'))
+  })
+
+  it("password myEdit", () => {
+    wrapper.get('.password input').trigger('input')
+    console.log(wrapper.emitted('to-parent'))
+  })
+  
+})
 
 
 
