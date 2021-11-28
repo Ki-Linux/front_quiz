@@ -72,7 +72,7 @@
                 });
             }
 
-            if(this.Written === true) {
+            if(this.Written) {
                 canPost();
             }
 
