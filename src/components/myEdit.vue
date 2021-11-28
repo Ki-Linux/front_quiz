@@ -2,11 +2,11 @@
     <div id="myEdit">
         <div class="user">
             <h2>ユーザーニックネーム</h2>
-            <input type="text" maxlength="10" v-model="childName">
+            <input type="text" maxlength="10" v-model="childName" @input="Write">
         </div>
         <div class="password">
             <h2>パスワード</h2>
-            <input type="password" maxlength="10" v-model="childPassword">
+            <input type="password" maxlength="10" v-model="childPassword" @input="Write">
             <p>↑目をつける</p>
         </div>
     </div>
@@ -19,7 +19,7 @@ export default class myEdit extends Vue {
     public childName = "";
     public childPassword = "";
 
-    mounted() {
+    Write() {
         
         this.$emit('to-parent', this.childName, this.childPassword);
     }

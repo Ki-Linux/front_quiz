@@ -28,6 +28,8 @@
         toParent(childName: string, childPassword: string): void {
             this.name = childName;
             this.password = childPassword;
+            console.log(this.name);
+            console.log(this.password);
         }
 
         setup(): void {
