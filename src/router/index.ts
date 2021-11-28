@@ -51,6 +51,12 @@ const routes: Array<RouteConfig> = [
     name: 'Add',
     component: () => import('../views/add.vue'),
     meta: { title: 'いろいろ3択クイズ[新規登録]' }
+  },
+  {
+    path: '/login',
+    name: "Login",
+    component: () =>import('../views/login.vue'),
+    meta: { title: 'いろいろ3択クイズ[ログイン]' }
   }
 ]
 
