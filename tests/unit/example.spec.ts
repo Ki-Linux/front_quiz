@@ -52,6 +52,21 @@ it('showNothing = ""', () => {
 
 
 
+//htmlなし
+it('false to true by click', () => {
+  const wrapper = shallowMount(add, {
+    data() {
+      return {
+        Written: false
+      }
+    }
+  });
+  wrapper.get('.setup button').trigger('click')
+  expect(wrapper.exists()).toBe(true)
+})
+
+
+
 
 /*test.only("test App Component", function() {
   const wrapper = mount(App);
