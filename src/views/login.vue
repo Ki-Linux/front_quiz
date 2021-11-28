@@ -96,16 +96,25 @@
                     console.log(error);
                 })
 
+                
 
                 setTimeout(()=> {
+
+                    //load
+                    const judgeYes = () => {
+                        location.reload();
+                    }
+
+
                     if(this.wordTrue) {
                         $router.push('/extraHome');
                     } else {
                         this.noWritten = "ユーザーニックネームまたはパスワードが違います。"
-                        location.reload();
+                        setTimeout(judgeYes,1000);
+
                     }
 
-                },1000)
+                },1000);
             }
 
             setTimeout(judgeYes,1000);
