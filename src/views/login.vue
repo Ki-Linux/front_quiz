@@ -2,9 +2,8 @@
     <div id="login">
         <h1>ログイン</h1>
         <my-edit-login @to-parent="toParent"/>
-        <div class="setup">
-            <p>{{ showNothing }}</p>
-            <button @click="setup">ログインする</button>
+        <div class="setLogin">
+            <button @click="goLogin">ログインする</button>
         </div>
     </div>
 </template>
@@ -25,6 +24,10 @@
         toParent(childName: string, childPassword: string): void {
             this.login_name = childName;
             this.login_password = childPassword;
+        }
+
+        goLogin(): void {
+            console.log('goLogin');
         }
     }
 </script>

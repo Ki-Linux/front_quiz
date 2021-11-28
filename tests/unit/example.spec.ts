@@ -1,4 +1,4 @@
-import { mount, shallowMount } from "@vue/test-utils";
+import { createWrapper, mount, shallowMount } from "@vue/test-utils";
 /*import HelloWorld from "@/components/HelloWorld.vue";
 import form from "@/views/form.vue";*/
 /*import MainData from '@/components/MainData.vue';
@@ -84,6 +84,15 @@ describe('myedit.vue', () => {
 })
 
 
+
+//login.vue
+import login from '@/views/login.vue';
+
+it('click goLogin', () => {
+  const wrapper = shallowMount(login);
+  wrapper.get('.setLogin button').trigger('click');
+  console.log('goLogin');
+})
 
 /*test.only("test App Component", function() {
   const wrapper = mount(App);
