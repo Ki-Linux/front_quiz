@@ -1,15 +1,7 @@
 <template>
     <div>
         <h1>新規登録</h1>
-        <div class="user">
-            <h2>ユーザーニックネーム</h2>
-            <input type="text" maxlength="10" v-model="name">
-        </div>
-        <div class="password">
-            <h2>パスワード</h2>
-            <input type="password" maxlength="10" v-model="password">
-            <p>↑目をつける</p>
-        </div>
+        <my-edit @to-parent="toParent"/>
         <div class="setup">
             <p>{{ showNothing }}</p>
             <button @click="setup">登録する</button>
@@ -18,15 +10,25 @@
 </template>
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
+    import myEdit from '../components/myEdit.vue';
     import axios from 'axios'
 
-    @Component
+    @Component({
+        components: {
+            'my-edit': myEdit
+        }
+    })
     export default class add extends Vue {
 
         public name = "";
         public password = "";
         public Written = false;
         public showNothing = "";
+
+        toParent(childName: string, childPassword: string): void {
+            this.name = childName;
+            this.password = childPassword;
+        }
 
         setup(): void {
             console.log('set up can');
