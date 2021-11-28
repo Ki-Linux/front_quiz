@@ -12,6 +12,8 @@
     import { Component, Vue } from 'vue-property-decorator';
     import myEdit from '@/components/myEdit.vue';
     import axios from 'axios';
+    import $router from '../router/index';
+
 
     @Component({
         components: {
@@ -24,6 +26,7 @@
         public noWritten = "";
         public login_name = "";
         public login_password = "";
+        public wordTrue = false;
 
         toParent(childName: string, childPassword: string): void {
             this.login_name = childName;
@@ -77,6 +80,29 @@
                 canSend();
             }
 
+
+            //ログイン成功か失敗かを表示させる
+            
+            const judgeYes = () => {
+                axios.get('/ableSendYes')
+                .then((response) => {
+                    console.log(response.data);
+                    this.wordTrue = response.data;
+
+                    if(this.wordTrue) {
+                        $router.push('/extraHome');
+                    }
+
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+            }
+
+            setTimeout(judgeYes,1000);
+            
+
+            
            
         }
     }
