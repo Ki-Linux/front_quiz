@@ -73,8 +73,9 @@
                 canPost();
             }
 
-            setTimeout(() => {
-                console.log("sendTrue")
+            const second = () => {
+                console.log("sendTrue");
+
                 axios.get('/sendTrue')
                 .then((response) => {
                     console.log('res success on /sendTrue');
@@ -89,10 +90,12 @@
 
                 setTimeout(() => {
                     location.reload();
-                },1000)          
+                },1000);
+                 
+            }
+                         
 
-
-            },2000)
+            setTimeout(second, 1000);
             
 
         }
