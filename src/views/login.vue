@@ -89,9 +89,7 @@
                     console.log(response.data);
                     this.wordTrue = response.data;
 
-                    if(this.wordTrue) {
-                    $router.push('/extraHome');
-                } 
+                   
 
                 })
                 .catch((error) => {
@@ -99,14 +97,15 @@
                 })
 
 
-                if(!this.noWritten) {
-                    this.noWritten = "ユーザーニックネームまたはパスワードが違います。"
-                }
-
                 setTimeout(()=> {
+                    if(this.wordTrue) {
+                        $router.push('/extraHome');
+                    } else {
+                        this.noWritten = "ユーザーニックネームまたはパスワードが違います。"
+                        location.reload();
+                    }
 
-                    location.reload();
-                },1000);
+                },1000)
             }
 
             setTimeout(judgeYes,1000);
