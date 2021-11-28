@@ -8,6 +8,7 @@
         <div class="password">
             <h2>パスワード</h2>
             <input type="password" maxlength="10" v-model="password">
+            <p>↑目をつける</p>
         </div>
         <div class="setup">
             <p>{{ showNothing }}</p>
@@ -91,7 +92,7 @@
                 setTimeout(() => {
                     location.reload();
                 },1000);
-                 
+
             }
                          
 
