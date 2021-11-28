@@ -43,7 +43,7 @@
                 location.reload();
             }
 
-             if(this.login_name !== "" && this.login_password !== "") {
+            if(this.login_name !== "" && this.login_password !== "") {
 
                 console.log("no nothing Written");
                 this.bothWritten = true;
