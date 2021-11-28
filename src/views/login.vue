@@ -38,6 +38,7 @@
                         
             axios.defaults.baseURL = "http://localhost:3000";
 
+            //reload
             const startReload = () => {
                 location.reload();
             }
