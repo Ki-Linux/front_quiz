@@ -44,6 +44,12 @@ describe('can show"setup can"', () => {
   })
 }) 
 
+it('showNothing = ""', () => {
+  const wrapper = shallowMount(add);
+  const nothing = wrapper.get('.setup p')
+  expect(nothing.text()).toBe('');
+})
+
 
 
 
