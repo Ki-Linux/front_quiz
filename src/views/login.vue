@@ -59,7 +59,7 @@
 
             const canSend = () => {
 
-                axios.post('/post/loginTwo', {
+                axios.post('/loginTwo', {
 
                     loginName: this.login_name,
                     loginPassword: this.login_password
