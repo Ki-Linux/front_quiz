@@ -38,6 +38,10 @@
                         
             axios.defaults.baseURL = "http://localhost:3000";
 
+            const startReload = () => {
+                location.reload();
+            }
+
              if(this.login_name !== "" && this.login_password !== "") {
 
                 console.log("no nothing Written");
@@ -47,16 +51,20 @@
 
                 console.log("nothing both");
                 this.noWritten = "ユーザーニックネームとパスワードが入力されていません。";
+                setTimeout(startReload, 1000);
+
 
             } else if(this.login_name === "") {
 
                 console.log("nothing name");
                 this.noWritten = "ユーザーニックネームが入力されていません。"
+                setTimeout(startReload, 1000);
 
             } else if(this.login_password === "") {
 
                 console.log("nothing password");
                 this.noWritten = "パスワードが入力されていません。"
+                setTimeout(startReload, 1000);
 
             }
 
@@ -100,17 +108,12 @@
 
                 setTimeout(()=> {
 
-                    //load
-                    const judgeYes = () => {
-                        location.reload();
-                    }
-
 
                     if(this.wordTrue) {
                         $router.push('/extraHome');
                     } else {
                         this.noWritten = "ユーザーニックネームまたはパスワードが違います。"
-                        setTimeout(judgeYes,1000);
+                        setTimeout(startReload, 1000);
 
                     }
 
