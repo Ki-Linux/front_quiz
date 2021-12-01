@@ -11,8 +11,8 @@
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
     import myEdit from '@/components/myEdit.vue';
+    import { nextPage, sendPage } from '../components/ableSendYes';
     import axios from 'axios';
-    import $router from '../router/index';
 
 
     @Component({
@@ -26,7 +26,7 @@
         public noWritten = "";
         public login_name = "";
         public login_password = "";
-        public wordTrue = false;
+        public wordTrue: boolean = nextPage;
 
         toParent(childName: string, childPassword: string): void {
             this.login_name = childName;
@@ -93,7 +93,7 @@
             //ログイン成功か失敗かを表示させる
             
             const judgeYes = () => {
-                axios.get('/ableSendYes')
+                /*axios.get('/ableSendYes')
                 .then((response) => {
                     console.log(response.data);
                     this.wordTrue = response.data;
@@ -105,8 +105,8 @@
                 })
                 .catch((error) => {
                     console.log(error);
-                })
-
+                })*/
+                sendPage();
                 
 
                 setTimeout(()=> {
