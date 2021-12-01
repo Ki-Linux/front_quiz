@@ -98,7 +98,9 @@
                     console.log(response.data);
                     this.wordTrue = response.data;
 
-                   
+                   if(this.wordTrue) {
+                        $router.push('/extraHome');
+                    }
 
                 })
                 .catch((error) => {
@@ -110,9 +112,8 @@
                 setTimeout(()=> {
 
 
-                    if(this.wordTrue) {
-                        $router.push('/extraHome');
-                    } else {
+                    if(!this.wordTrue) {
+                        
                         this.noWritten = "ユーザーニックネームまたはパスワードが違います。"
                         setTimeout(startReload, 1000);
 
