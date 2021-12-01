@@ -6,17 +6,20 @@
             <p>{{ showNothing }}</p>
             <button @click="setup">登録する</button>
         </div>
+        <to-home/>
     </div>
 </template>
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
     import myEdit from '../components/myEdit.vue';
+    import toRouter from '@/components/toRouter.vue';
     import { sendPage } from '../components/ableSendYes';
     import axios from 'axios';
 
     @Component({
         components: {
-            'my-edit': myEdit
+            'my-edit': myEdit,
+            'to-home': toRouter,
         }
     })
     export default class add extends Vue {

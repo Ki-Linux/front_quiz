@@ -6,11 +6,13 @@
             <p>{{ noWritten }}</p>
             <button @click="goLogin">ログインする</button>
         </div>
+        <button-to-home/>
     </div>
 </template>
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
     import myEdit from '@/components/myEdit.vue';
+    import toRouter from '@/components/toRouter.vue';
     import { nextPage, sendPage } from '../components/ableSendYes';
     import axios from 'axios';
 
@@ -18,6 +20,7 @@
     @Component({
         components: {
             'my-edit-login': myEdit,
+            'button-to-home': toRouter,
         }
     })
     export default class login extends Vue {
