@@ -93,22 +93,10 @@
             //ログイン成功か失敗かを表示させる
             
             const judgeYes = () => {
-                /*axios.get('/ableSendYes')
-                .then((response) => {
-                    console.log(response.data);
-                    this.wordTrue = response.data;
-
-                   if(this.wordTrue) {
-                        $router.push('/extraHome');
-                    }
-
-                })
-                .catch((error) => {
-                    console.log(error);
-                })*/
+               
+               //ableSendYes実行
                 sendPage();
                 
-
                 setTimeout(()=> {
 
 

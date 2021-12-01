@@ -11,8 +11,8 @@
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
     import myEdit from '../components/myEdit.vue';
+    import { sendPage } from '../components/ableSendYes';
     import axios from 'axios';
-    import $router from '../router/index';
 
     @Component({
         components: {
@@ -79,20 +79,8 @@
 
             const second = () => {
 
-                    axios.get('/ableSendYes')
-                    .then((response) => {
-                        console.log('to Next Page');
-                    
-                        if(response.data) {
-                            $router.push('/extraHome');
-                        }
-                    })
-                    .catch((error) => {
-                        console.log(error);
-                    })
-            
-
-
+                //ableSendYes実行
+                sendPage();
 
                 console.log("sendTrue");
 
