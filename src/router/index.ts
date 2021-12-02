@@ -63,6 +63,12 @@ const routes: Array<RouteConfig> = [
     name: 'extraHome',
     component: () => import('../views/extraHome.vue'),
     meta: { title: 'いろいろ3択クイズ＋' }
+  },
+  {
+    path: '/extra',
+    name: 'extra',
+    component: () => import('../views/extra.vue'),
+    meta: { title: 'いろいろ3択クイズ[エキストラ]' }
   }
 ]
 
