@@ -12,7 +12,7 @@
    export default class extraHome extends Vue {
       public showUserName = "";
 
-   mounted() {
+   created() {
 
       axios.defaults.baseURL = "http://localhost:3000";
 
