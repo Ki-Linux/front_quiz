@@ -140,3 +140,5 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
         }  
     ]
 ]
+
+export { questionExtra, answerExtra }
