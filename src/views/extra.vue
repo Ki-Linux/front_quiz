@@ -18,7 +18,8 @@
 import { Component, Vue } from 'vue-property-decorator';
 import MainData from '../components/MainData.vue';
 import { questionExtra, answerExtra } from '../components/extraData';
-import axios from 'axios';
+import { sendUserName } from '../components/userNameFromServer';
+
 @Component({
     components: {
         'extra-data': MainData,
@@ -43,17 +44,9 @@ export default class extra extends Vue{
     }
 
     public postIp(): void {
-        this.$router.push({path: '/'});
+        //this.$router.push({path: '/'});
         
-        axios.post('http://localhost:3000/post/ex', {
-            postNumber: this.ParentTrueNumber
-        })
-        .then(function (response) {
-            console.log(response + "abc");
-        })
-        .catch(function (error) {
-            console.log(error)
-        });
+        sendUserName();
 
         setTimeout(function() {
             location.reload();
