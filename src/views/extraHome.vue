@@ -6,15 +6,20 @@
 </template>
 <script lang="ts">
    import { Component, Vue } from 'vue-property-decorator';
-   import axios from 'axios';
+   import { sendUserName, showNameFromServer } from '../components/userNameFromServer';
+   //import axios from 'axios';
 
    @Component
    export default class extraHome extends Vue {
-      public showUserName = "";
+      public UserName = "";
 
-   created() {
+      created() {
 
-      axios.defaults.baseURL = "http://localhost:3000";
+         sendUserName();
+
+         this.UserName = showNameFromServer;
+
+      /*axios.defaults.baseURL = "http://localhost:3000";
 
       axios.get('/getUserNameWithiykrnmltpoebrlmknebwr34t35reefwefWEFYUMm4te')
       .then((response) => {
@@ -22,7 +27,7 @@
       })
       .catch((err) => {
          console.log(err);
-      })
+      })*/
 
       }
 
