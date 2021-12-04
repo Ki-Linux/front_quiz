@@ -49,7 +49,9 @@ export default class extra extends Vue{
     public postIp(): void {
         $router.push({path: '/extraHome'});
 
-        axios.post('http://localhost:3000/post/ex', {
+      axios.defaults.baseURL = "http://localhost:3000";
+
+        axios.post('/post/ex', {
             postNumber: this.ParentTrueNumber,
             postUserName: showNameFromServer
         })
