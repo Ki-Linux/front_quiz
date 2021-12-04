@@ -94,6 +94,21 @@ it('click goLogin', () => {
   console.log('goLogin');
 })
 
+//extraHome.vue
+import extraHome from '@/views/extraHome.vue';
+
+it('button click', () => {
+  const wrapper = shallowMount(extraHome, {
+    data() {
+      return {
+        Written: "test on extraHome button"
+      }
+    }
+  });
+  wrapper.get('.buttonAndAverage button').trigger('click');
+  console.log(wrapper);
+})
+
 /*test.only("test App Component", function() {
   const wrapper = mount(App);
   

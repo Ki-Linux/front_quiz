@@ -8,18 +8,24 @@
       </div>
       <h1>エキストラステージ</h1>
       <div class="buttonAndAverage">
-         <button>エキストラ</button>
+         <button @click="toQuiz">エキストラ</button>
          <p>%</p>
       </div>
    </div>
 </template>
 <script lang="ts">
    import { Component, Vue } from 'vue-property-decorator';
+   import $router from '../router/index';
    //import axios from 'axios';
 
    @Component
    export default class extraHome extends Vue {
       public showUserName = "";
+
+      toQuiz(): void {
+
+         $router.push('/extra');
+      }
 
 
       /*mounted() {
