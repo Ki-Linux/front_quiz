@@ -9,7 +9,11 @@
       <h1>エキストラステージ</h1>
       <div class="buttonAndAverage">
          <button @click="toQuiz">エキストラ</button>
-         <p>%</p>
+         <ul>
+            <li>%</li>
+            <li>※個人の平均正答率です。</li>
+         </ul>
+         <p></p>
       </div>
    </div>
 </template>
