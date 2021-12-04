@@ -18,7 +18,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import MainData from '../components/MainData.vue';
 import { questionExtra, answerExtra } from '../components/extraData';
-import { showNameFromServer } from '../components/userNameFromServer';
+import { sendUserName, showNameFromServer } from '../components/userNameFromServer';
 import axios from 'axios';
 import $router from '../router/index';
 
@@ -49,7 +49,9 @@ export default class extra extends Vue{
     public postIp(): void {
         $router.push({path: '/extraHome'});
 
-      axios.defaults.baseURL = "http://localhost:3000";
+        sendUserName();
+
+        axios.defaults.baseURL = "http://localhost:3000";
 
         axios.post('/post/ex', {
             postNumber: this.ParentTrueNumber,
