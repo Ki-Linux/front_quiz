@@ -1,19 +1,25 @@
 <template>
    <div id="extraHome">
-      <p>extra</p>
-      <p>{{ showUserName }}</p>
+      <div class="top">
+         <ul>
+            <li><router-link to="/">戻る</router-link></li>
+            <li>ようこそ{{ showUserName }}様</li>
+         </ul>
+      </div>
+      <h1>エキストラステージ</h1>
+      
    </div>
 </template>
 <script lang="ts">
    import { Component, Vue } from 'vue-property-decorator';
-   import axios from 'axios';
+   //import axios from 'axios';
 
    @Component
    export default class extraHome extends Vue {
       public showUserName = "";
 
 
-      mounted() {
+      /*mounted() {
 
          axios.defaults.baseURL = "http://localhost:3000";
 
@@ -25,7 +31,7 @@
             console.log(err);
          })
 
-      }
+      }*/
 
    }
 </script>
