@@ -7,7 +7,10 @@
          </ul>
       </div>
       <h1>エキストラステージ</h1>
-      
+      <div class="buttonAndAverage">
+         <button>エキストラ</button>
+         <p>%</p>
+      </div>
    </div>
 </template>
 <script lang="ts">
