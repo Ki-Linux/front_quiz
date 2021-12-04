@@ -6,33 +6,26 @@
 </template>
 <script lang="ts">
    import { Component, Vue } from 'vue-property-decorator';
-   import { showNameFromServer } from '../components/userNameFromServer';
-   //import axios from 'axios';
+   import axios from 'axios';
 
    @Component
    export default class extraHome extends Vue {
-      public showUserName: string = showNameFromServer;
+      public showUserName = "";
 
 
       mounted() {
-         console.log('ui ui' + this.showUserName);
+
+         axios.defaults.baseURL = "http://localhost:3000";
+
+         axios.get('/getUserNameWithiykrnmltpoebrlmknebwr34t35reefwefWEFYUMm4te')
+         .then((response) => {
+            this.showUserName = response.data;
+         })
+         .catch((err) => {
+            console.log(err);
+         })
+
       }
-
-         //sendUserName();
-
-         //this.showUserName = showNameFromServer;
-
-      /*axios.defaults.baseURL = "http://localhost:3000";
-
-      axios.get('/getUserNameWithiykrnmltpoebrlmknebwr34t35reefwefWEFYUMm4te')
-      .then((response) => {
-         this.showUserName = response.data;
-      })
-      .catch((err) => {
-         console.log(err);
-      })*/
-
-      //}
 
    }
 </script>
