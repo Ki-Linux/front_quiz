@@ -6,18 +6,21 @@
 </template>
 <script lang="ts">
    import { Component, Vue } from 'vue-property-decorator';
-   import { sendUserName, showNameFromServer } from '../components/userNameFromServer';
+   import { showNameFromServer } from '../components/userNameFromServer';
    //import axios from 'axios';
 
    @Component
    export default class extraHome extends Vue {
-      public UserName = "";
+      public showUserName: string = showNameFromServer;
 
-      created() {
 
-         sendUserName();
+      mounted() {
+         console.log('ui ui' + this.showUserName);
+      }
 
-         this.UserName = showNameFromServer;
+         //sendUserName();
+
+         //this.showUserName = showNameFromServer;
 
       /*axios.defaults.baseURL = "http://localhost:3000";
 
@@ -29,7 +32,7 @@
          console.log(err);
       })*/
 
-      }
+      //}
 
    }
 </script>

@@ -2,7 +2,8 @@ import axios from 'axios';
 
 let showNameFromServer = "";
 
-const sendUserName = () => {
+//const sendUserName = () => {
+    axios.defaults.baseURL = "http://localhost:3000";
 
     axios.get('/getUserNameWithiykrnmltpoebrlmknebwr34t35reefwefWEFYUMm4te')
     .then((response) => {
@@ -12,6 +13,6 @@ const sendUserName = () => {
     .catch((err) => {
        console.log(err);
     })
-}
+//}
                 
-export { sendUserName, showNameFromServer }  
+export { showNameFromServer }  
