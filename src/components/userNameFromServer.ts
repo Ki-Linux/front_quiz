@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let showNameFromServer
+let showNameFromServer = "";
 
 const sendUserName = () => {
 
@@ -14,4 +14,4 @@ const sendUserName = () => {
     })
 }
                 
-export { sendUserName }  
+export { sendUserName, showNameFromServer }  
