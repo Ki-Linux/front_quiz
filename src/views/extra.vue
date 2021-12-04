@@ -20,6 +20,8 @@ import MainData from '../components/MainData.vue';
 import { questionExtra, answerExtra } from '../components/extraData';
 import { showNameFromServer } from '../components/userNameFromServer';
 import axios from 'axios';
+import $router from '../router/index';
+
 
 @Component({
     components: {
@@ -45,13 +47,11 @@ export default class extra extends Vue{
     }
 
     public postIp(): void {
-        //this.$router.push({path: '/'});
-        
-        //sendUserName();
+        $router.push({path: '/extraHome'});
 
         axios.post('http://localhost:3000/post/ex', {
             postNumber: this.ParentTrueNumber,
-            postUserrName: showNameFromServer
+            postUserName: showNameFromServer
         })
         .then((response) => {
             console.log(response + "abc");
