@@ -26,7 +26,7 @@
    @Component
    export default class extraHome extends Vue {
       public showUserName = "";
-      public average = "";
+      public average = 0;
 
       toQuiz(): void {
 
@@ -55,7 +55,14 @@
             .then((response) => {
                const receiveAverage = JSON.parse(JSON.stringify(response.data));
 
-               this.average = receiveAverage;
+               let sum = 0;
+               for(let i = 0; i < receiveAverage.length; i++){
+                  sum += receiveAverage[i].totalNumber;
+               }
+
+               const ApiAverage = (Math.round(sum/receiveAverage.length * 100)) / 10;
+
+               this.average = ApiAverage;
 
             })
             .catch((err) => {
