@@ -15,6 +15,7 @@
             <li>{{ average }}%</li>
             <li>※個人の平均正答率です。</li>
          </ul>
+         <meter id="yu" min="0" max="100" :value="average">max100%</meter>
       </div>
    </div>
 </template>
@@ -26,7 +27,7 @@
    @Component
    export default class extraHome extends Vue {
       public showUserName = "";
-      public average = 0;
+      public average = 50;
 
       toQuiz(): void {
 
