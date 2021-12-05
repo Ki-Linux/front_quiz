@@ -74,6 +74,20 @@
                 .catch((error) => {
                     console.log("error");
                 });
+
+
+                //点数の方のデータベースを作る
+                axios.post('/post/pointPost', {
+                postUserName: this.name,
+
+                })
+                .then((response) => {
+                    console.log("response");
+                })
+                .catch((error) => {
+                    console.log("error");
+                });
+
             }
 
             if(this.Written) {
