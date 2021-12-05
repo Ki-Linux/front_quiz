@@ -1,5 +1,9 @@
 <template>
     <div id="home">
+      <ul class="loginFunction">
+        <li><router-link to="/add" class="newLogin">新規登録</router-link></li>
+        <li><router-link to="/login" class="newLogin">ログイン</router-link></li>
+      </ul>
       <h1>いろいろ３択クイズ</h1><!--title -->
       <div class="quizDes"><!-- 概要 -->
         <p>いくつもの問の中から10問がランダムで出題されます。<br>クイズの内容はいろいろです。</p>
@@ -9,6 +13,7 @@
         <button @click="toMain(index)">{{ level.levelName }}</button><!-- レベルごとのボタンの表示 -->
         <ul><!--平均点の表示 -->
           <li>平均正答率</li>
+          <li><meter min="0" max="100" :value="level.apiA">メーター</meter></li>
           <li>{{ level.apiA }}%</li>
         </ul>
       </div>
@@ -121,10 +126,15 @@ $footerwide: 0 60px;//定義
 /*960~*/
 @include pc {
   *#home {
-    margin-top: 100px;
+    //margin-top: 100px;
       h1 { 
         font-size: 70px;
       }
+  }
+
+  .loginFunction {
+    font-size: 2em;
+    margin-right: 80px;
   }
 
   .quizDes p { 
@@ -152,12 +162,17 @@ $footerwide: 0 60px;//定義
 /*481~959*/
 @include tbmax {
   *#home {
-    margin-top: 85px;
+    //margin-top: 85px;
 
     h1 { 
       font-size: 40px;
     }
 
+  }
+
+  .loginFunction {
+    font-size: 1.5em;
+    margin-right: 50px;
   }
   
   .quizDes p { 
@@ -185,6 +200,11 @@ $footerwide: 0 60px;//定義
       font-size: 35px;
     }
 
+  }
+
+  .loginFunction {
+    font-size: 1.6em;
+    margin-right: 13px;
   }
 
   .quizDes p { 
@@ -304,5 +324,17 @@ footer {
 
   }
 
+}
+
+
+.loginFunction {
+  text-align: right;
+
+    li .newLogin {
+      display: inline-block;
+      padding: 13px 0;
+      text-decoration: none;
+      color: rgb(17, 22, 71);
+    }
 }
 </style>
