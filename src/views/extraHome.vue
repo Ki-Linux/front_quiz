@@ -8,12 +8,13 @@
       </div>
       <h1>エキストラステージ</h1>
       <div class="buttonAndAverage">
-         <button @click="toQuiz">エキストラ</button>
+         <div class="buttonToExtra">
+            <button @click="toQuiz">エキストラ</button>
+         </div>
          <ul>
-            <li>%</li>
+            <li>{{ average }}%</li>
             <li>※個人の平均正答率です。</li>
          </ul>
-         <p></p>
       </div>
    </div>
 </template>
@@ -25,6 +26,7 @@
    @Component
    export default class extraHome extends Vue {
       public showUserName = "";
+      public average = "";
 
       toQuiz(): void {
 
@@ -51,8 +53,10 @@
                sendName: this.showUserName
             })
             .then((response) => {
-               const i = JSON.parse(JSON.stringify(response.data));
-               console.log(i);
+               const receiveAverage = JSON.parse(JSON.stringify(response.data));
+
+               this.average = receiveAverage;
+
             })
             .catch((err) => {
                console.log(err);
