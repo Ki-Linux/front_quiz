@@ -1,401 +1,401 @@
 const questionExtra: string[] = [
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-    'g',
-    'h',
-    'i',
-    'j',
-    'k',
-    'l',
-    'm',
-    'n',
-    'o',
-    'p',
-    'q',
-    'r',
-    's',
-    't',
-    'u',
-    'v',
-    'w',
-    'x',
-    'y',
-    'z',
-    'a',
-    'b',
-    'c',
-    'd'
+    'Adoの歌は？',
+    'スイカの種は１玉何個くらいある？',
+    '一番速い新幹線は？',
+    'フレンチバーミリオンとは？',
+    'ひろゆきが言っていないことは？',
+    '5GのGは？',
+    '「ららぽーと」はどこにない？',
+    '次の中でアンパンマンのキャラクターは？',
+    '日本で２番目に多いコンビニは？',
+    '「賽子」はなんて読む？',
+    'スシローの裏メニューは？',
+    '世界一長い消しカスは何メートル？',
+    '1作目のポケモンは何匹いる？',
+    'にゃんこ大戦争のキャタクターは？',
+    '「原神」はなんて読む？',
+    '乃木坂46の曲は？',
+    '痩せ我慢の対義語は？',
+    '黄昏の森とは？',
+    'スーパーに売っていないものは？',
+    '嵐の曲は？',
+    '「〇〇　東京ガールズコレクション」で〇〇に入るのは？',
+    '世界一甘い食べ物は？',
+    'イクラを油で揚げるとどうなる？',
+    'マリオの本名は？',
+    'ヨーダは？',
+    'ばかうけとは？',
+    'どうぶつの森にいるのは？',
+    'サイダーガールとは？',
+    'カプリコの味にあるのは？',
+    '世界一YouTubeで再生されている動画は？'
 ]    
 
 const answerExtra: { select: string; judge: boolean; }[][] = [
     
     [
         {
-            select:'a1',
+            select:'阿修羅ちゃん',
             judge: true
         },
         {
-            select:'b1',
+            select:'500',
             judge: true
         },
         {
-            select:'c1',
+            select:'東北新幹線',
             judge: true
         },
         {
-            select:'d1',
+            select:'色',
             judge: true
         },
         {
-            select:'e1',
+            select:'なんかそういう確証あるんですか？',
             judge: true
         },
         {
-            select:'f1',
+            select:'ジェネレーション',
             judge: true
         },
         {
-            select:'g1',
+            select:'帯広',
             judge: true
         },
         {
-            select:'h1',
+            select:'あくびどり',
             judge: true
         },
         {
-            select:'i1',
+            select:'ファミリーマート',
             judge: true
         },
         {
-            select:'j1',
+            select:'さいころ',
             judge: true
         },
         {
-            select:'k1',
+            select:'特大エビ天',
             judge: false
         },
         {
-            select:'l1',
+            select:'15メートル23センチ',
             judge: false
         },
         {
-            select:'m1',
+            select:'189',
             judge: false
         },
         {
-            select:'n1',
+            select:'風の精霊ウィンド',
             judge: false
         },
         {
-            select:'o1',
+            select:'はらかみ',
             judge: false
         },
         {
-            select:'p1',
+            select:'会いたかった',
             judge: false
         },
         {
-            select:'q1',
+            select:'デブ走り',
             judge: false
         },
         {
-            select:'r1',
+            select:'荒野行動のステージ',
             judge: false
         },
         {
-            select:'s1',
+            select:'牛角のキムチ',
             judge: false
         },
         {
-            select:'t1',
+            select:'『Pretender』',
             judge: false
         },
         {
-            select:'u1',
+            select:'リクルート',
             judge: false
         },
         {
-            select:'v1',
+            select:'チョコボール',
             judge: false
         },
         {
-            select:'w1',
+            select:'イクラが溶ける',
             judge: false
         },
         {
-            select:'x1',
+            select:'マリオッツヲ・マリオ',
             judge: false
         },
         {
-            select:'y1',
+            select:'バットマン',
             judge: false
         },
         {
-            select:'z1',
+            select:'漫才',
             judge: false
         },
         {
-            select:'a1',
+            select:'ホワイトクジラ',
             judge: false
         },
         {
-            select:'b1',
+            select:'ご当地アイドル',
             judge: false
         },
         {
-            select:'c1',
+            select:'チョコレートケーキ味',
             judge: false
         },
         {
-            select:'d1',
+            select:'リアルポケモン',
             judge: false
         }
     ],
     [
         {
-            select:'a2',
+            select:'たぶん',
             judge: false
         },
         {
-            select:'b2',
+            select:'100',
             judge: false
         },
         {
-            select:'c2',
+            select:'東海道新幹線',
             judge: false
         },
         {
-            select:'d2',
+            select:'食べ物',
             judge: false
         },
         {
-            select:'e2',
+            select:'なんだろう。嘘つくのやめてもらっていいですか。',
             judge: false
         },
         {
-            select:'f2',
+            select:'ゴミ',
             judge: false
         },
         {
-            select:'g2',
+            select:'船橋',
             judge: false
         },
         {
-            select:'h2',
+            select:'りんごパンマン',
             judge: false
         },
         {
-            select:'i2',
+            select:'ローソン',
             judge: false
         },
         {
-            select:'j2',
+            select:'ますこ',
             judge: false
         },
         {
-            select:'k2',
+            select:'海鮮漬け',
             judge: true
         },
         {
-            select:'l2',
+            select:'9メートル19センチ',
             judge: true
         },
         {
-            select:'m2',
+            select:'151',
             judge: true
         },
         {
-            select:'n2',
+            select:'雷の精霊ボルト',
             judge: true
         },
         {
-            select:'o2',
+            select:'げんしん',
             judge: true
         },
         {
-            select:'p2',
+            select:'会いたかったかもしれない',
             judge: true
         },
         {
-            select:'q2',
+            select:'デブ大暴れ',
             judge: true
         },
         {
-            select:'r2',
+            select:'芸人',
             judge: true
         },
         {
-            select:'s2',
+            select:'すき家のキムチ',
             judge: true
         },
         {
-            select:'t2',
+            select:'『Love so sweet』',
             judge: true
         },
         {
-            select:'u2',
+            select:'楽天',
             judge: false
         },
         {
-            select:'v2',
+            select:'パンナコッテル',
             judge: false
         },
         {
-            select:'w2',
+            select:'イクラが飛び跳ねる',
             judge: false
         },
         {
-            select:'x2',
+            select:'マリオ',
             judge: false
         },
         {
-            select:'y2',
+            select:'ポケモン',
             judge: false
         },
         {
-            select:'z2',
+            select:'ゲーム',
             judge: false
         },
         {
-            select:'a2',
+            select:'アナコンダ',
             judge: false
         },
         {
-            select:'b2',
+            select:'YouTuber',
             judge: false
         },
         {
-            select:'c2',
+            select:'いちごしょうゆ味',
             judge: false
         },
         {
-            select:'d2',
+            select:'ヒカキンビートボックス',
             judge: false
         }       
     ],
     [
         {
-            select:'a3',
+            select:'流れ弾',
             judge: false
         },
         {
-            select:'b3',
+            select:'700',
             judge: false
         },
         {
-            select:'c3',
+            select:'九州新幹線',
             judge: false
         },
         {
-            select:'d3',
+            select:'歌',
             judge: false
         },
         {
-            select:'e3',
+            select:'それってあなたの感想ですよね？',
             judge: false
         },
         {
-            select:'f3',
+            select:'グローバル',
             judge: false
         },
         {
-            select:'g3',
+            select:'沼津',
             judge: false
         },
         {
-            select:'h3',
+            select:'だいこんちゃん',
             judge: false
         },
         {
-            select:'i3',
+            select:'ミニストップ',
             judge: false
         },
         {
-            select:'j3',
+            select:'しょうじ',
             judge: false
         },
         {
-            select:'k3',
+            select:'マグロ盛り',
             judge: false
         },
         {
-            select:'l3',
+            select:'6メートル48センチ',
             judge: false
         },
         {
-            select:'m3',
+            select:'136',
             judge: false
         },
         {
-            select:'n3',
+            select:'水の精霊ウォーター',
             judge: false
         },
         {
-            select:'o3',
+            select:'はらがみ',
             judge: false
         },
         {
-            select:'p3',
+            select:'会いたかったなんて言えない',
             judge: false
         },
         {
-            select:'q3',
+            select:'デブ駆けて',
             judge: false
         },
         {
-            select:'r3',
+            select:'宮崎にある森',
             judge: false
         },
         {
-            select:'s3',
+            select:'吉野家のキムチ',
             judge: false
         },
         {
-            select:'t3',
+            select:'『This is a pen』',
             judge: false
         },
         {
-            select:'u3',
+            select:'マイナビ',
             judge: true
         },
         {
-            select:'v3',
+            select:'グラブジャムン',
             judge: true
         },
         {
-            select:'w3',
+            select:'破裂する',
             judge: true
         },
         {
-            select:'x3',
+            select:'マリオ・マリオ',
             judge: true
         },
         {
-            select:'y3',
+            select:'スター・ウォーズ',
             judge: true
         },
         {
-            select:'z3',
+            select:'お菓子',
             judge: true
         },
         {
-            select:'a3',
+            select:'タランチュラ',
             judge: true
         },
         {
-            select:'b3',
+            select:'バンド',
             judge: true
         },
         {
-            select:'c3',
+            select:'生ハムメロン味',
             judge: true
         },
         {
-            select:'d3',
+            select:'ベイビーシャークダンス',
             judge: true
         }     
     ]
