@@ -5,8 +5,8 @@
             </form>
             <h1>問{{ titleNumber }}: {{ question[Random] }}</h1><!-- 問題提示 -->
             <div class="answer" v-show="!only"><!-- 正解か不正解の表示 -->
-                <p v-if="showAnswer">正解</p>
-                <p v-else>不正解</p>
+                <p v-if="showAnswer">◯正解</p>
+                <p v-else>✕不正解</p>
             </div>
             <form class="select" v-for="(answer, index) in Answer" v-bind:key="answer[Random].select"><!-- 回答のボタン -->
                 <input @click="TrueFalse(index, Random)" type="button" v-model="answer[Random].select">
