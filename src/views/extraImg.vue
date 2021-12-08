@@ -9,7 +9,7 @@
     @Component
     export default class Img extends Vue {
 
-        public pathList: HTMLImageElement[] = [
+        public pathList: any[] = [
             require("@/assets/hawaiiTrue.png"),
             require("@/assets/hawaiiFalse2.png")
         ]
