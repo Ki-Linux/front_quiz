@@ -334,7 +334,7 @@ footer {
       display: inline-block;
       padding: 13px 0;
       text-decoration: none;
-      color: rgb(17, 22, 71);
+      color: rgb(15, 24, 102);
     }
 }
 </style>
