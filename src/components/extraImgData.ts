@@ -12,8 +12,7 @@ const questionExtra: string[] =  [
     'パンタグラフはどれ？',
     'キリスト教に関係ないのは？',
     'この中で人数が一番多いのは？',
-    '1番口が大きいのは？',
-    '爆笑とは？'
+    '1番口が小さいのは？'
 ]
 
 const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
@@ -50,6 +49,30 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
         {
             select: require("@/assets/suisu.png"),
             judge: false
+        },
+        {
+            select: require("@/assets/towerF.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/mizuF1.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/pantaF1.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/harowin.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/lowyer.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/kuti3.png"),
+            judge: false
         }
     ],
     [
@@ -84,6 +107,30 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
         {
             select: require("@/assets/japan.png"),
             judge: true
+        },
+        {
+            select: require("@/assets/towerTrue.png"),
+            judge: true
+        },
+        {
+            select: require("@/assets/mizuT.png"),
+            judge: true
+        },
+        {
+            select: require("@/assets/pantaF2.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/harowin2.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/nurce.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/oowarai_man.png"),
+            judge: false
         }
     ],
     [
@@ -118,6 +165,30 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
         {
             select: require("@/assets/igirisu.png"),
             judge: false
+        },
+        {
+            select: require("@/assets/towerF2.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/mizuF2.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/pantaT.png"),
+            judge: true
+        },
+        {
+            select: require("@/assets/kurisumasu.png"),
+            judge: true
+        },
+        {
+            select: require("@/assets/doctor.png"),
+            judge: true
+        },
+        {
+            select: require("@/assets/kuti1.png"),
+            judge: true
         }
     ]
 ]
