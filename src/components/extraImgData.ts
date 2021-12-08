@@ -1,4 +1,4 @@
-const questionBeginner: string[] =  [
+const questionExtra: string[] =  [
     'ハワイの地図は？',
     '爬虫類は？',
     '八百長とは？',
@@ -16,11 +16,26 @@ const questionBeginner: string[] =  [
     '爆笑とは？'
 ]
 
-/*const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
+const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
 
     [
         {
-            select: 
+            select: require("@/assets/hawaiiTrue.png"),
+            judge: true
+        }
+    ],
+    [
+        {
+            select: require("@/assets/hawaiiFalse2.png"),
+            judge: false
+        }
+    ],
+    [
+        {
+            select: require("@/assets/hawaiiFalse1.png"),
+            judge: false
         }
     ]
-]*/
+]
+
+export { answerExtra }
