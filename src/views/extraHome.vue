@@ -41,11 +41,10 @@
    @Component
    export default class extraHome extends Vue {
       public showUserName = "";
-      public average = 50;
-      public averageImg = 50;
+      public average = 0;
+      public averageImg = 0;
       public individual = "※個人の平均正答率です。";
-      public receiveExtra = 0;
-      public receiveImg = 0;
+
 
       toQuiz(): void {
 
@@ -98,19 +97,19 @@
             //IMG
             axios.post('/imgAPI', {
                
-               sendName: this.showUserName
+               sendImgName: this.showUserName
             })
             .then((response) => {
-               const receiveAverage = JSON.parse(JSON.stringify(response.data));
+               const receiveExtraImg = JSON.parse(JSON.stringify(response.data));
 
                let sum = 0;
-               for(let i = 0; i < receiveAverage.length; i++){
-                  sum += receiveAverage[i].totalNumber;
+               for(let i = 0; i < receiveExtraImg.length; i++){
+                  sum += receiveExtraImg[i].totalNumber;
                }
 
-               const ApiAverage = (Math.round(sum/receiveAverage.length * 100)) / 10;
+               const ApiImgeAverage = (Math.round(sum/receiveExtraImg.length * 100)) / 10;
 
-               this.averageImg = ApiAverage;
+               this.averageImg = ApiImgeAverage;
 
             })
             .catch((err) => {

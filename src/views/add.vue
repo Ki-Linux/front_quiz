@@ -76,7 +76,7 @@
                 });
 
 
-                //点数の方のデータベースを作る
+                //点数の方のデータベースを作る(エキストラ)
                 axios.post('/post/pointPost', {
                 postUserName: this.name,
 
@@ -88,6 +88,18 @@
                     console.log("error");
                 });
 
+
+                //点数の方のデータベースを作る(画像)
+                axios.post('/post/pointImgPost', {
+                postUserNameByImg: this.name,
+
+                })
+                .then((response) => {
+                    console.log("response");
+                })
+                .catch((error) => {
+                    console.log("error");
+                });
             }
 
             if(this.Written) {
