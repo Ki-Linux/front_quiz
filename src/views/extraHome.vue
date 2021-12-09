@@ -13,7 +13,21 @@
          </div>
          <ul>
             <li>{{ average }}%</li>
-            <li>※個人の平均正答率です。</li>
+            <li>{{ individual }}</li>
+         </ul>
+         <meter id="yu" min="0" max="100" :value="average">max100%</meter>
+      </div>
+      <div class="quizOFIMG">
+         <div class="imgDes">
+            <h1>画像クイズ</h1>
+            <p>画像クイズは全15問のうち5問がランダムで出題されます。</p>
+         </div>
+         <div class="buttonToExtraImg">
+            <button @click="toImgQuiz">画像クイズ</button>
+         </div>
+         <ul>
+            <li>{{ averageImg }}%</li>
+            <li>{{ individual }}</li>
          </ul>
          <meter id="yu" min="0" max="100" :value="average">max100%</meter>
       </div>
@@ -28,10 +42,19 @@
    export default class extraHome extends Vue {
       public showUserName = "";
       public average = 50;
+      public averageImg = 50;
+      public individual = "※個人の平均正答率です。";
+      public receiveExtra = 0;
+      public receiveImg = 0;
 
       toQuiz(): void {
 
          $router.push('/extra');
+      }
+
+      toImgQuiz(): void {
+
+         $router.push('/extraImg');
       }
 
       public mounted(): void {
@@ -49,6 +72,7 @@
 
          setTimeout(() => {
 
+            //EXTRA
             axios.post('/exAPI', {
                
                sendName: this.showUserName
@@ -68,7 +92,30 @@
             })
             .catch((err) => {
                console.log(err);
-            })      
+            })    
+            
+
+            //IMG
+            axios.post('/imgAPI', {
+               
+               sendName: this.showUserName
+            })
+            .then((response) => {
+               const receiveAverage = JSON.parse(JSON.stringify(response.data));
+
+               let sum = 0;
+               for(let i = 0; i < receiveAverage.length; i++){
+                  sum += receiveAverage[i].totalNumber;
+               }
+
+               const ApiAverage = (Math.round(sum/receiveAverage.length * 100)) / 10;
+
+               this.averageImg = ApiAverage;
+
+            })
+            .catch((err) => {
+               console.log(err);
+            })
 
          },1000);
 
