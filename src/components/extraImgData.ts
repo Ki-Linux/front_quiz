@@ -193,4 +193,4 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
     ]
 ]
 
-export { answerExtra }
+export { questionExtra, answerExtra }
