@@ -2,9 +2,8 @@ const questionBeginner: string[] =  [
     'ドクターXの言葉は？',
     '1番辛いのは？',
     'スマートフォンを略して？',
-    '大正は何年続いた？',
     'ヨーロッパにある国は？',
-    '魚類は？',
+    '次の中でアンパンマンのキャラクターは？',
     '人数が一番少ないのは？',
     '2017年流行語大賞は？',
     '雲を英語で？',
@@ -47,15 +46,11 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'15年',
-            judge: true
-        },
-        {
             select:'フランス',
             judge: true
         },
         {
-            select:'サメ',
+            select:'あくびどり',
             judge: true
         },
         {
@@ -169,15 +164,11 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '20年',
-            judge: false
-        },
-        {
             select: '日本',
             judge: false
         },
         {
-            select: 'シャチ',
+            select:'りんごパンマン',
             judge: false
         },
         {
@@ -291,15 +282,11 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '18年',
-            judge: false
-        },
-        {
             select: 'アメリカ',
             judge: false
         },
         {
-            select: 'クジラ',
+            select:'だいこんちゃん',
             judge: false
         },
         {
