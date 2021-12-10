@@ -9,7 +9,7 @@ const questionIntermediate: string[] = [
     '『名探偵コナン』の連載が始まったのは？',
     '学生数が1番多い大学は？',
     'プロ野球のセ・リーグとパ・リーグのチーム数はそれぞれいくつある？',
-    'ティッシュを英語にすると？',
+    '嵐の曲は？',
     '「黄昏」は何て読む？',
     'アイスの商品名として日本に実際にあったものは？',
     '2018年にテレビで放送されたアニメは？',
@@ -17,7 +17,6 @@ const questionIntermediate: string[] = [
     'YouTubeの歴代ミュージックビデオで再生回数が日本国内1位は？',
     '『ドラえもん』のひみつ道具の登場回数1位は？',
     '青と黄色を混ぜると？',
-    '面積が2番目に大きい県は？',
     'サワーとは？',
     'マクドナルドの人気ハンバーガー1位は？（2021年「LINEリサーチ」の調査）',
     '7月は何日ある？',
@@ -74,7 +73,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: 'tisshu',
+            select:'『Pretender』',
             judge: false
         },
         {
@@ -103,10 +102,6 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
         },
         {
             select: 'むらさき',
-            judge: false
-        },
-        {
-            select: '北海道',
             judge: false
         },
         {
@@ -192,7 +187,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: 'tissue',
+            select:'『Love so sweet』',
             judge: true
         },
         {
@@ -221,10 +216,6 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
         },
         {
             select: 'みどり',
-            judge: true
-        },
-        {
-            select: '岩手県',
             judge: true
         },
         {
@@ -310,7 +301,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: 'tissie',
+            select:'『This is a pen』',
             judge: false
         },
         {
@@ -339,10 +330,6 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
         },
         {
             select: 'オレンジ',
-            judge: false
-        },
-        {
-            select: '福島県',
             judge: false
         },
         {
