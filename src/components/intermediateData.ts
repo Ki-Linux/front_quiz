@@ -3,7 +3,7 @@ const questionIntermediate: string[] = [
     'エベレストの高さは？',
     '現役宇宙飛行士は何人？',
     'キューピー『たまご白書』の調査開始から1位を取り続けている人気卵料理は？',
-    '100の1000倍は？',
+    'ヒカキンの本名は？',
     'うまい棒で1番人気の味は？',
     '日本で歴代興行収入3位の映画は？',
     'イギリスのお金の単位は？',
@@ -51,7 +51,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '10万',
+            select: 'かいはつひかる',
             judge: true
         },
         {
@@ -173,7 +173,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '1万',
+            select: 'かいはつひからない',
             judge: false
         },
         {
@@ -295,7 +295,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '100万',
+            select: 'すずきひかる',
             judge: false
         },
         {
