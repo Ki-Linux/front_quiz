@@ -23,7 +23,7 @@ const questionAdvanced: string[] = [
     'ウルトラマンに出てこない怪獣は？',
     '日本でも採れる宝石は？',
     'どうぶつの森にいるのは？',
-    '次の中で人口が1番少ない県は？',
+    'マリオの本名は？',
     '次の中でテレビ放送が始まったのが1番遅い漫画は？',
     '衆議院議員の任期は？',
     'UberEatsが日本で始まった年は？',
@@ -130,7 +130,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '佐賀県',
+            select:'マリオッツヲ・マリオ',
             judge: false
         },
         {
@@ -248,7 +248,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '徳島県',
+            select:'マリオ',
             judge: false
         },
         {
@@ -366,7 +366,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '高知県',
+            select:'マリオ・マリオ',
             judge: true
         },
         {
