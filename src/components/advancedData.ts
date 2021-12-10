@@ -25,7 +25,7 @@ const questionAdvanced: string[] = [
     'どうぶつの森にいるのは？',
     'マリオの本名は？',
     '次の中でテレビ放送が始まったのが1番遅い漫画は？',
-    '衆議院議員の任期は？',
+    'パブロ・ディエゴ・ホセ・フランシスコ・デ・パウラ・ホアン・ネポムセーノ･マリーア・デ・ロス・レメディオス・クリスピン・クリスピアーノ・デ・ラ・サンディシマ・トリニダード･ルイス・「」・ピカソの「」に入るのは？',
     'UberEatsが日本で始まった年は？',
     '「YouTube Premium」は何か月無料？'
 ]
@@ -138,7 +138,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '3年',
+            select: 'ヘ',
             judge: false
         },
         {
@@ -256,7 +256,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '6年',
+            select: 'ミ',
             judge: false
         },
         {
@@ -374,7 +374,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '4年',
+            select: 'イ',
             judge: true
         },
         {
