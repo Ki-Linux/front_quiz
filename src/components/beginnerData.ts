@@ -6,7 +6,6 @@ const questionBeginner: string[] =  [
     '次の中でアンパンマンのキャラクターは？',
     '人数が一番少ないのは？',
     '2017年流行語大賞は？',
-    '雲を英語で？',
     '勤労感謝の日がある月は？',
     'YouTube金の盾はチャンネル登録者が何万人になればもらえる？',
     '松江市は何県？',
@@ -59,10 +58,6 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
         },
         {
             select:'「インスタ映え」',
-            judge: true
-        },
-        {
-            select:'cloud',
             judge: true
         },
         {
@@ -180,10 +175,6 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: 'clowd',
-            judge: false
-        },
-        {
             select: '10月',
             judge: false
         },
@@ -295,10 +286,6 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
         },
         {
             select: '「プレミアムフライデー」',
-            judge: false
-        },
-        {
-            select: 'kumo',
             judge: false
         },
         {
