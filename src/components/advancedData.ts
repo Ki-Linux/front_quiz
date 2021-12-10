@@ -1,13 +1,12 @@
 const questionAdvanced: string[] = [
     '日本で初めてマクドナルドが上陸したのは何年？',
-    '1924年は何時代？',
+    'いないのは？',
     '「艸」から連想できるものは？',
     '次の中で1番遅くにできたサービスは？',
     'パプリカの色は何種類ある？',
     'iPhoneやiPadなどのapple製品で使われている充電ケーブル端子の名前は？',
     'ダイヤモンドの誕生月は？',
     '「池田模範堂」は何の会社？',
-    '静岡県熱海市の電気の周波数は？',
     '2009年に公開された映画は？',
     '左手を上げる招き猫意味は？',
     '店舗の数が2000件に1番近い牛丼チェーンは？',
@@ -23,7 +22,7 @@ const questionAdvanced: string[] = [
     'オスとメスの区別がない生物は？',
     'ウルトラマンに出てこない怪獣は？',
     '日本でも採れる宝石は？',
-    '地球と太陽の距離は？',
+    'どうぶつの森にいるのは？',
     '次の中で人口が1番少ない県は？',
     '次の中でテレビ放送が始まったのが1番遅い漫画は？',
     '衆議院議員の任期は？',
@@ -39,7 +38,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '大正',
+            select: 'さいごしゃちょー',
             judge: true
         },
         {
@@ -64,10 +63,6 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
         },
         {
             select: '虫さされ薬',
-            judge: true
-        },
-        {
-            select: '50Hz',
             judge: true
         },
         {
@@ -131,7 +126,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '約1億4000万km',
+            select:'ホワイトクジラ',
             judge: false
         },
         {
@@ -161,7 +156,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '昭和',
+            select: '西村ひろゆかない',
             judge: false
         },
         {
@@ -186,10 +181,6 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
         },
         {
             select: '個別指導塾',
-            judge: false
-        },
-        {
-            select: '60Hz',
             judge: false
         },
         {
@@ -253,7 +244,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '約1億2000万km',
+            select:'アナコンダ',
             judge: false
         },
         {
@@ -283,7 +274,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '明治',
+            select: 'マックスうざい',
             judge: false
         },
         {
@@ -308,10 +299,6 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
         },
         {
             select: '総菜パン',
-            judge: false
-        },
-        {
-            select: '40Hz',
             judge: false
         },
         {
@@ -375,7 +362,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '約1億5000万km',
+            select:'タランチュラ',
             judge: true
         },
         {
