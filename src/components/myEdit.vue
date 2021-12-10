@@ -7,7 +7,6 @@
         <div class="password">
             <h2>パスワード</h2>
             <input type="password" maxlength="10" v-model="childPassword" @input="Write">
-            <p>↑目をつける</p>
         </div>
     </div>
 </template>
@@ -26,4 +25,22 @@ export default class myEdit extends Vue {
     
 }
 </script>
+<style scoped lang="scss">
+    #myEdit {
+        margin-top: 20px;
+        .user {
+            margin: 20px;
+        }
 
+        input {
+            font-size: 22px;
+            padding-left: 3px;
+        }
+    }
+
+    
+
+    .password input{
+        background: url("../assets/eye.png") right center no-repeat;
+    }
+</style>
