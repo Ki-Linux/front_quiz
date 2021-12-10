@@ -21,7 +21,6 @@ const questionBeginner: string[] =  [
     '武蔵小杉はどこにある？',
     '1番多くの人に使われているのは？',
     'マンモスはいついた？',
-    '「」の顔も3度まで 「」に入るのは？',
     'ポテトチップスの味にないものは？',
     '恐竜でないのは？',
     'この中で歴代発行部数が1番多い漫画は？',
@@ -117,10 +116,6 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
         },
         {
             select:'200万年前',
-            judge: false
-        },
-        {
-            select:'昇',
             judge: false
         },
         {
@@ -230,10 +225,6 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '神',
-            judge: false
-        },
-        {
             select: '笹だんご',
             judge: false
         },
@@ -337,10 +328,6 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
         },
         {
             select: '400万年前',
-            judge: true
-        },
-        {
-            select: '仏',
             judge: true
         },
         {
