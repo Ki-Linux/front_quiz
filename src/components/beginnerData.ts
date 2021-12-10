@@ -1,11 +1,11 @@
 const questionBeginner: string[] =  [
-    '県はいくつある？',
+    'ドクターXの言葉は？',
     '1番辛いのは？',
     'スマートフォンを略して？',
     '大正は何年続いた？',
     'ヨーロッパにある国は？',
     '魚類は？',
-    'カエルを英語で？',
+    '人数が一番少ないのは？',
     '2017年流行語大賞は？',
     '雲を英語で？',
     '勤労感謝の日がある月は？',
@@ -35,7 +35,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
     
     [
         {
-            select:'43',
+            select:'私、失敗しないので。',
             judge: true
         },   
         {
@@ -59,7 +59,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'frog',
+            select:'コムドット',
             judge: true
         },
         {
@@ -157,7 +157,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
     ],
     [
         {
-            select: '45',
+            select: 'あなたは人質です。',
             judge: false
         },
         {
@@ -181,7 +181,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: 'flog',
+            select: 'フィッシャーズ',
             judge: false
         },
         {
@@ -279,7 +279,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
     ],
     [
         {
-            select: '47',
+            select: '片っ端から、救ってやるよ。',
             judge: false
         },
         {
@@ -303,7 +303,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: 'kaeru',
+            select: '東海オンエア',
             judge: false
         },
         {
