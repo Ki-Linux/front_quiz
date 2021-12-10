@@ -11,7 +11,6 @@ const questionAdvanced: string[] = [
     '左手を上げる招き猫意味は？',
     '店舗の数が2000件に1番近い牛丼チェーンは？',
     '新幹線が通らない県は？',
-    '詩人でないのは？',
     '「αマン」とは？',
     '日本の1番東にある島は？',
     'ドラえもんのひみつ道具にないものは？',
@@ -79,10 +78,6 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
         },
         {
             select: '長野県',
-            judge: false
-        },
-        {
-            select: '高村光太郎',
             judge: false
         },
         {
@@ -200,10 +195,6 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '小村寿太郎',
-            judge: true
-        },
-        {
             select: 'ウナコーワのキャラクター',
             judge: true
         },
@@ -315,10 +306,6 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
         },
         {
             select: '埼玉県',
-            judge: false
-        },
-        {
-            select: '中原中也',
             judge: false
         },
         {
