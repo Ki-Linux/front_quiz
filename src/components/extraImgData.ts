@@ -197,8 +197,78 @@ export { questionExtra, answerExtra }
 
 const questionTry = [
     'ハワイの地図は？',
-    'ぴょこはどれ？',
     '八百長とは？',
+    'クトゥルフは？',
     'クラッカーは？',
     'ミズグモはどれ？'
+]
+
+const answerTry: { select: HTMLImageElement; judge: boolean; }[][] = [
+
+    [
+        {
+            select: require("@/assets/hawaiiTrue.png"),
+            judge: true
+        },
+        {
+            select: require("@/assets/saiya.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/kutwurufu.png"),
+            judge: true
+        },
+        {
+            select: require("@/assets/hakka.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/mizuF1.png"),
+            judge: false
+        }
+    ],
+    [
+        {
+            select: require("@/assets/hawaiiFalse2.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/race.png"),
+            judge: true
+        },
+        {
+            select: require("@/assets/monster.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/kurakka.png"),
+            judge: true
+        },
+        {
+            select: require("@/assets/mizuF2.png"),
+            judge: false
+        }
+    ],
+    [
+        {
+            select: require("@/assets/hawaiiFalse1.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/nou.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/chuunibyou.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/cookie.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/mizuT.png"),
+            judge: true
+        }
+    ]
 ]
