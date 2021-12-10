@@ -26,7 +26,7 @@ const questionAdvanced: string[] = [
     '次の中でテレビ放送が始まったのが1番遅い漫画は？',
     'パブロ・ディエゴ・ホセ・フランシスコ・デ・パウラ・ホアン・ネポムセーノ･マリーア・デ・ロス・レメディオス・クリスピン・クリスピアーノ・デ・ラ・サンディシマ・トリニダード･ルイス・「」・ピカソの「」に入るのは？',
     'UberEatsが日本で始まった年は？',
-    '「YouTube Premium」は何か月無料？'
+    'YouTube Premiumは何か月無料？'
 ]
 
 const answerAdvanced: { select: string; judge: boolean; }[][] = [
@@ -45,7 +45,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '『ニコニコ動画』',
+            select: 'ニコニコ動画',
             judge: true
         },
         {
@@ -65,7 +65,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '『崖の上のポニョ』',
+            select: '崖の上のポニョ',
             judge: true
         },
         {
@@ -93,7 +93,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '『半沢直樹』',
+            select: '半沢直樹',
             judge: false
         },
         {
@@ -129,7 +129,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '『怪物くん』',
+            select: '怪物くん',
             judge: false
         },
         {
@@ -159,7 +159,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '『YouTube』',
+            select: 'YouTube',
             judge: false
         },
         {
@@ -179,7 +179,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '『サマーウォーズ』',
+            select: 'サマーウォーズ',
             judge: false
         },
         {
@@ -207,7 +207,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '『逃げるは恥だが役に立つ』',
+            select: '逃げるは恥だが役に立つ',
             judge: true
         },
         {
@@ -243,7 +243,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '『鉄腕アトム』',
+            select: '鉄腕アトム',
             judge: false
         },
         {
@@ -273,7 +273,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '『mixi』',
+            select: 'mixi',
             judge: false
         },
         {
@@ -293,7 +293,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '『桐島、部活やめるってよ』',
+            select: '桐島、部活やめるってよ',
             judge: false
         },
         {
@@ -321,7 +321,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '『ガリレオ』',
+            select: 'ガリレオ',
             judge: false
         },
         {
@@ -357,7 +357,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '『サザエさん』',
+            select: 'サザエさん',
             judge: true
         },
         {

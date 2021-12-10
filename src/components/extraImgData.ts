@@ -194,3 +194,11 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
 ]
 
 export { questionExtra, answerExtra }
+
+const questionTry = [
+    'ハワイの地図は？',
+    'ぴょこはどれ？',
+    '八百長とは？',
+    'クラッカーは？',
+    'ミズグモはどれ？'
+]

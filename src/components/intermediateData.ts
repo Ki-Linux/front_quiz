@@ -6,7 +6,7 @@ const questionIntermediate: string[] = [
     'ヒカキンの本名は？',
     'うまい棒で1番人気の味は？',
     '日本で歴代興行収入3位の映画は？',
-    '『名探偵コナン』の連載が始まったのは？',
+    '名探偵コナンの連載が始まったのは？',
     '学生数が1番多い大学は？',
     'プロ野球のセ・リーグとパ・リーグのチーム数はそれぞれいくつある？',
     '嵐の曲は？',
@@ -15,7 +15,7 @@ const questionIntermediate: string[] = [
     '2018年にテレビで放送されたアニメは？',
     '1年は何分？',
     'YouTubeの歴代ミュージックビデオで再生回数が日本国内1位は？',
-    '『ドラえもん』のひみつ道具の登場回数1位は？',
+    'ドラえもんのひみつ道具の登場回数1位は？',
     '青と黄色を混ぜると？',
     'サワーとは？',
     'マクドナルドの人気ハンバーガー1位は？（2021年「LINEリサーチ」の調査）',
@@ -57,7 +57,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '『タイタニック』',
+            select: 'タイタニック',
             judge: true
         },
         {
@@ -73,7 +73,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'『Pretender』',
+            select:'Pretender',
             judge: false
         },
         {
@@ -85,7 +85,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '『鬼滅の刃』',
+            select: '鬼滅の刃',
             judge: false
         },
         {
@@ -171,7 +171,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '『千と千尋の神隠し』',
+            select: '千と千尋の神隠し',
             judge: false
         },
         {
@@ -187,7 +187,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'『Love so sweet』',
+            select:'Love so sweet',
             judge: true
         },
         {
@@ -199,7 +199,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '『サンリオ男子』',
+            select: 'サンリオ男子',
             judge: true
         },
         {
@@ -285,7 +285,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '『君の名は。』',
+            select: '君の名は。',
             judge: false
         },
         {
@@ -301,7 +301,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'『This is a pen』',
+            select:'This is a pen',
             judge: false
         },
         {
@@ -313,7 +313,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '『はたらく細胞』',
+            select: 'はたらく細胞',
             judge: false
         },
         {
