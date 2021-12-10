@@ -13,7 +13,7 @@
         <button @click="toMain(index)">{{ level.levelName }}</button><!-- レベルごとのボタンの表示 -->
         <ul><!--平均点の表示 -->
           <li>平均正答率</li>
-          <li><meter min="0" max="100" :value="level.apiA">メーター</meter></li>
+          <li><meter min="0" max="100" low="20" high="40" :value="level.apiA" potimum="0">最大100%</meter></li>
           <li>{{ level.apiA }}%</li>
         </ul>
       </div>
@@ -296,6 +296,14 @@ $colors: (
   }
 
 } 
+
+.tryImgQuiz {
+  button {
+    font-size: 20px;
+    margin-bottom: 40px;
+    padding: 5px 10px;
+  }
+}
 
 /*普通にタグについているクラス*/  
 .buttonAverage ul {
