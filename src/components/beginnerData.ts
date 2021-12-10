@@ -11,7 +11,7 @@ const questionBeginner: string[] =  [
     '1番高いのは？',
     '1番多い苗字は？',
     '次の中から日本で1番多いものはどれか？',
-    '空気の成分で1番多いのは？',
+    '1作目のポケモンは何匹いる？',
     'この中で人口が1番多い国は？',
     'パチンコに入ってもいい年齢は？',
     'ランクル300とは？',
@@ -80,7 +80,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'二酸化炭素',
+            select:'189',
             judge: false
         },
         {
@@ -190,7 +190,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '窒素',
+            select:'151',
             judge: true
         },
         {
@@ -300,7 +300,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '酸素',
+            select:'136',
             judge: false
         },
         {
