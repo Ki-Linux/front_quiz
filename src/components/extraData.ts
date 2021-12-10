@@ -6,27 +6,21 @@ const questionExtra: string[] = [
     'ひろゆきが言っていないことは？',
     '5GのGは？',
     '「ららぽーと」はどこにない？',
-    '次の中でアンパンマンのキャラクターは？',
     '日本で２番目に多いコンビニは？',
     '「賽子」はなんて読む？',
     'スシローの裏メニューは？',
     '世界一長い消しカスは何メートル？',
-    '1作目のポケモンは何匹いる？',
     'にゃんこ大戦争のキャタクターは？',
     '「原神」はなんて読む？',
     '乃木坂46の曲は？',
     '痩せ我慢の対義語は？',
     '黄昏の森とは？',
     'スーパーに売っていないものは？',
-    '嵐の曲は？',
     '「〇〇　東京ガールズコレクション」で〇〇に入るのは？',
     '世界一甘い食べ物は？',
     'イクラを油で揚げるとどうなる？',
-    'マリオの本名は？',
     'ヨーダは？',
     'ばかうけとは？',
-    'どうぶつの森にいるのは？',
-    'サイダーガールとは？',
     'カプリコの味にあるのは？',
     '世界一YouTubeで再生されている動画は？'
 ]    
@@ -63,10 +57,6 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'あくびどり',
-            judge: true
-        },
-        {
             select:'ファミリーマート',
             judge: true
         },
@@ -80,10 +70,6 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
         },
         {
             select:'15メートル23センチ',
-            judge: false
-        },
-        {
-            select:'189',
             judge: false
         },
         {
@@ -111,10 +97,6 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'『Pretender』',
-            judge: false
-        },
-        {
             select:'リクルート',
             judge: false
         },
@@ -127,23 +109,11 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'マリオッツヲ・マリオ',
-            judge: false
-        },
-        {
             select:'バットマン',
             judge: false
         },
         {
             select:'漫才',
-            judge: false
-        },
-        {
-            select:'ホワイトクジラ',
-            judge: false
-        },
-        {
-            select:'ご当地アイドル',
             judge: false
         },
         {
@@ -185,10 +155,6 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'りんごパンマン',
-            judge: false
-        },
-        {
             select:'ローソン',
             judge: false
         },
@@ -202,10 +168,6 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
         },
         {
             select:'9メートル19センチ',
-            judge: true
-        },
-        {
-            select:'151',
             judge: true
         },
         {
@@ -233,10 +195,6 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'『Love so sweet』',
-            judge: true
-        },
-        {
             select:'楽天',
             judge: false
         },
@@ -249,23 +207,11 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'マリオ',
-            judge: false
-        },
-        {
             select:'ポケモン',
             judge: false
         },
         {
             select:'ゲーム',
-            judge: false
-        },
-        {
-            select:'アナコンダ',
-            judge: false
-        },
-        {
-            select:'YouTuber',
             judge: false
         },
         {
@@ -307,10 +253,6 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'だいこんちゃん',
-            judge: false
-        },
-        {
             select:'ミニストップ',
             judge: false
         },
@@ -324,10 +266,6 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
         },
         {
             select:'6メートル48センチ',
-            judge: false
-        },
-        {
-            select:'136',
             judge: false
         },
         {
@@ -355,10 +293,6 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'『This is a pen』',
-            judge: false
-        },
-        {
             select:'マイナビ',
             judge: true
         },
@@ -371,23 +305,11 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'マリオ・マリオ',
-            judge: true
-        },
-        {
             select:'スター・ウォーズ',
             judge: true
         },
         {
             select:'お菓子',
-            judge: true
-        },
-        {
-            select:'タランチュラ',
-            judge: true
-        },
-        {
-            select:'バンド',
             judge: true
         },
         {
