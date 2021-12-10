@@ -55,7 +55,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'「インスタ映え」',
+            select:'インスタ映え',
             judge: true
         },
         {
@@ -127,7 +127,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'『ドラえもん』',
+            select:'ドラえもん',
             judge: false
         },
         {
@@ -161,7 +161,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '「ひふみん」',
+            select: 'ひふみん',
             judge: false
         },
         {
@@ -233,7 +233,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '『ジョジョの奇妙な冒険』',
+            select: 'ジョジョの奇妙な冒険',
             judge: false
         },
         {
@@ -267,7 +267,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '「プレミアムフライデー」',
+            select: 'プレミアムフライデー',
             judge: false
         },
         {
@@ -339,7 +339,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '『ゴルゴ13』',
+            select: 'ゴルゴ13',
             judge: true
         },
         {
