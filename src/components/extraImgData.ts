@@ -272,3 +272,5 @@ const answerTry: { select: HTMLImageElement; judge: boolean; }[][] = [
         }
     ]
 ]
+
+export { questionTry, answerTry }

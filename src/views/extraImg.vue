@@ -46,10 +46,6 @@
 
         public Answer: { select: HTMLImageElement; judge: boolean; }[][] = answerExtra;
 
-        public yes(): void {
-            console.log('yes');
-        }
-
         get Random(): number {
             const rnd = Math.floor(Math.random() * this.question.length);
             return rnd
