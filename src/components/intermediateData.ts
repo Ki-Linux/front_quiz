@@ -19,7 +19,7 @@ const questionIntermediate: string[] = [
     '青と黄色を混ぜると？',
     'サワーとは？',
     'マクドナルドの人気ハンバーガー1位は？（2021年「LINEリサーチ」の調査）',
-    '7月は何日ある？',
+    'サイダーガールとは？',
     'Facebookを創業したのは？',
     '結婚できるのは？',
     '「やまざき串だんご（あん）」1パックのだんごの玉の数は？',
@@ -113,7 +113,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '30日',
+            select:'ご当地アイドル',
             judge: false
         },
         {
@@ -227,7 +227,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '29日',
+            select:'YouTuber',
             judge: false
         },
         {
@@ -341,7 +341,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '31日',
+            select:'バンド',
             judge: true
         },
         {
