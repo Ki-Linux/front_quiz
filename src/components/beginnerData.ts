@@ -8,7 +8,6 @@ const questionBeginner: string[] =  [
     '2017年流行語大賞は？',
     '勤労感謝の日がある月は？',
     'YouTube金の盾はチャンネル登録者が何万人になればもらえる？',
-    '松江市は何県？',
     '1番高いのは？',
     '1番多い苗字は？',
     '次の中から日本で1番多いものはどれか？',
@@ -66,10 +65,6 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
         },
         {
             select:'50万人',
-            judge: false
-        },
-        {
-            select:'鳥取県',
             judge: false
         },
         {
@@ -183,10 +178,6 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '島根県',
-            judge: true
-        },
-        {
             select: 'スカイツリー',
             judge: true
         },
@@ -294,10 +285,6 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
         },
         {
             select: '10万人',
-            judge: false
-        },
-        {
-            select: '徳島県',
             judge: false
         },
         {
