@@ -17,6 +17,9 @@
           <li>{{ level.apiA }}%</li>
         </ul>
       </div>
+      <div class="tryImgQuiz">
+        <button @click="toTryQuiz">画像クイズ（お試し）</button>
+      </div>
       <footer><!-- 利用規約とお問い合わせ -->
         <router-link class="router" to="/rule"><ul><li>ご利用に関して</li><li>プライバシーポリシー</li></ul></router-link>
         <router-link class="router" to="/form">お問い合わせ</router-link>
@@ -61,6 +64,10 @@ export default class Home extends Vue {
         $router.push({path: '/adv'});
       break;
     }
+  }
+
+  public toTryQuiz() {
+    $router.push({path: 'quizTry'});
   }
 
   public mounted(): void {

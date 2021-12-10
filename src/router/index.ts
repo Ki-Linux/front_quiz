@@ -75,6 +75,12 @@ const routes: Array<RouteConfig> = [
     name: 'image',
     component: () => import('../views/extraImg.vue'),
     meta: { title: 'いろいろ3択クイズ[エキストラ（画像）]' }
+  },
+  {
+    path: '/quizTry',
+    name: 'quizTry',
+    component: () => import('../views/quizImgTry.vue'),
+    meta: { title: 'いろいろ3択クイズ[お試し（画像）]' }
   }
 ]
 
