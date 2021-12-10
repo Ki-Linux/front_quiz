@@ -1,6 +1,6 @@
 <template>
     <div id="tryQuiz">
-       <div v-if="this.titleNumber <= 5">
+       <div class="questionAnswer" v-if="this.titleNumber <= 5">
             <div class="toNext" v-if="!only"><!-- 次へボタン -->
                 <button @click="change">{{ NextEnd }}</button>
             </div>
@@ -15,7 +15,7 @@
         </div>
         <div class="totalSum" v-else><!-- 結果 -->
             <ul>
-                <li id="liSecond">結果<br>{{ trueLength }}問<span>/5問</span> 正解</li>
+                <li>結果<br>{{ trueLength }}問<span>/5問</span> 正解</li>
             </ul>
             <form class="back">
                 <p>お試しは以上です。新規登録をすることでもっとたくさんの画像クイズができます。</p>
@@ -71,3 +71,41 @@
         
     }
 </script>
+<style scoped lang="scss">
+    #tryQuiz {
+        margin-top: 30px;
+    }
+
+    .questionAnswer {
+
+        .toNext {
+            margin-bottom: 10px;
+            font-size: 20px;
+            button {
+                padding:7px 17px;
+            }
+        }
+
+        .select {
+            margin-top: 30px;
+        }
+
+        .answer {
+            color: red;
+            font-size: 30px;
+            margin: 20px;
+        }
+    }
+
+    .totalSum {
+        ul {
+            li {
+                font-size: 30px;
+            }
+        }
+
+        .back p {
+            margin-bottom: 20px;
+        }
+    }
+</style>
