@@ -6,7 +6,6 @@ const questionIntermediate: string[] = [
     'ヒカキンの本名は？',
     'うまい棒で1番人気の味は？',
     '日本で歴代興行収入3位の映画は？',
-    'イギリスのお金の単位は？',
     '『名探偵コナン』の連載が始まったのは？',
     '学生数が1番多い大学は？',
     'プロ野球のセ・リーグとパ・リーグのチーム数はそれぞれいくつある？',
@@ -60,10 +59,6 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
         },
         {
             select: '『タイタニック』',
-            judge: true
-        },
-        {
-            select: 'ポンド',
             judge: true
         },
         {
@@ -185,10 +180,6 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: 'ドル',
-            judge: false 
-        },
-        {
             select: '1992年',
             judge: false
         },
@@ -304,10 +295,6 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
         },
         {
             select: '『君の名は。』',
-            judge: false
-        },
-        {
-            select: 'エン',
             judge: false
         },
         {
