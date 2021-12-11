@@ -52,6 +52,14 @@ ul {
   padding: 0;
 }
 
+button {
+  -webkit-appearance: none;
+}
+
+input[type="button"] {
+  -webkit-appearance: none;
+} 
+
 /*#quiz(beginner.vue, intermediate.vue, advanced.vue)*/ 
 #quiz {
   padding-top: 40px;
