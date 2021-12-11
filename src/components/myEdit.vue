@@ -6,7 +6,11 @@
         </div>
         <div class="password">
             <h2>パスワード</h2>
-            <input type="password" maxlength="10" v-model="childPassword" @input="Write">
+            <label id="eye-icon" for="closepassword" @click="closeEye" v-if="isActive"><img src="../assets/eye.png" alt=""></label>
+            <label id="eye-closed" for="checkpassword" @click="openEye" v-else><img src="../assets/EyeClosed.png" alt=""></label>
+            <input id="checkpassword" type="password" v-if="isActive" maxlength="10" v-model="childPassword" @input="Write">
+            <input id="closepassword" type="text" v-else maxlength="10" v-model="childPassword" @input="Write">
+
         </div>
     </div>
 </template>
@@ -17,17 +21,26 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class myEdit extends Vue {
     public childName = "";
     public childPassword = "";
+    public isActive = true;
 
     Write() {
         
         this.$emit('to-parent', this.childName, this.childPassword);
+    }
+
+    closeEye() {
+        this.isActive = false;
+    }
+
+    openEye() {
+        this.isActive = true;
     }
     
 }
 </script>
 <style scoped lang="scss">
     #myEdit {
-        margin-top: 20px;
+        margin: 20px 0;
         .user {
             margin: 20px;
         }
@@ -38,9 +51,10 @@ export default class myEdit extends Vue {
         }
     }
 
-    
-
-    .password input{
-        background: url("../assets/eye.png") right center no-repeat;
-    }
+    .password {
+            label > img {
+                margin: 0 auto;
+            }
+        } 
+ 
 </style>

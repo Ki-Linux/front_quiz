@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="add">
         <h1>新規登録</h1>
         <my-edit @to-parent="toParent"/>
         <div class="setup">
@@ -140,3 +140,15 @@
         }
     }
 </script>
+<style scoped lang="scss">
+    #add {
+        margin-top: 50px;
+        .setup {
+            button {
+                font-size: 22px;
+                padding: 5px 15px;
+                margin:10px 0 140px;
+            }
+        }
+    }
+</style>
