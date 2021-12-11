@@ -23,7 +23,8 @@ const questionExtra: string[] = [
     'ばかうけとは？',
     'カプリコの味にあるのは？',
     '世界一YouTubeで再生されている動画は？',
-    '意味が全く違うのは？'
+    '意味が全く違うのは？',
+    'このサイトの作成者が中1の時に取った理科のテストの点数は？'
 ]    
 
 const answerExtra: { select: string; judge: boolean; }[][] = [
@@ -128,6 +129,10 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
         {
             select: 'キメハラ',
             judge: false
+        },
+        {
+            select: '5点',
+            judge: false
         }
     ],
     [
@@ -230,7 +235,11 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
         {
             select:'オワハラ',
             judge: false
-        }        
+        },
+        {
+            select:'10点',
+            judge: false
+        }         
     ],
     [
         {
@@ -331,6 +340,10 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
         },
         {
             select:'アオハラ',
+            judge: true
+        },
+        {
+            select:'7点',
             judge: true
         }       
     ]
