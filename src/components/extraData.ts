@@ -1,7 +1,7 @@
 const questionExtra: string[] = [
     'Adoの歌は？',
     'スイカの種は１玉何個くらいある？',
-    '一番速い新幹線は？',
+    'じゃんけんで一番出すことが多いのは？',
     'フレンチバーミリオンとは？',
     'ひろゆきが言っていないことは？',
     '5GのGは？',
@@ -38,7 +38,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'東北新幹線',
+            select:'グー',
             judge: true
         },
         {
@@ -140,7 +140,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'東海道新幹線',
+            select:'チョキ',
             judge: false
         },
         {
@@ -242,7 +242,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'九州新幹線',
+            select:'パー',
             judge: false
         },
         {
