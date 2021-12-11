@@ -37,7 +37,7 @@
         setup(): void {
             console.log('set up can');
             
-            axios.defaults.baseURL = "http://localhost:3000";
+            axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
 
             if(this.name !== "" && this.password !== "") {
 

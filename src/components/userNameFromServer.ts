@@ -3,7 +3,7 @@ import axios from 'axios';
 let showNameFromServer = "";
 
 //const sendUserName = () => {
-    axios.defaults.baseURL = "http://localhost:3000";
+    axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
 
     axios.get('/getUserNameWithiykrnmltpoebrlmknebwr34t35reefwefWEFYUMm4te')
     .then((response) => {

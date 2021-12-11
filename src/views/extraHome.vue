@@ -1,8 +1,7 @@
 <template>
    <div id="extraHome">
       <div class="top">
-            <!-- <li><router-link to="/">戻る</router-link></li> -->
-            <p>ようこそ{{ showUserName }}様</p>
+         <p>ようこそ{{ showUserName }}様</p>
       </div>
       <div class="buttonAndAverage">
             <h1>エキストラステージ</h1>
@@ -70,7 +69,7 @@
 
       public mounted(): void {
 
-         axios.defaults.baseURL = "http://localhost:3000";
+         axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
 
          axios.get('/getUserNameWithiykrnmltpoebrlmknebwr34t35reefwefWEFYUMm4te')
          .then((response) => {

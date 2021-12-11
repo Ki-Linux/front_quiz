@@ -5,7 +5,7 @@
         :question="queAdv" :Answer="ansAdv"/><!-- 問題 -->
         <div class="totalSum" v-else><!-- 結果 -->
             <ul>
-                <li id="liFirst" v-if="ParentTrueNumber >= 10">満点！</li>
+                <li id="liFirst" v-if="ParentTrueNumber >= 10">満点!!</li>
                 <li id="liSecond">結果<br>{{ ParentTrueNumber }}問<span>/10問</span> 正解</li>
             </ul>
             <form class="back">
@@ -44,7 +44,7 @@ export default class beginner extends Vue{
     public postIp(): void {
         this.$router.push({path: '/'});
 
-        axios.post('http://localhost:3000/post/ad', {
+        axios.post('https://servicenewquiz.azurewebsites.net/post/ad', {
             postNumber: this.ParentTrueNumber
         })
         .then(function (response) {

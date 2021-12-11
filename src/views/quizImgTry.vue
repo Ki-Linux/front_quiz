@@ -19,7 +19,7 @@
             </ul>
             <div class="back">
                 <p>お試しは以上です。新規登録をすることでもっとたくさんの画像クイズができます。</p>
-                <button @click="backTop">トップページに戻る</button>
+                <back-top/>
             </div>
         </div>
     </div>
@@ -29,7 +29,11 @@
     import { questionTry, answerTry } from '@/components/extraImgData';
     import backTop from '../components/backTop.vue';
 
-    @Component
+    @Component({
+        components: {
+            'back-top': backTop
+        }
+    })
     export default class tryImg extends Vue {
         public NextEnd = "次の問題へ";
         public only = true;

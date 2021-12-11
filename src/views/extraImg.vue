@@ -86,7 +86,7 @@
 
             //sendUserName();
 
-            axios.defaults.baseURL = "http://localhost:3000";
+            axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
 
             axios.post('/post/img', {
                 postNumber: this.trueLength,

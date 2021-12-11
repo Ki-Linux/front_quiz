@@ -37,17 +37,17 @@ export default class Home extends Vue {
   public urlName: { levelName: string; url: string; apiA: number; }[] = [  //ボタンとリンクの情報
     {
       levelName: '初級',
-      url: 'http://localhost:3000/',
+      url: 'https://servicenewquiz.azurewebsites.net/',
       apiA: 0
     },
     {
       levelName: '中級',
-      url: 'http://localhost:3000/iAPI',
+      url: 'https://servicenewquiz.azurewebsites.net/iAPI',
       apiA: 0
     },
     {
       levelName: '上級',
-      url: 'http://localhost:3000/adAPI',
+      url: 'https://servicenewquiz.azurewebsites.net/adAPI',
       apiA: 0
     }
   ]

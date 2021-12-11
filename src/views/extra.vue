@@ -51,7 +51,7 @@ export default class extra extends Vue{
 
         //sendUserName();
 
-        axios.defaults.baseURL = "http://localhost:3000";
+        axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
 
         axios.post('/post/ex', {
             postNumber: this.ParentTrueNumber,

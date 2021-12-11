@@ -51,7 +51,7 @@ export default class Form extends Vue {
         const beTrue = () => {
             this.$router.push({path: '/back'});
 
-            axios.defaults.baseURL = "http://localhost:3000";
+            axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
 
             axios.post('/post/send', {
                 postText: this.text,
