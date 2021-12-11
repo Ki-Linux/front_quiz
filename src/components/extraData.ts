@@ -22,7 +22,8 @@ const questionExtra: string[] = [
     'ヨーダは？',
     'ばかうけとは？',
     'カプリコの味にあるのは？',
-    '世界一YouTubeで再生されている動画は？'
+    '世界一YouTubeで再生されている動画は？',
+    '意味が全く違うのは？'
 ]    
 
 const answerExtra: { select: string; judge: boolean; }[][] = [
@@ -123,6 +124,10 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
         {
             select:'リアルポケモン',
             judge: false
+        },
+        {
+            select: 'キメハラ',
+            judge: false
         }
     ],
     [
@@ -221,7 +226,11 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
         {
             select:'ヒカキンビートボックス',
             judge: false
-        }       
+        },
+        {
+            select:'オワハラ',
+            judge: false
+        }        
     ],
     [
         {
@@ -319,7 +328,11 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
         {
             select:'ベイビーシャークダンス',
             judge: true
-        }     
+        },
+        {
+            select:'アオハラ',
+            judge: true
+        }       
     ]
 ]
 
