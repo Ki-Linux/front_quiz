@@ -73,7 +73,7 @@
 </script>
 <style scoped lang="scss">
     #tryQuiz {
-        margin-top: 30px;
+        padding-top: 30px;
     }
 
     .questionAnswer {

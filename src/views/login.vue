@@ -123,7 +123,7 @@
 </script>
 <style scoped lang="scss">
     #login {
-        margin-top: 50px;
+        padding-top: 50px;
         .setLogin button {
             font-size: 22px;
             padding: 5px 15px;

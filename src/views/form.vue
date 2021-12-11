@@ -151,7 +151,7 @@ $breakpoint: (
 
 /*全体*/
 #form {
-    margin: 40px 30px 0;
+    padding: 40px 30px 0;
     .titleDes p {
             font-size: 17px;//20
             margin: 20px 0 50px;

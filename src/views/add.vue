@@ -142,7 +142,7 @@
 </script>
 <style scoped lang="scss">
     #add {
-        margin-top: 50px;
+        padding-top: 50px;
         .setup {
             button {
                 font-size: 22px;

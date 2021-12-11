@@ -54,7 +54,7 @@ ul {
 
 /*#quiz(beginner.vue, intermediate.vue, advanced.vue)*/ 
 #quiz {
-  margin-top: 40px;
+  padding-top: 40px;
 
   .totalSum ul {
     #liFirst {
