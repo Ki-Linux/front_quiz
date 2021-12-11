@@ -1,6 +1,7 @@
 <template>
     <div id="add">
         <h1>新規登録</h1>
+        <p>新規登録をすると<br>エキストラクイズ、画像クイズができます。</p>
         <my-edit @to-parent="toParent"/>
         <div class="setup">
             <p>{{ showNothing }}</p>
