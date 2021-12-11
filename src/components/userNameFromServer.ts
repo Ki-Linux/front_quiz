@@ -8,7 +8,7 @@ let showNameFromServer = "";
     axios.get('/getUserNameWithiykrnmltpoebrlmknebwr34t35reefwefWEFYUMm4te')
     .then((response) => {
         
-         showNameFromServer = response.data;
+        showNameFromServer = response.data;
     })
     .catch((err) => {
        console.log(err);

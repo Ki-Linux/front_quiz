@@ -9,7 +9,7 @@
                 <p v-if="showAnswer">◯正解</p>
                 <p v-else>✕不正解</p>
             </div>
-            <div class="select" v-for="(answer, index) in Answer" v-bind:key="answer"><!-- 回答のボタン -->
+            <div class="select" v-for="(answer, index) in Answer" v-bind:key="index"><!-- 回答のボタン -->
                 <button @click="TrueFalse(index)"><img v-bind:src="answer[titleNumber - 1].select" alt="img"></button>  
             </div>
         </div>
@@ -17,17 +17,17 @@
             <ul>
                 <li>結果<br>{{ trueLength }}問<span>/5問</span> 正解</li>
             </ul>
-            <form class="back">
+            <div class="back">
                 <p>お試しは以上です。新規登録をすることでもっとたくさんの画像クイズができます。</p>
-                <button @click="postIp">トップページに戻る</button>
-            </form>
+                <button @click="backTop">トップページに戻る</button>
+            </div>
         </div>
     </div>
 </template>
 <script lang="ts">
     import { Vue, Component } from 'vue-property-decorator';
     import { questionTry, answerTry } from '@/components/extraImgData';
-    import $router from '../router/index';
+    import backTop from '../components/backTop.vue';
 
     @Component
     export default class tryImg extends Vue {
@@ -65,8 +65,8 @@
             }
         }
 
-        public postIp(): void {
-            $router.push({path: '/'});
+        public backTop() {
+            this.$router.push({path: '/'});
         }
         
     }

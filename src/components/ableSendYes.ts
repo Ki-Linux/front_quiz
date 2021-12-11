@@ -6,7 +6,7 @@ let nextPage = false;
 const sendPage = () => {
     axios.get('/ableSendYes')
     .then((response) => {
-        console.log(response.data);
+        //console.log(response.data);
         nextPage = response.data;
 
         if(nextPage) {

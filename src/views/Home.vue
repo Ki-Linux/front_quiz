@@ -67,7 +67,7 @@ export default class Home extends Vue {
   }
 
   public toTryQuiz() {
-    $router.push({path: 'quizTry'});
+    $router.push({path: '/quizTry'});
   }
 
   public mounted(): void {

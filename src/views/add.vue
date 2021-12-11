@@ -115,7 +115,7 @@
 
                 axios.get('/sendTrue')
                 .then((response) => {
-                    console.log('res success on /sendTrue');
+                    //console.log('res success on /sendTrue');
                     this.showNothing = response.data;
   
 

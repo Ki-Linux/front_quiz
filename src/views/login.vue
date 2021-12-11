@@ -37,7 +37,7 @@
         }
 
         goLogin(): void {
-            console.log('goLogin');
+            //console.log('goLogin');
                         
             axios.defaults.baseURL = "http://localhost:3000";
 
@@ -48,25 +48,25 @@
 
             if(this.login_name !== "" && this.login_password !== "") {
 
-                console.log("no nothing Written");
+                //console.log("no nothing Written");
                 this.bothWritten = true;
 
             } else if(this.login_name === "" && this.login_password === "") {
 
-                console.log("nothing both");
+                //console.log("nothing both");
                 this.noWritten = "ユーザーニックネームとパスワードが入力されていません。";
                 setTimeout(startReload, 1000);
 
 
             } else if(this.login_name === "") {
 
-                console.log("nothing name");
+                //console.log("nothing name");
                 this.noWritten = "ユーザーニックネームが入力されていません。"
                 setTimeout(startReload, 1000);
 
             } else if(this.login_password === "") {
 
-                console.log("nothing password");
+                //console.log("nothing password");
                 this.noWritten = "パスワードが入力されていません。"
                 setTimeout(startReload, 1000);
 

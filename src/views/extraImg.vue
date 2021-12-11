@@ -19,9 +19,9 @@
                 <li id="liFirst" v-if="this.trueLength >= 5">満点!!</li>
                 <li id="liSecond">結果<br>{{ trueLength }}問<span>/5問</span> 正解</li>
             </ul>
-            <form class="back">
+            <div class="back">
                 <button @click="postIp">トップページに戻る</button>
-            </form>
+            </div>
         </div>
     </div>
 </template>

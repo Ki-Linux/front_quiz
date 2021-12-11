@@ -8,9 +8,9 @@
                 <li id="liFirst" v-if="ParentTrueNumber >= 10">満点！</li>
                 <li id="liSecond">結果<br>{{ ParentTrueNumber }}問<span>/10問</span> 正解</li>
             </ul>
-            <form class="back">
+            <div class="back">
                 <button @click="postIp">トップページに戻る</button>
-            </form>
+            </div>
         </div>
     </div>
 </template>

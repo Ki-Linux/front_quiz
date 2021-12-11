@@ -15,7 +15,6 @@
             <li><meter min="0" max="100" low="20" high="40" :value="average">max100%</meter></li>
             <li>{{ individual }}</li>
          </ul>
-
       </div>
       <div class="quizOfImg">
          <div class="imgDes">
@@ -32,14 +31,22 @@
             <li>{{ individual }}</li>
          </ul>
       </div>
+      <div class="back">
+         <back-top/>
+      </div>
    </div>
 </template>
 <script lang="ts">
    import { Component, Vue } from 'vue-property-decorator';
+   import backTop from '../components/backTop.vue';
    import $router from '../router/index';
    import axios from 'axios';
 
-   @Component
+   @Component({
+    components: {
+        'back-top': backTop,
+    }
+})
    export default class extraHome extends Vue {
       public showUserName = "";
       public average = 0;
@@ -55,6 +62,10 @@
       toImgQuiz(): void {
 
          $router.push('/extraImg');
+      }
+
+      backTop(): void {
+         $router.push('/');
       }
 
       public mounted(): void {
@@ -119,35 +130,10 @@
 
          },1000);
 
-         /*setTimeout(() => {
-            axios.get('/exAPI')
-            .then((response) => {
-               
-               const i = JSON.parse(JSON.stringify(response.data));
-               console.log(i);
-            })
-            .catch((err) => {
-               console.log(err);
-            })
-
-         },2000);*/
+         
 
       }
 
-
-      /*mounted() {
-
-         axios.defaults.baseURL = "http://localhost:3000";
-
-         axios.get('/getUserNameWithiykrnmltpoebrlmknebwr34t35reefwefWEFYUMm4te')
-         .then((response) => {
-            this.showUserName = response.data;
-         })
-         .catch((err) => {
-            console.log(err);
-         })
-
-      }*/
 
    }
 </script>
@@ -217,5 +203,9 @@ button {
    }
       font-size: 18px;
    }
+}
+
+.back button{
+   font-size: 30px;
 }
 </style>
