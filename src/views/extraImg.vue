@@ -16,7 +16,7 @@
         </div>
         <div class="totalSum" v-else><!-- 結果 -->
             <ul>
-                <li id="liFirst" v-if="this.trueLength >= 5">満点！</li>
+                <li id="liFirst" v-if="this.trueLength >= 5">満点!!</li>
                 <li id="liSecond">結果<br>{{ trueLength }}問<span>/5問</span> 正解</li>
             </ul>
             <form class="back">
@@ -105,3 +105,93 @@
         }
     }
 </script>
+<style scoped lang="scss">
+    #extraImg {
+
+        $breakpoint: (
+            sp: 'screen and (max-width: 480px)',
+            tbmin: '(min-width: 481px)',
+            tbmax: 'screen and (max-width: 959px)',
+            pc: 'screen and (min-width: 960px)'
+        );
+
+        @mixin pc {
+            @media #{map-get($breakpoint, pc)} {
+                @content;
+            }
+        }
+
+        @mixin tbmax {
+            @media #{map-get($breakpoint, tbmax)} and #{map-get($breakpoint, tbmin)} {
+                @content;
+            }
+        }
+
+        @mixin sp {
+            @media #{map-get($breakpoint, sp)} {
+                @content;
+            }
+        }
+
+        $max-left: 280px;
+        @include pc {
+            #liFirst {
+                padding-left: $max-left + 50;
+            }
+
+            #liSecond {
+                font-size: 90px;
+            }
+        }
+
+        @include tbmax {
+            #liFirst {
+                padding-left: $max-left;
+            }
+
+            #liSecond {
+                font-size: 60px;
+            }
+        }
+
+        @include sp {
+            #liFirst {
+                padding-left: $max-left - 100
+            }
+
+            #liSecond {
+                font-size: 50px;
+            }
+        }
+
+        //全体
+        padding-top: 30px;
+
+        .toNext button {
+            font-size: 20px;
+            margin: 10px 0;
+            background-color: rgba(255, 251, 244, 0.726);
+            color:rgba(63, 62, 62, 0.911);
+            
+        }
+
+        .answer p {
+            font-size: 30px;
+            color: red;
+        }
+
+        .select button {
+            margin: 10px 0;
+        }
+
+        .totalSum ul > li {
+            font-size: 45px;
+        }
+
+        #liFirst {
+            color: red;
+            transform: rotate( 15deg);
+     
+        }
+    }
+</style>
