@@ -12,7 +12,7 @@ const questionExtra: string[] =  [
     'パンタグラフはどれ？',
     'キリスト教に関係ないのは？',
     'この中で人数が一番多いのは？',
-    '1番口が小さいのは？'
+    '口の開きが1番小さいのは？'
 ]
 
 const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
@@ -71,7 +71,7 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: require("@/assets/kuti3.png"),
+            select: require("@/assets/kuti1.png"),
             judge: false
         }
     ],
@@ -121,7 +121,7 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: require("@/assets/harowin2.png"),
+            select: require("@/assets/kurisumasu.png"),
             judge: false
         },
         {
@@ -179,7 +179,7 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: require("@/assets/kurisumasu.png"),
+            select: require("@/assets/harowin2.png"),
             judge: true
         },
         {
@@ -187,7 +187,7 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: require("@/assets/kuti1.png"),
+            select: require("@/assets/kuti3.png"),
             judge: true
         }
     ]

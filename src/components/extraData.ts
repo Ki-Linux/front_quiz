@@ -7,7 +7,7 @@ const questionExtra: string[] = [
     '5GのGは？',
     '「ららぽーと」はどこにない？',
     '日本で２番目に多いコンビニは？',
-    '「賽子」はなんて読む？',
+    '珍珍珍はなんのお店？',
     'スシローの裏メニューは？',
     '世界一長い消しカスは何メートル？',
     'にゃんこ大戦争のキャタクターは？',
@@ -16,7 +16,7 @@ const questionExtra: string[] = [
     '痩せ我慢の対義語は？',
     '黄昏の森とは？',
     'スーパーに売っていないものは？',
-    '「〇〇　東京ガールズコレクション」で〇〇に入るのは？',
+    '「○○ 東京ガールズコレクション」で○○に入るのは？',
     '世界一甘い食べ物は？',
     'イクラを油で揚げるとどうなる？',
     'ヨーダは？',
@@ -61,7 +61,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'さいころ',
+            select:'ラーメン',
             judge: true
         },
         {
@@ -159,7 +159,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'ますこ',
+            select:'餃子',
             judge: false
         },
         {
@@ -257,7 +257,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'しょうじ',
+            select:'ビデオ',
             judge: false
         },
         {
