@@ -258,7 +258,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'沼津',
+            select:'アメリカ',
             judge: false
         },
         {
