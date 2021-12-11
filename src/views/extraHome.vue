@@ -12,7 +12,7 @@
          <ul>
             <li>平均正答率</li>
             <li>{{ average }}%</li>
-            <li><meter id="yu" min="0" max="100" :value="average">max100%</meter></li>
+            <li><meter min="0" max="100" low="20" high="40" :value="average">max100%</meter></li>
             <li>{{ individual }}</li>
          </ul>
 
@@ -28,7 +28,7 @@
          <ul>
             <li>平均正答率</li>
             <li>{{ averageImg }}%</li>
-            <li><meter id="yu" min="0" max="100" :value="average">max100%</meter></li>
+            <li><meter min="0" max="100" low="20" high="40" :value="average">max100%</meter></li>
             <li>{{ individual }}</li>
          </ul>
       </div>
