@@ -80,10 +80,10 @@
                     loginPassword: this.login_password
                 })
                 .then((response) => {
-                    console.log("response");
+                    //console.log("response");
                 })
                 .catch((error) => {
-                    console.log("error");
+                    //console.log("error");
                 });
 
             }
@@ -106,7 +106,7 @@
                     if(!this.wordTrue) {
                         
                         this.noWritten = "ユーザーニックネームまたはパスワードが違います。"
-                        setTimeout(startReload, 1000);
+                        setTimeout(startReload, 2000);
 
                     }
 

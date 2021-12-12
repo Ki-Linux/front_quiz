@@ -129,7 +129,7 @@
                 setTimeout(() => {
                     
                     location.reload();
-                },1000);
+                },9000);
 
             }
                          
