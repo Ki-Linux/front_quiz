@@ -5,7 +5,7 @@
         <my-edit @to-parent="toParent"/>
         <div class="setup">
             <p>{{ showNothing }}</p>
-            <button @click="setup">登録する</button>
+            <button @click.once="setup">登録する</button>
         </div>
         <to-home/>
     </div>
@@ -113,7 +113,7 @@
                 //ableSendYes実行
                 sendPage();
 
-                console.log("sendTrue");
+                //console.log("sendTrue");
 
                 axios.get('/sendTrue')
                 .then((response) => {
@@ -130,12 +130,12 @@
                 setTimeout(() => {
                     
                     location.reload();
-                },9000);
+                },5000);
 
             }
                          
 
-            setTimeout(second, 4000);
+            setTimeout(second, 6000);
 
 
                     

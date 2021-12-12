@@ -4,7 +4,7 @@
         <my-edit-login @to-parent="toParent"/>
         <div class="setLogin">
             <p>{{ noWritten }}</p>
-            <button @click="goLogin">ログインする</button>
+            <button @click.once="goLogin">ログインする</button>
         </div>
         <button-to-home/>
     </div>
