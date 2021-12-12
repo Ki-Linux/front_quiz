@@ -11,7 +11,7 @@ let showNameFromServer = "";
         showNameFromServer = response.data;
     })
     .catch((err) => {
-       console.log(err);
+       //console.log(err);
     })
 //}
                 

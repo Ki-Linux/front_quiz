@@ -36,31 +36,32 @@
         }
 
         setup(): void {
-            console.log('set up can');
-            
-            axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
+            //console.log('set up can');
+
 
             if(this.name !== "" && this.password !== "") {
 
-                console.log("no nothing Written");
+                //console.log("no nothing Written");
                 this.Written = true;
 
             } else if(this.name === "" && this.password === "") {
 
-                console.log("nothing both");
+                //console.log("nothing both");
                 this.showNothing = "ユーザーニックネームとパスワードが入力されていません。";
 
             } else if(this.name === "") {
 
-                console.log("nothing name");
+                //console.log("nothing name");
                 this.showNothing = "ユーザーニックネームが入力されていません。"
 
             } else if(this.password === "") {
 
-                console.log("nothing password");
+                //console.log("nothing password");
                 this.showNothing = "パスワードが入力されていません。"
 
             }
+                        
+            axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
 
             const canPost = () => {
 
@@ -70,10 +71,10 @@
 
                 })
                 .then((response) => {
-                    console.log("response");
+                    //console.log("response");
                 })
                 .catch((error) => {
-                    console.log("error");
+                    //console.log("error");
                 });
 
 
@@ -83,10 +84,10 @@
 
                 })
                 .then((response) => {
-                    console.log("response");
+                    //console.log("response");
                 })
                 .catch((error) => {
-                    console.log("error");
+                    //console.log("error");
                 });
 
 
@@ -96,10 +97,10 @@
 
                 })
                 .then((response) => {
-                    console.log("response");
+                    //console.log("response");
                 })
                 .catch((error) => {
-                    console.log("error");
+                    //console.log("error");
                 });
             }
 
@@ -123,7 +124,7 @@
 
                 })
                 .catch((error) => {
-                    console.log(error);
+                    //console.log(error);
                 })
 
                 setTimeout(() => {
@@ -134,7 +135,7 @@
             }
                          
 
-            setTimeout(second, 1000);
+            setTimeout(second, 4000);
 
 
                     

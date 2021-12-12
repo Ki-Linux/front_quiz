@@ -58,10 +58,10 @@ export default class extra extends Vue{
             postUserName: showNameFromServer
         })
         .then((response) => {
-            console.log(response + "abc");
+            //console.log(response + "abc");
         }) 
         .catch((error) => {
-            console.log(error)
+            //console.log(error)
         });
 
         setTimeout(() => {
