@@ -38,6 +38,12 @@
         setup(): void {
             //console.log('set up can');
 
+            const reset = () => {
+                location.reload();
+            };
+
+            this.showNothing = "登録してます。10秒ほどお待ちください";
+
 
             if(this.name !== "" && this.password !== "") {
 
@@ -48,16 +54,19 @@
 
                 //console.log("nothing both");
                 this.showNothing = "ユーザーニックネームとパスワードが入力されていません。";
+                setTimeout(reset, 1000);
 
             } else if(this.name === "") {
 
                 //console.log("nothing name");
-                this.showNothing = "ユーザーニックネームが入力されていません。"
+                this.showNothing = "ユーザーニックネームが入力されていません。";
+                setTimeout(reset, 1000);
 
             } else if(this.password === "") {
 
                 //console.log("nothing password");
-                this.showNothing = "パスワードが入力されていません。"
+                this.showNothing = "パスワードが入力されていません。";
+                setTimeout(reset, 1000);
 
             }
                         
@@ -119,6 +128,7 @@
                 .then((response) => {
                     //console.log('res success on /sendTrue');
                     this.showNothing = response.data;
+                    setTimeout(reset, 1000);
   
 
 
@@ -127,15 +137,10 @@
                     //console.log(error);
                 })
 
-                setTimeout(() => {
-                    
-                    location.reload();
-                },5000);
-
             }
                          
 
-            setTimeout(second, 6000);
+            setTimeout(second, 8000);
 
 
                     
