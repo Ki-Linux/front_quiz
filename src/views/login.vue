@@ -39,7 +39,7 @@
         goLogin(): void {
             //console.log('goLogin');
                         
-            axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
+            axios.defaults.baseURL = "http://localhost:3000";
 
             //reload
             const startReload = () => {
