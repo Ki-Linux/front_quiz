@@ -10,116 +10,81 @@
     </div>
 </template>
 <script lang="ts">
-    import { Component, Vue } from 'vue-property-decorator';
-    import myEdit from '@/components/myEdit.vue';
-    import toRouter from '@/components/toRouter.vue';
-    import { nextPage, sendPage } from '../components/ableSendYes';
-    import axios from 'axios';
+import { Vue, Component } from 'vue-property-decorator';
+import myEdit from '@/components/myEdit.vue';
+import toHome from '@/components/toRouter.vue';
+import axios from 'axios';
 
-
-    @Component({
-        components: {
-            'my-edit-login': myEdit,
-            'button-to-home': toRouter,
-        }
-    })
-    export default class login extends Vue {
-
-        public bothWritten = false;
-        public noWritten = "";
-        public login_name = "";
-        public login_password = "";
-        public wordTrue: boolean = nextPage;
-
-        toParent(childName: string, childPassword: string): void {
-            this.login_name = childName;
-            this.login_password = childPassword;
-        }
-
-        goLogin(): void {
-            //console.log('goLogin');
-                        
-            axios.defaults.baseURL = "http://localhost:3000";
-
-            //reload
-            const startReload = () => {
-                location.reload();
-            }
-
-            if(this.login_name !== "" && this.login_password !== "") {
-
-                //console.log("no nothing Written");
-                this.bothWritten = true;
-
-            } else if(this.login_name === "" && this.login_password === "") {
-
-                //console.log("nothing both");
-                this.noWritten = "ユーザーニックネームとパスワードが入力されていません。";
-                setTimeout(startReload, 1000);
-
-
-            } else if(this.login_name === "") {
-
-                //console.log("nothing name");
-                this.noWritten = "ユーザーニックネームが入力されていません。"
-                setTimeout(startReload, 1000);
-
-            } else if(this.login_password === "") {
-
-                //console.log("nothing password");
-                this.noWritten = "パスワードが入力されていません。"
-                setTimeout(startReload, 1000);
-
-            }
-
-            const canSend = () => {
-
-                axios.post('/loginTwo', {
-
-                    loginName: this.login_name,
-                    loginPassword: this.login_password
-                })
-                .then((response) => {
-                    //console.log("response");
-                })
-                .catch((error) => {
-                    //console.log("error");
-                });
-
-            }
-
-            if(this.bothWritten) {
-                canSend();
-            }
-
-
-            //ログイン成功か失敗かを表示させる
-            
-            const judgeYes = () => {
-               
-               //ableSendYes実行
-                sendPage();
-                
-                setTimeout(()=> {
-
-
-                    if(!this.wordTrue) {
-                        
-                        this.noWritten = "ユーザーニックネームまたはパスワードが違います。"
-                        setTimeout(startReload, 2000);
-
-                    }
-
-                },1000);
-            }
-
-            setTimeout(judgeYes,1000);
-            
-
-            
-           
-        }
+@Component({
+    components: {
+    'my-edit-login': myEdit,
+    'button-to-home': toHome
     }
+})
+export default class login extends Vue {
+    public parent_username = "";
+    public parent_password = "";
+    public noWritten = "";
+
+    public toParent(childName: string, childPassword: string): void {
+        this.parent_username = childName;
+        this.parent_password = childPassword;
+    }
+
+    public goLogin(): void {
+        axios.defaults.baseURL = "http://localhost:3000";
+
+        //名前とパスワードのデータを送る
+        const nothing_fault = () => {
+
+            axios.post('/post/login', {
+                post_login_name: this.parent_username,
+                post_login_password: this.parent_password
+            })
+            .then((response) => {
+                //console.log(response);
+                const judge_to_be_true = JSON.parse(JSON.stringify(response.data));
+
+                if(judge_to_be_true) {
+                    //console.log('success');
+                    
+                    //localstrageへ名前を保存
+                    localStorage.setItem('myKey', this.parent_username);
+
+                    //次のページへ
+                    this.$router.push({path: '/extraHome'});
+
+                } else {
+                    //console.log('not success');
+                    this.noWritten = "ユーザーニックネームまたはパスワードが違います。";
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+
+        }
+        
+
+
+        //inputが空欄の時
+        if(this.parent_username === "" && this.parent_password === "") {
+            this.noWritten = "ユーザーニックネームとパスワードが入力されていません";
+
+        } else if(this.parent_username === "") {
+            this.noWritten = "ユーザーニックネームが入力されていません";
+
+        } else if(this.parent_password === "") {
+            this.noWritten = "パスワードが入力されていません";
+
+        } else {
+            nothing_fault(); //axios実行
+        }
+
+
+    }
+
+}
 </script>
 <style scoped lang="scss">
     #login {

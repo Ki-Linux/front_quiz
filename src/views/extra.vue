@@ -18,7 +18,6 @@
 import { Component, Vue } from 'vue-property-decorator';
 import MainData from '../components/MainData.vue';
 import { questionExtra, answerExtra } from '../components/extraData';
-import { showNameFromServer } from '../components/userNameFromServer';
 import axios from 'axios';
 import $router from '../router/index';
 
@@ -51,11 +50,14 @@ export default class extra extends Vue{
 
         //sendUserName();
 
-        axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
+        //localStorageから名前を呼び出す
+        const data_name: string = localStorage.getItem('myKey') || '';
+
+        axios.defaults.baseURL = "http://localhost:3000";
 
         axios.post('/post/ex', {
-            postNumber: this.ParentTrueNumber,
-            postUserName: showNameFromServer
+            postUserName: data_name,
+            postNumber: this.ParentTrueNumber
         })
         .then((response) => {
             //console.log(response + "abc");

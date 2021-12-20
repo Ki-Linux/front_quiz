@@ -28,7 +28,6 @@
 <script lang="ts">
     import { Vue, Component } from 'vue-property-decorator';
     import { questionExtra, answerExtra } from '@/components/extraImgData';
-    import { showNameFromServer } from '../components/userNameFromServer';
     import $router from '../router/index';
     import axios from 'axios';
 
@@ -84,13 +83,14 @@
         public postIp(): void {
             $router.push({path: '/extraHome'});
 
-            //sendUserName();
+            const data_name: string = localStorage.getItem('myKey') || '';
 
-            axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
+            axios.defaults.baseURL = "http://localhost:3000";
 
             axios.post('/post/img', {
-                postNumber: this.trueLength,
-                postUserName: showNameFromServer
+
+                postUserName: data_name,
+                postNumber: this.trueLength
             })
             .then((response) => {
                 console.log(response + "abc");

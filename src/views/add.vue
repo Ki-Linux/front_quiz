@@ -5,147 +5,94 @@
         <my-edit @to-parent="toParent"/>
         <div class="setup">
             <p>{{ showNothing }}</p>
+            <p>{{ show_its_same }}</p>
             <button @click.once="setup">登録する</button>
         </div>
         <to-home/>
     </div>
 </template>
 <script lang="ts">
-    import { Component, Vue } from 'vue-property-decorator';
-    import myEdit from '../components/myEdit.vue';
-    import toRouter from '@/components/toRouter.vue';
-    import { sendPage } from '../components/ableSendYes';
-    import axios from 'axios';
+import { Vue, Component } from 'vue-property-decorator';
+import myEdit from '../components/myEdit.vue';
+import toHome from '../components/toRouter.vue';
+import axios from 'axios';
 
-    @Component({
-        components: {
-            'my-edit': myEdit,
-            'to-home': toRouter,
-        }
-    })
-    export default class add extends Vue {
-
-        public name = "";
-        public password = "";
-        public Written = false;
-        public showNothing = "";
-
-        toParent(childName: string, childPassword: string): void {
-            this.name = childName;
-            this.password = childPassword;
-        }
-
-        setup(): void {
-            //console.log('set up can');
-
-            const reset = () => {
-                location.reload();
-            };
-
-            this.showNothing = "登録してます。10秒ほどお待ちください";
-
-
-            if(this.name !== "" && this.password !== "") {
-
-                //console.log("no nothing Written");
-                this.Written = true;
-
-            } else if(this.name === "" && this.password === "") {
-
-                //console.log("nothing both");
-                this.showNothing = "ユーザーニックネームとパスワードが入力されていません。";
-                setTimeout(reset, 1000);
-
-            } else if(this.name === "") {
-
-                //console.log("nothing name");
-                this.showNothing = "ユーザーニックネームが入力されていません。";
-                setTimeout(reset, 1000);
-
-            } else if(this.password === "") {
-
-                //console.log("nothing password");
-                this.showNothing = "パスワードが入力されていません。";
-                setTimeout(reset, 1000);
-
-            }
-                        
-            axios.defaults.baseURL = "http://localhost:3000";
-
-            const canPost = () => {
-
-                axios.post('/post/namePost', {
-                postName: this.name,
-                postPassword: this.password
-
-                })
-                .then((response) => {
-                    //console.log("response");
-                })
-                .catch((error) => {
-                    //console.log("error");
-                });
-
-
-                //点数の方のデータベースを作る(エキストラ)
-                axios.post('/post/pointPost', {
-                postUserName: this.name,
-
-                })
-                .then((response) => {
-                    //console.log("response");
-                })
-                .catch((error) => {
-                    //console.log("error");
-                });
-
-
-                //点数の方のデータベースを作る(画像)
-                axios.post('/post/pointImgPost', {
-                postUserNameByImg: this.name,
-
-                })
-                .then((response) => {
-                    //console.log("response");
-                })
-                .catch((error) => {
-                    //console.log("error");
-                });
-            }
-
-            if(this.Written) {
-                canPost();
-            }
-
-            const second = () => {
-
-                //ableSendYes実行
-                sendPage();
-
-                //console.log("sendTrue");
-
-                axios.get('/sendTrue')
-                .then((response) => {
-                    //console.log('res success on /sendTrue');
-                    this.showNothing = response.data;
-                    setTimeout(reset, 1000);
-  
-
-
-                })
-                .catch((error) => {
-                    //console.log(error);
-                })
-
-            }
-                         
-
-            setTimeout(second, 8000);
-
-
-                    
-        }
+@Component({
+    components: {
+    'my-edit': myEdit,
+    'to-home': toHome
     }
+})
+export default class add extends Vue {
+    public parent_username = "";
+    public parent_password = "";
+    public showNothing = "";
+    //すでにユーザーネームがあるかないかの判断
+    public judgeToNextORNot = "";
+    public show_its_same = "";
+
+    //ユーザーネームとパスワードのデータ
+    public toParent(childName: string, childPassword: string): void {
+        this.parent_username = childName;
+        this.parent_password = childPassword;
+    }
+
+    public setup(): void {
+        //console.log(this.parent_username + this.parent_password);
+
+        axios.defaults.baseURL = "http://localhost:3000";
+
+        //名前とパスワードのデータを送る
+
+        const nothing_fault = () => {
+            axios.post('/post/sendUserData2.3',{
+                user_name: this.parent_username,
+                user_password: this.parent_password
+
+            })
+            .then((response) => {
+                console.log(response);
+                this.judgeToNextORNot = JSON.parse(JSON.stringify(response.data));
+
+                if(this.judgeToNextORNot === "このユーザーニックネームはすでにあります。") {
+
+                    this.show_its_same = this.judgeToNextORNot;//表示
+                } else if(this.judgeToNextORNot === "ログイン成功です。") {
+
+                    console.log(this.judgeToNextORNot);
+                    //localstrageへ名前を保存
+                    localStorage.setItem('myKey', this.parent_username);
+
+                    //次のページへ
+                    this.$router.push({path: '/extraHome'});
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+        }
+
+
+        //入力が足りない場合
+        if(this.parent_username === "" && this.parent_password === "") {
+            this.showNothing = "ユーザーニックネームとパスワードが入力されていません";
+
+        } else if(this.parent_username === "") {
+            this.showNothing = "ユーザーニックネームが入力されていません";
+
+        } else if(this.parent_password === "") {
+            this.showNothing = "パスワードが入力されていません";
+
+        } else {
+            nothing_fault(); //axios実行
+        }
+
+
+    }
+
+    
+}
+
 </script>
 <style scoped lang="scss">
     #add {
