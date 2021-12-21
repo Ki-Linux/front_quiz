@@ -168,7 +168,7 @@
         padding-top: 30px;
 
         .toNext button {
-            font-size: 20px;
+            font-size: 30px;
             margin: 10px 0;
             background-color: rgba(255, 251, 244, 0.726);
             color:rgba(63, 62, 62, 0.911);
