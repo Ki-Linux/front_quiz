@@ -1,30 +1,32 @@
 const questionBeginner: string[] =  [
     'ドクターXの言葉は？',
     '1番辛いのは？',
-    'スマートフォンを略して？',
-    'ヨーロッパにある国は？',
+    '千鳥の大吾がキングコング西野に言ったことは？',
+    'ヨッシーは何者？',
     '次の中でアンパンマンのキャラクターは？',
     '人数が一番少ないのは？',
     '2017年流行語大賞は？',
-    '勤労感謝の日がある月は？',
+    '秋田の方言である「んが」の意味に1番近いのは？',
     'YouTube金の盾はチャンネル登録者が何万人になればもらえる？',
     '1番高いのは？',
     '1番多い苗字は？',
     '次の中から日本で1番多いものはどれか？',
     '1作目のポケモンは何匹いる？',
-    'この中で人口が1番多い国は？',
+    'お菓子として売っているのは？',
     'パチンコに入ってもいい年齢は？',
     'ランクル300とは？',
-    '東京オリンピックは何年に開催された？',
-    '「嚔」の読み方は？',
+    'SKY-HIとは？',
+    'ピアノが弾けないのは？',
     'この中でカフェインが1番多い飲み物は？',
-    '武蔵小杉はどこにある？',
+    'ラコステのマークは？',
     '1番多くの人に使われているのは？',
-    'マンモスはいついた？',
+    '表しかない本は？',
     'ポテトチップスの味にないものは？',
     '恐竜でないのは？',
     'この中で歴代発行部数が1番多い漫画は？',
-    'ボールを蹴るスポーツは？'
+    'ボールを蹴るスポーツは？',
+    '寿司がケースの中にあるのは？',
+    '最初はグーは誰が考えた？'
 ]
 
 const answerBeginner: { select: string; judge: boolean; }[][] = [
@@ -39,11 +41,11 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'スマホ',
+            select:'捕まってないだけの詐欺師',
             judge: true
         },
         {
-            select:'フランス',
+            select:'カメ',
             judge: true
         },
         {
@@ -59,12 +61,12 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'11月',
+            select:'あなた',
             judge: true
         },
         {
-            select:'50万人',
-            judge: false
+            select:'100万人',
+            judge: true
         },
         {
             select:'ピサの斜塔',
@@ -83,7 +85,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'インド',
+            select:'太陽グミ',
             judge: false
         },
         {
@@ -95,11 +97,11 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'1960年',
+            select:'飛行機',
             judge: false
         },
         {
-            select:'かばん',
+            select:'ハラミちゃん',
             judge: false
         },
         {
@@ -107,7 +109,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'埼玉県',
+            select:'タカ',
             judge: false
         },
         {
@@ -115,7 +117,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'200万年前',
+            select:'科学の本',
             judge: false
         },
         {
@@ -133,7 +135,15 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
         {
             select:'ゲートボール',
             judge: false
-        }
+        },
+        {
+            select:'かっぱ寿司',
+            judge: false
+        },
+        {
+            select:'明石家さんま',
+            judge: false
+        },
     ],
     [
         {
@@ -145,11 +155,11 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: 'スフォン',
+            select: 'もうすぐ捕まりそうな詐欺師',
             judge: false
         },
         {
-            select: '日本',
+            select: '恐竜',
             judge: false
         },
         {
@@ -165,12 +175,12 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '10月',
+            select: 'このやろう',
             judge: false
         },
         {
-            select: '100万人',
-            judge: true
+            select: '50万人',
+            judge: false
         },
         {
             select: 'スカイツリー',
@@ -189,7 +199,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '中国',
+            select: '地球グミ',
             judge: true
         },
         {
@@ -201,19 +211,19 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '1964年',
+            select: 'アーティスト',
             judge: true
         },
         {
-            select: 'あくび',
-            judge: false
+            select: 'カバちゃん',
+            judge: true
         },
         {
             select: '抹茶',
             judge: false
         },
         {
-            select: '東京都',
+            select: 'カブトムシ',
             judge: false
         },
         {
@@ -221,7 +231,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '900万年前',
+            select: '筋肉の本',
             judge: false
         },
         {
@@ -239,6 +249,14 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
         {
             select: 'スカッシュ',
             judge: false
+        },
+        {
+            select: 'はま寿司',
+            judge: false
+        },
+        {
+            select: 'タモリ',
+            judge: false
         }
     ],
     [
@@ -251,11 +269,11 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: 'スマー',
+            select: '捕まえられない詐欺師',
             judge: false
         },
         {
-            select: 'アメリカ',
+            select: 'チンパンジー',
             judge: false
         },
         {
@@ -271,7 +289,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '12月',
+            select: 'おいら',
             judge: false
         },
         {
@@ -295,7 +313,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: 'アメリカ',
+            select: '月グミ',
             judge: false
         },
         {
@@ -307,19 +325,19 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '1962年',
+            select: '高層ビル',
             judge: false
         },
         {
-            select: 'くしゃみ',
-            judge: true
+            select: 'けいちゃん',
+            judge: false
         },
         {
             select: '玉露',
             judge: true
         },
         {
-            select: '神奈川県',
+            select: 'ワニ',
             judge: true
         },
         {
@@ -327,7 +345,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '400万年前',
+            select: '占いの本',
             judge: true
         },
         {
@@ -344,6 +362,14 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
         },
         {
             select: 'フットサル',
+            judge: true
+        },
+        {
+            select: 'くら寿司',
+            judge: true
+        },
+        {
+            select: '志村けん',
             judge: true
         }
     ] 

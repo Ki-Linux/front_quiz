@@ -5,6 +5,7 @@
             </form>
             <h1>問{{ titleNumber }}: {{ question[Random] }}</h1><!-- 問題提示 -->
             <div class="answer" v-show="!only"><!-- 正解か不正解の表示 -->
+                <p>{{ number_true }}</p>
                 <p v-if="showAnswer">◯正解</p>
                 <p v-else>✕不正解</p>
             </div>
@@ -27,11 +28,12 @@ export default class Main extends Vue {
     public showAnswer = false;
     private trueLength = 0;
     public NextEnd = "次の問題へ";
+    public number_true = "";
 
     @Prop()
     public question!: string[];
-    @Prop()
 
+    @Prop()
     public Answer!: { select: string; judge: boolean; }[][];
 
     get Random(): number {
@@ -59,8 +61,18 @@ export default class Main extends Vue {
                 this.showAnswer = true;
                 this.trueLength++;
                 this.$emit('childTrue', this.trueLength);
+                this.number_true = "";
             }
             else {
+                //正解の表示
+                if(Random <= 8) {
+                    this.number_true = "正解:  "+ this.Answer[0][Random].select;
+                } else if(Random <= 17) {
+                    this.number_true = "正解:  "+ this.Answer[1][Random].select;
+                } else if(Random <= 27) {
+                    this.number_true = "正解:  "+ this.Answer[2][Random].select;
+                }
+               
                 this.showAnswer = false;
             }
         }
