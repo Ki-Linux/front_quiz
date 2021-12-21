@@ -3,16 +3,16 @@ const questionAdvanced: string[] = [
     'いないのは？',
     '「艸」から連想できるものは？',
     '次の中で1番遅くにできたサービスは？',
-    'パプリカの色は何種類ある？',
+    '阿部寛のものまねをしている芸人の名前は？',
     'iPhoneやiPadなどのapple製品で使われている充電ケーブル端子の名前は？',
     'ダイヤモンドの誕生月は？',
-    '「池田模範堂」は何の会社？',
+    'マッスルフォーに入っていないのは？',
     '2009年に公開された映画は？',
-    '左手を上げる招き猫意味は？',
+    'YouTubeの登録者数が一番多いのは？',
     '店舗の数が2000件に1番近い牛丼チェーンは？',
-    '新幹線が通らない県は？',
-    '「αマン」とは？',
-    '日本の1番東にある島は？',
+    'BTSのメンバーは？',
+    'αマンとは？',
+    '「口 口 口 口」口の数は？',
     'ドラえもんのひみつ道具にないものは？',
     '2016年に放送されたドラマは？',
     'メルカリは最大いくらの値段で売ることができる？',
@@ -49,7 +49,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '8種類',
+            select: 'ラパラフェ',
             judge: true
         },
         {
@@ -61,7 +61,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '虫さされ薬',
+            select: '八木',
             judge: true
         },
         {
@@ -69,7 +69,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: 'お金を招く',
+            select: 'セイキン',
             judge: false
         },
         {
@@ -77,7 +77,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '長野県',
+            select: 'SHO',
             judge: false
         },
         {
@@ -85,7 +85,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '沖ノ鳥島',
+            select: '4',
             judge: false
         },
         {
@@ -163,7 +163,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '9種類',
+            select: 'ラファエル',
             judge: false
         },
         {
@@ -175,7 +175,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '個別指導塾',
+            select: '庄司',
             judge: false
         },
         {
@@ -183,7 +183,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '人を招く',
+            select: '中田敦彦のYouTube大学',
             judge: true
         },
         {
@@ -191,7 +191,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '千葉県',
+            select: 'RM',
             judge: true
         },
         {
@@ -199,7 +199,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '南鳥島',
+            select: '6',
             judge: true
         },
         {
@@ -277,7 +277,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '12種類',
+            select: 'ラパラファエ',
             judge: false
         },
         {
@@ -289,7 +289,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '総菜パン',
+            select: '春日',
             judge: false
         },
         {
@@ -297,7 +297,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '欲を招く',
+            select: 'カジサック',
             judge: false
         },
         {
@@ -305,7 +305,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '埼玉県',
+            select: 'YN',
             judge: false
         },
         {
@@ -313,7 +313,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '与那国島',
+            select: '5',
             judge: false
         },
         {
