@@ -10,7 +10,7 @@ const questionIntermediate: string[] = [
     '学生数が1番多い大学は？',
     'プロ野球のセ・リーグとパ・リーグのチーム数はそれぞれいくつある？',
     '嵐の曲は？',
-    '「黄昏」は何て読む？',
+    'ネズミの下にある料理は？',
     'アイスの商品名として日本に実際にあったものは？',
     '2018年にテレビで放送されたアニメは？',
     '1年は何分？',
@@ -24,7 +24,7 @@ const questionIntermediate: string[] = [
     '結婚できるのは？',
     '「やまざき串だんご（あん）」1パックのだんごの玉の数は？',
     '日清カップヌードルの種類にないもいのは？',
-    'スミレの花言葉は？',
+    '実際にある駅名は？',
     'アドベンチャーワールドはどこにある？',
     'カラットとは？'
 ]
@@ -77,7 +77,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: 'きてい',
+            select: '日本料理',
             judge: false
         },
         {
@@ -133,7 +133,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '真心の愛',
+            select: '時時井（じじい）',
             judge: false
         },
         {
@@ -191,7 +191,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: 'たそがれ',
+            select: '中華料理',
             judge: true
         },
         {
@@ -247,7 +247,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '冷淡',
+            select: '草蘇我木（くそがき）',
             judge: false
         },
         {
@@ -305,7 +305,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: 'おぼろげ',
+            select: 'スペイン料理',
             judge: false
         },
         {
@@ -361,7 +361,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: true 
         },
         {
-            select: '誠実',
+            select: '半家（はげ）',
             judge: true
         },
         {
