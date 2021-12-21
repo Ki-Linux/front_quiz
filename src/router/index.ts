@@ -55,7 +55,7 @@ const routes: Array<RouteConfig> = [
   {
     path: '/login',
     name: "Login",
-    component: () =>import('../views/login.vue'),
+    component: () =>import('@/views/login.vue'),
     meta: { title: 'いろいろ3択クイズ[ログイン]' }
   },
   {

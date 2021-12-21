@@ -7,12 +7,12 @@
       :class="{ extra: index === 0, img: index === 1}">
             <h1>{{ title_average.title }}</h1>
          <div class="button_to_quiz">
-            <button @click="toQuiz">{{ title_average.button }}</button>
+            <button @click="toQuiz(index)">{{ title_average.button }}</button>
          </div>
           <ul>
             <li>平均正答率</li>
             <li>{{ title_average.average_number }}%</li>
-            <li><meter min="0" max="100" low="20" high="40" :value="average">max100%</meter></li>
+            <li><meter min="0" max="100" low="20" high="40" :value="title_average.average_number">max100%</meter></li>
             <li>個人の平均正答率です。</li>
          </ul>
       </div>
@@ -25,6 +25,7 @@
 import { Vue, Component } from 'vue-property-decorator';
 import backTop from '../components/backTop.vue';
 import axios from 'axios';
+import $router from '../router/index';
 
 @Component({
    components: {
@@ -33,6 +34,7 @@ import axios from 'axios';
 })
 export default class extraHome extends Vue {
    public user_name = "";
+   public title_number = 0;
    public Title_Average: { title: string; button: string; average_number: number; }[] = [
       {
          title: "エキストラステージ",
@@ -47,38 +49,71 @@ export default class extraHome extends Vue {
    ]
 
 
-   public mounted() {
+   public mounted(): void {
       const data_name: string = localStorage.getItem('myKey') || '';
       this.user_name = data_name;
 
-      setTimeout(() => {
-axios.post('/select_user_name/isdeihofhwioefwlvasknd', {
-         select_user_name: this.user_name
+      
+      axios.defaults.baseURL = "http://localhost:3000";
+
+      axios.post('/post/isdeihofhwioefwlvasknd', {
+         select_user_name: this.user_name,
+         
       })
       .then((response) => {
+         
          const Api = JSON.parse(JSON.stringify(response.data));
-         //console.log(Api);
+         //console.log(Api)
+         
+         //nullを除外
+         const new_extra_Api = Api.filter(function(new_api: any){
+            return new_api.extra_quiz !== null;
+         });
+
+         const new_img_Api = Api.filter(function(new_api: any){
+            return new_api.img_quiz !== null;
+         });
+
+         //合計を抽出
          let extra_sum = 0;
          let img_sum = 0;
-        for(let i = 0; i < Api.length; i++){
-            extra_sum += Api[i].extra_quiz;
-            img_sum += Api[i].img_quiz;
-        }
+         for(let i = 0; i < new_extra_Api.length; i++){
+           
+            extra_sum += new_extra_Api[i].extra_quiz;
+         }
 
-         console.log(Api.length);
-
-        const ApiAverage_extraSum = (Math.round(extra_sum/Api.length * 100)) / 10;
-        const ApiAverage_imgSum = (Math.round(img_sum/Api.length * 100)) / 10;
-
+         for(let i = 0; i < new_img_Api.length; i++){
+           
+            img_sum += new_img_Api[i].img_quiz;
+         }
+         //console.log(extra_sum);
+         
+         //average
+         const ApiAverage_extraSum = (Math.round(extra_sum/new_extra_Api.length * 100)) / 10;
+         const ApiAverage_imgSum = (Math.round(img_sum/new_img_Api.length * 100)) / 10;
+         //console.log(ApiAverage_extraSum);
+         //console.log(ApiAverage_imgSum);
+         
          this.Title_Average[0].average_number = ApiAverage_extraSum;
          this.Title_Average[1].average_number = ApiAverage_imgSum;
+         
 
       })
       .catch((err) => {
          console.log(err);
       })
-      },1000)
       
+   }
+
+   //別のページへ
+   public toQuiz(index: number): void {//押したボタンに応じたリンク先へ
+
+      if(index === 0) {
+         $router.push({path: '/extra'});
+      } else if(index === 1) {
+         $router.push({path: '/extraImg'});
+      }
+
    }
 
 }
