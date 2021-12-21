@@ -1,22 +1,22 @@
 const questionExtra: string[] = [
     'Adoの歌は？',
-    'スイカの種は１玉何個くらいある？',
+    '「ダブルパチンコ」は誰のネタ？',
     'じゃんけんで一番出すことが多いのは？',
     'フレンチバーミリオンとは？',
     'ひろゆきが言っていないことは？',
     '5GのGは？',
-    '「ららぽーと」はどこにない？',
+    'Abemaの「」に勝ったら1000万円シリーズで「」に当てはまらないのは？',
     '日本で２番目に多いコンビニは？',
     '珍珍珍はなんのお店？',
     'スシローの裏メニューは？',
     '世界一長い消しカスは何メートル？',
     'にゃんこ大戦争のキャタクターは？',
-    '「原神」はなんて読む？',
+    'カミナリに似ているのは？',
     '乃木坂46の曲は？',
     '痩せ我慢の対義語は？',
     '黄昏の森とは？',
-    'スーパーに売っていないものは？',
-    '「○○ 東京ガールズコレクション」で○○に入るのは？',
+    'ねるねるねるねは何ばんまである？',
+    'TGCとは？',
     '世界一甘い食べ物は？',
     'イクラを油で揚げるとどうなる？',
     'ヨーダは？',
@@ -24,7 +24,9 @@ const questionExtra: string[] = [
     'カプリコの味にあるのは？',
     '世界一YouTubeで再生されている動画は？',
     '意味が全く違うのは？',
-    'このサイトの作成者が中1の時に取った理科のテストの点数は？'
+    'このサイトの作成者が中1の時に理科のテストで取った点数は？',
+    'イオンがない県は？',
+    'Nintendoのゲームは？'
 ]    
 
 const answerExtra: { select: string; judge: boolean; }[][] = [
@@ -35,7 +37,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'500',
+            select:'Yes!アキト',
             judge: true
         },
         {
@@ -55,7 +57,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'アメリカ',
+            select:'朝倉海',
             judge: true
         },
         {
@@ -79,7 +81,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'はらかみ',
+            select:'新選組',
             judge: false
         },
         {
@@ -95,11 +97,11 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'牛角のキムチ',
+            select:'2ばん',
             judge: false
         },
         {
-            select:'リクルート',
+            select:'東京ゴッドコレクション',
             judge: false
         },
         {
@@ -133,6 +135,14 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
         {
             select: '5点',
             judge: false
+        },
+        {
+            select: '高知県',
+            judge: false
+        },
+        {
+            select: 'ソニック',
+            judge: false
         }
     ],
     [
@@ -141,7 +151,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'100',
+            select:'ジョイマン',
             judge: false
         },
         {
@@ -161,7 +171,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'船橋',
+            select:'朝青龍',
             judge: false
         },
         {
@@ -185,7 +195,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'げんしん',
+            select:'岩倉使節団',
             judge: true
         },
         {
@@ -201,12 +211,12 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'すき家のキムチ',
+            select:'3ばん',
             judge: true
         },
         {
-            select:'楽天',
-            judge: false
+            select:'東京ガールズコレクション',
+            judge: true
         },
         {
             select:'パンナコッテル',
@@ -239,6 +249,14 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
         {
             select:'10点',
             judge: false
+        },
+        {
+            select: '青森県',
+            judge: false
+        },
+        {
+            select: 'パックマン',
+            judge: false
         }         
     ],
     [
@@ -247,7 +265,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'700',
+            select:'ハリウッドザコシショウう',
             judge: false
         },
         {
@@ -267,7 +285,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'中国',
+            select:'那須川天心',
             judge: false
         },
         {
@@ -291,7 +309,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'はらがみ',
+            select:'天正遣欧少年使節',
             judge: false
         },
         {
@@ -307,12 +325,12 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'吉野家のキムチ',
+            select:'4ばん',
             judge: false
         },
         {
-            select:'マイナビ',
-            judge: true
+            select:'東京ゴキブリコレクション',
+            judge: false
         },
         {
             select:'グラブジャムン',
@@ -345,7 +363,15 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
         {
             select:'7点',
             judge: true
-        }       
+        },
+        {
+            select:'福井県',
+            judge: true
+        },
+        {
+            select:'ピクミン',
+            judge: true
+        }        
     ]
 ]
 
