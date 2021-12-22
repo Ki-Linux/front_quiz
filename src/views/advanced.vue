@@ -28,7 +28,7 @@ export default class beginner extends Vue{
     
     //本文
     public level = "上級";
-    public queAdv: string[] = questionAdvanced;
+    public queAdv: { question: string; answer: string; }[] = questionAdvanced;
     public ansAdv: { select: string; judge: boolean; }[][] = answerAdvanced;
     public ParentTitleNumber = 0;
     public ParentTrueNumber = 0;

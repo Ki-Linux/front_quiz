@@ -38,6 +38,12 @@ export default class add extends Vue {
     }
 
     public setup(): void {
+
+        //reload
+        const load = () => {
+            location.reload();
+        };
+
         //console.log(this.parent_username + this.parent_password);
 
         axios.defaults.baseURL = "http://localhost:3000";
@@ -57,14 +63,16 @@ export default class add extends Vue {
                 if(this.judgeToNextORNot === "このユーザーニックネームはすでにあります。") {
 
                     this.show_its_same = this.judgeToNextORNot;//表示
+                    setTimeout(load, 1000);
                 } else if(this.judgeToNextORNot === "ログイン成功です。") {
 
-                    console.log(this.judgeToNextORNot);
+                    //console.log(this.judgeToNextORNot);
                     //localstrageへ名前を保存
                     localStorage.setItem('myKey', this.parent_username);
 
                     //次のページへ
                     this.$router.push({path: '/extraHome'});
+                    setTimeout(load, 1000);
                 }
             })
             .catch((err) => {
@@ -76,12 +84,15 @@ export default class add extends Vue {
         //入力が足りない場合
         if(this.parent_username === "" && this.parent_password === "") {
             this.showNothing = "ユーザーニックネームとパスワードが入力されていません";
+            setTimeout(load, 1000);
 
         } else if(this.parent_username === "") {
             this.showNothing = "ユーザーニックネームが入力されていません";
+            setTimeout(load, 1000);
 
         } else if(this.parent_password === "") {
             this.showNothing = "パスワードが入力されていません";
+            setTimeout(load, 1000);
 
         } else {
             nothing_fault(); //axios実行

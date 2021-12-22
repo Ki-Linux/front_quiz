@@ -32,6 +32,13 @@ export default class login extends Vue {
     }
 
     public goLogin(): void {
+
+        //load
+        const load = () => {
+            location.reload();
+        }
+
+
         axios.defaults.baseURL = "http://localhost:3000";
 
         //名前とパスワードのデータを送る
@@ -53,6 +60,7 @@ export default class login extends Vue {
 
                     //次のページへ
                     this.$router.push({path: '/extraHome'});
+                    setTimeout(load, 1000);
 
                 } else {
                     //console.log('not success');
@@ -70,12 +78,15 @@ export default class login extends Vue {
         //inputが空欄の時
         if(this.parent_username === "" && this.parent_password === "") {
             this.noWritten = "ユーザーニックネームとパスワードが入力されていません";
+            setTimeout(load, 1000);
 
         } else if(this.parent_username === "") {
             this.noWritten = "ユーザーニックネームが入力されていません";
+            setTimeout(load, 1000);
 
         } else if(this.parent_password === "") {
             this.noWritten = "パスワードが入力されていません";
+            setTimeout(load, 1000);
 
         } else {
             nothing_fault(); //axios実行

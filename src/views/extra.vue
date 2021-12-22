@@ -32,7 +32,7 @@ export default class extra extends Vue{
 
     //本文
     public level = "エキストラ";
-    public queExtra: string[] = questionExtra;
+    public queExtra: { question: string; answer: string; }[] = questionExtra;
     public ansExtra: { select: string; judge: boolean; }[][] = answerExtra;
     public ParentTitleNumber = 0;
     public ParentTrueNumber = 0;
@@ -60,10 +60,10 @@ export default class extra extends Vue{
             postNumber: this.ParentTrueNumber
         })
         .then((response) => {
-            //console.log(response + "abc");
+            console.log(response + "abc");
         }) 
         .catch((error) => {
-            //console.log(error)
+            console.log(error)
         });
 
         setTimeout(() => {

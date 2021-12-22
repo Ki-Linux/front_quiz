@@ -3,7 +3,7 @@
     <div class="titleDes"><!-- 概要 -->
         <h1>お問い合わせ</h1>
         <p>不具合やご要望等がございましたら、以下より送信してください。
-        <br>※返信をご希望の場合は、メールアドレスの記入もお願いいたします。</p>
+        <br>※返信をご希望の場合は、メールアドレスの記入もお願いします。</p>
     </div>
     <form v-on:submit.prevent = "toSend">
         <textarea name="E" id="E" cols="40" rows="8" v-model="text"></textarea><!-- 内容書き込み -->
