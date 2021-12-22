@@ -201,7 +201,7 @@ $footerwide: 0 60px;//定義
 /*~480*/
 @include sp {
   *#home {
-    margin-top: 70px;
+    padding-top: 5px;
 
     h1 { 
       font-size: 35px;

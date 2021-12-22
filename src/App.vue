@@ -128,7 +128,7 @@ input[type="button"] {
 
   .answer p:first-of-type {
     color: black;
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 

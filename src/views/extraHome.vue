@@ -1,7 +1,7 @@
 <template>
    <div id="extraHome">
       <div class="top">
-         <p>ようこそ{{ user_name }}様</p>
+         <p>ようこそ {{ user_name }}様</p>
       </div>
       <div class="buttonAndAverage" v-for="(title_average, index) in Title_Average" :key="index"
       :class="{ extra: index === 0, img: index === 1}">
