@@ -85,7 +85,7 @@
 
             const data_name: string = localStorage.getItem('myKey') || '';
 
-            axios.defaults.baseURL = "http://localhost:3000";
+            axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
 
             axios.post('/post/img', {
 

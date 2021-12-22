@@ -7,49 +7,49 @@ const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../views/Home.vue'),
+    component: () => import('@/views/Home.vue'),
     meta: { title: 'いろいろ3択クイズ', desc: 'このクイズはアニメ、映画、観光地など様々なジャンルの問題が出題されるクイズです。問題はランダムで出題されます。' }
   },
   {
     path: '/begin',
     name: 'Beginner',
-    component: () => import('../views/beginner.vue'),
+    component: () => import('@/views/beginner.vue'),
     meta: { title: 'いろいろ3択クイズ[初級]'}
   },
   {
     path: '/int',
     name: 'Intermediate',
-    component: () => import('../views/intermediate.vue'),
+    component: () => import('@/views/intermediate.vue'),
     meta: { title: 'いろいろ3択クイズ[中級]'}
   },
   {
     path: '/adv',
     name: 'Advanced',
-    component: () => import('../views/advanced.vue'),
+    component: () => import('@/views/advanced.vue'),
     meta: { title: 'いろいろ3択クイズ[上級]'}
   },
   {
     path: '/form',
     name: 'Form',
-    component: () => import('../views/form.vue'),
+    component: () => import('@/views/form.vue'),
     meta: { title: 'いろいろ3択クイズ[お問い合わせ]'}
   },
   {
     path: '/back',
     name: 'Back',
-    component: () => import('../views/back.vue'),
+    component: () => import('@/views/back.vue'),
     meta: { title: 'いろいろ3択クイズ[戻る]'}
   },
   {
     path: '/rule',
     name: 'Rule',
-    component: () => import('../views/rule.vue'),
+    component: () => import('@/views/rule.vue'),
     meta: { title: 'いろいろ3択クイズ[ご利用に関して]'}
   },
   {
     path: '/add',
     name: 'Add',
-    component: () => import('../views/add.vue'),
+    component: () => import('@/views/add.vue'),
     meta: { title: 'いろいろ3択クイズ[新規登録]' }
   },
   {
@@ -61,25 +61,25 @@ const routes: Array<RouteConfig> = [
   {
     path: '/extraHome',
     name: 'extraHome',
-    component: () => import('../views/extraHome.vue'),
+    component: () => import('@/views/extraHome.vue'),
     meta: { title: 'いろいろ3択クイズ＋' }
   },
   {
     path: '/extra',
     name: 'extra',
-    component: () => import('../views/extra.vue'),
+    component: () => import('@/views/extra.vue'),
     meta: { title: 'いろいろ3択クイズ[エキストラ]' }
   },
   {
     path: '/extraImg',
     name: 'image',
-    component: () => import('../views/extraImg.vue'),
+    component: () => import('@/views/extraImg.vue'),
     meta: { title: 'いろいろ3択クイズ[エキストラ（画像）]' }
   },
   {
     path: '/quizTry',
     name: 'quizTry',
-    component: () => import('../views/quizImgTry.vue'),
+    component: () => import('@/views/quizImgTry.vue'),
     meta: { title: 'いろいろ3択クイズ[お試し（画像）]' }
   }
 ]

@@ -39,7 +39,7 @@ export default class login extends Vue {
         }
 
 
-        axios.defaults.baseURL = "http://localhost:3000";
+        axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
 
         //名前とパスワードのデータを送る
         const nothing_fault = () => {

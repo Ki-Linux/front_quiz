@@ -46,7 +46,7 @@ export default class add extends Vue {
 
         //console.log(this.parent_username + this.parent_password);
 
-        axios.defaults.baseURL = "http://localhost:3000";
+        axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
 
         //名前とパスワードのデータを送る
 

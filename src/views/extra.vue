@@ -53,7 +53,7 @@ export default class extra extends Vue{
         //localStorageから名前を呼び出す
         const data_name: string = localStorage.getItem('myKey') || '';
 
-        axios.defaults.baseURL = "http://localhost:3000";
+        axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
 
         axios.post('/post/ex', {
             postUserName: data_name,
