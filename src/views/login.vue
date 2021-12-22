@@ -65,6 +65,7 @@ export default class login extends Vue {
                 } else {
                     //console.log('not success');
                     this.noWritten = "ユーザーニックネームまたはパスワードが違います。";
+                    setTimeout(load, 1000);
                 }
             })
             .catch((err) => {
