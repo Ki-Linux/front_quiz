@@ -23,23 +23,25 @@
         </ul>
     </div>
     <div class="back">
-        <button @click="toTop">トップページに戻る</button>
+        <back-top/>
     </div>
 </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-@Component
+import backTop from '@/components/backTop.vue';
+@Component({
+    components: {
+        'back-top': backTop,
+    }
+})
 export default class rule extends Vue{
     //head
     mounted() {
         //scroll
         scrollTo(0, 0);
     }
-    //本文
-    public toTop():void {
-        this.$router.push({path: '/'});
-    }
+    
 }
 </script>
 <style scoped lang="scss">
@@ -65,11 +67,6 @@ export default class rule extends Vue{
         }
     }
 
-    .back {
-        input {
-            padding: 3px 13px;
-        }
-    }
 
 }
 </style>

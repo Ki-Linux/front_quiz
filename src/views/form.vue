@@ -24,14 +24,19 @@
         <input type="submit" value="送信"><!-- 送信 -->
     </form>
     <div class="back"><!-- トップページへ -->
-        <button @click="toTop">トップページに戻る</button>
+        <back-top/>
     </div>
 </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import backTop from '@/components/backTop.vue';
 import axios from 'axios';
-@Component
+@Component({
+    components: {
+        'back-top': backTop,
+    }
+})
 export default class Form extends Vue {
     //headの部分
     mounted() {

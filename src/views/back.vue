@@ -3,13 +3,18 @@
         <h1>送信を完了いたしました。</h1>
         <p>ご協力ありがとうございました!</p>
         <div class="back">
-            <button @click="toHome">トップページに戻る</button>
+            <back-top/>
         </div>
     </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-@Component
+import backTop from '@/components/backTop.vue';
+@Component({
+    components: {
+        'back-top': backTop,
+    }
+})
 export default class back extends Vue {
   //headの部分
   mounted() {
@@ -17,11 +22,7 @@ export default class back extends Vue {
     //scroll
     scrollTo(0, 0);
   }
-        
-  //本文
-  public toHome(): void {
-    this.$router.push({path: '/'});
-  }
+   
 }
 </script>
 <style scoped lang="scss">
