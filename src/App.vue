@@ -125,6 +125,10 @@ input[type="button"] {
     color: red;
     font-size: 40px;
   }
+
+  .answer p:first-of-type {
+    color: black;
+  }
 }
 
 $breakpoint: (

@@ -3,7 +3,7 @@
             <form class="toNext" v-if="!only"><!-- 次へボタン -->
                 <input @click="change(Random)" type="button" v-model="NextEnd">
             </form>
-            <h1>問{{ titleNumber }}: {{ question[Random] }}</h1><!-- 問題提示 -->
+            <h1>問{{ titleNumber }}: {{ question[Random].question }}</h1><!-- 問題提示 -->
             <div class="answer" v-show="!only"><!-- 正解か不正解の表示 -->
                 <p>{{ number_true }}</p>
                 <p v-if="showAnswer">◯正解</p>
@@ -21,6 +21,7 @@ export default class Main extends Vue {
     mounted() {
         //scroll
         scrollTo(0, 0);
+        
     }
 
     public titleNumber = 1;
@@ -31,10 +32,11 @@ export default class Main extends Vue {
     public number_true = "";
 
     @Prop()
-    public question!: string[];
+    public question!: { question: string; answer: string; }[];
 
     @Prop()
     public Answer!: { select: string; judge: boolean; }[][];
+
 
     get Random(): number {
         const rnd = Math.floor(Math.random() * this.question.length);
@@ -65,14 +67,8 @@ export default class Main extends Vue {
             }
             else {
                 //正解の表示
-                if(Random <= 8) {
-                    this.number_true = "正解:  "+ this.Answer[0][Random].select;
-                } else if(Random <= 17) {
-                    this.number_true = "正解:  "+ this.Answer[1][Random].select;
-                } else if(Random <= 27) {
-                    this.number_true = "正解:  "+ this.Answer[2][Random].select;
-                }
-               
+                
+               this.number_true = "正解: " + this.question[Random].answer;
                 this.showAnswer = false;
             }
         }

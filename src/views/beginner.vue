@@ -29,7 +29,7 @@ export default class beginner extends Vue{
 
     //本文
     public level = "初級";
-    public queBegin: string[] = questionBeginner;
+    public queBegin: { question: string; answer: string; }[] = questionBeginner;
     public ansBegin: { select: string; judge: boolean; }[][] = answerBeginner;
     public ParentTitleNumber = 0;
     public ParentTrueNumber = 0;
