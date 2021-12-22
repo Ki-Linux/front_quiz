@@ -55,9 +55,9 @@ export default class beginner extends Vue{
             console.log(error)
         });
 
-        setTimeout(function() {
+        setTimeout(() => {
             location.reload();
-        },1000);
+        },2000);
     }
 }
 </script>
