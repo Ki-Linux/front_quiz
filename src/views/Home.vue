@@ -146,6 +146,7 @@ $footerwide: 0 60px;//定義
 
   .quizDes p { 
     font-size: 30px;
+    padding-bottom: 50px;
   }
 
   footer { 
@@ -184,6 +185,7 @@ $footerwide: 0 60px;//定義
   
   .quizDes p { 
     font-size: 18px;
+    padding-bottom: 40px;
   }
 
   footer { 
@@ -216,6 +218,7 @@ $footerwide: 0 60px;//定義
 
   .quizDes p { 
     font-size: 14px;
+    padding-bottom: 30px;
   }
 
   footer { 
@@ -232,7 +235,7 @@ $footerwide: 0 60px;//定義
 }
 /*全体*/
 .buttonAverage {
-  margin-top: 90px;
+  //margin-top: 90px;
 
   button {
     font-size: 65px;
@@ -262,6 +265,8 @@ $colors: (
 };
 
 .beginButton {
+  background-color: rgba(248, 247, 228, 0.493);
+  padding: 50px 0 10px;
 
   button {
     color: yellow_color(y);
@@ -274,6 +279,8 @@ $colors: (
 } 
 
 .intButton {
+  background-color: rgba(239, 250, 239, 0.5);
+  padding: 50px 0 10px;
 
   button {
     color: green_color(g);
@@ -286,6 +293,8 @@ $colors: (
 } 
 
 .advancedButton {
+  background-color: rgba(252, 227, 227, 0.267);
+  padding: 50px 0 10px;
 
   button {
     color: red_color(r);
@@ -298,9 +307,10 @@ $colors: (
 } 
 
 .tryImgQuiz {
+  background-color:rgba(241, 241, 241, 0.507);
   button {
     font-size: 20px;
-    margin-bottom: 40px;
+    margin: 40px 0;
     padding: 5px 10px;
   }
 }
@@ -308,16 +318,10 @@ $colors: (
 /*普通にタグについているクラス*/  
 .buttonAverage ul {
   font-size: 40px;
-  margin-bottom: 120px;
+  //margin-bottom: 120px;
 
   &:first-of-type {
     color: rgb(163, 163, 127);
-  }
-
-  li {
-    &:nth-of-type(2) {
-      margin-left: 0.5em;
-    }
   }
 
 }

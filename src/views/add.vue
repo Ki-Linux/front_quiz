@@ -113,6 +113,7 @@ export default class add extends Vue {
                 font-size: 22px;
                 padding: 5px 15px;
                 margin:10px 0 140px;
+                background-color: rgb(245, 243, 243);
             }
         }
     }

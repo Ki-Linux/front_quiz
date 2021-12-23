@@ -124,8 +124,9 @@ export default class extraHome extends Vue {
 
    .top p {
          font-size: 20px;
-         float: right;
-         padding: 20px 20px 0 0;
+         text-align: right;
+         padding: 20px;
+
    }
 
 
@@ -156,11 +157,7 @@ ul > li {
 }
 
 .back {
-
-   button{
-      font-size: 30px;
-   }
-
+   margin-top: 30px;
 }
 
 
@@ -179,8 +176,9 @@ $colors: (
 
 .extra {
 
-   background-color: blue;
-   padding-top: 80px;
+   background-color: rgba(238, 238, 255, 0.514);
+   padding-top: 60px;
+   padding-bottom: 30px;
 
    button {
       color: blue_color(b);
@@ -194,8 +192,10 @@ $colors: (
 
 .img {
 
-   background-color: yellow;
-   padding-top: 80px;
+   background-color: rgba(253, 240, 222, 0.568);
+   padding-top: 60px;
+   padding-bottom: 30px;
+
    button {
       color: orange_color(o);
    }

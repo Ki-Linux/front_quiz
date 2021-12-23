@@ -166,6 +166,10 @@
         }
 
         @include sp {
+            h1 {
+                font-size: 24px;
+            }
+
             #liFirst {
                 padding-left: $max-left - 100
             }
@@ -175,7 +179,7 @@
             }
 
             .answer p:first-of-type {
-                font-size: 16px;
+                font-size: 17px;
             }
         }
 
