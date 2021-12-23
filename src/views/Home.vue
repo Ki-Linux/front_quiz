@@ -1,12 +1,14 @@
 <template>
     <div id="home">
-      <ul class="loginFunction">
-        <li><router-link to="/add" class="newLogin">新規登録</router-link></li>
-        <li><router-link to="/login" class="newLogin">ログイン</router-link></li>
-      </ul>
-      <h1>いろいろ３択クイズ</h1><!--title -->
-      <div class="quizDes"><!-- 概要 -->
-        <p>いくつもの問の中から10問がランダムで出題されます。<br>クイズの内容はいろいろです。</p>
+      <div class="title">
+        <ul class="loginFunction">
+          <li><router-link to="/add" class="newLogin">新規登録</router-link></li>
+          <li><router-link to="/login" class="newLogin">ログイン</router-link></li>
+        </ul>
+        <h1>いろいろ３択クイズ</h1><!--title -->
+        <div class="quizDes"><!-- 概要 -->
+          <p>いくつもの問の中から10問がランダムで出題されます。<br>クイズの内容はいろいろです。</p>
+        </div>
       </div>
       <div class="buttonAverage" v-for="(level, index) in urlName" :key="index"
       :class="{ beginButton: index === 0, intButton: index === 1, advancedButton: index === 2 }">
@@ -203,7 +205,7 @@ $footerwide: 0 60px;//定義
 /*~480*/
 @include sp {
   *#home {
-    padding-top: 5px;
+    //padding-top: 5px;
 
     h1 { 
       font-size: 35px;
@@ -344,6 +346,11 @@ footer {
   }
 
 }
+
+  .title {
+    padding: 10px;
+    background-color:rgba(236, 236, 236, 0.5);
+  }
 
 
 .loginFunction {

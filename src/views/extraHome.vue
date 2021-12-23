@@ -129,7 +129,7 @@ export default class extraHome extends Vue {
          font-size: 20px;
          text-align: right;
          padding: 20px;
-         color: rgba(37, 37, 37, 0.836);
+         color: black;
       }
    }
 
