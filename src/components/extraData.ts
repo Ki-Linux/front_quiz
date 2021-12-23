@@ -62,8 +62,8 @@ const questionExtra: { question: string; answer: string; }[] = [
     { question: 'ヨーダは？',
       answer:'スター・ウォーズ'
     },
-    { question: 'ばかうけとは？',
-      answer:'お菓子'
+    { question: 'ブライアンがものまねをしていないのは？',
+      answer:'アンジャッシュ渡部'
     },
     { question: 'カプリコの味にあるのは？',
       answer:'生ハムメロン味'
@@ -173,7 +173,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'漫才',
+            select:'関暁夫',
             judge: false
         },
         {
@@ -287,7 +287,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'ゲーム',
+            select:'櫻井翔',
             judge: false
         },
         {
@@ -299,7 +299,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'オワハラ',
+            select:'パワハラ',
             judge: false
         },
         {
@@ -321,7 +321,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'ハリウッドザコシショウう',
+            select:'ハリウッドザコシショウ',
             judge: false
         },
         {
@@ -401,7 +401,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'お菓子',
+            select:'アンジャッシュ渡部',
             judge: true
         },
         {

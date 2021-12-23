@@ -1,18 +1,77 @@
-const questionExtra: string[] =  [
-    'ハワイの地図は？',
-    '爬虫類は？',
-    '八百長とは？',
-    'ぴょこはどれ？',
-    'クトゥルフは？',
-    'クラッカーは？',
-    '京都はどれ？',
-    '日本はどれ？',
-    '世界一高いビルはどれ？',
-    'ミズグモはどれ？',
-    'パンタグラフはどれ？',
-    'キリスト教に関係ないのは？',
-    'この中で人数が一番多いのは？',
-    '口の開きが1番小さいのは？'
+const questionExtra: { question: string; answer: string; }[] =  [
+    {
+        question: 'ハワイの地図は？',
+        answer: '1つめ'
+    },
+    {
+        question: '日向坂46のポーズは？',
+        answer: '1つめ'
+    },
+    {
+        question: 'イッヌは？',
+        answer: '1つめ (2つめがキツネ、3つめがネコ）'
+    },
+    {
+        question:'爬虫類は？',
+        answer: '1つめ'
+    },
+    {
+        question: '八百長とは？',
+        answer: '1つめ'
+    },
+    {
+        question: 'ぴょこはどれ？',
+        answer: '1つめ'
+    },
+    {
+        question: 'クトゥルフは？',
+        answer: '1つめ'
+    },
+    {
+        question: 'クラッカーは？',
+        answer: '2つめ'
+    },
+    {
+        question: '京都はどれ？',
+        answer: '2つめ'
+    },
+    {
+        question: '日本はどれ？',
+        answer: '2つめ'
+    },
+    {
+        question: '世界一高いビルはどれ？',
+        answer: '2つめ'
+    },
+    {
+        question: 'ミズグモはどれ？',
+        answer: '2つめ'
+    },
+    {
+        question: 'パンタグラフはどれ？',
+        answer: '3つめ'
+    },
+    {
+        question: 'キリスト教に関係ないのは？',
+        answer: '3つめ'
+    },
+    {
+        question: 'この中で人数が一番多いのは？',
+        answer: '3つめ'
+    },
+    {
+        question: '口の開きが1番大きいのは？',
+        answer: '3つめ'
+    },
+    {
+        question: 'キラークイーンのジョジョ立ちは？',
+        answer: '3つめ'
+    },
+    {
+        question: 'おとめ座は？',
+        answer: '3つめ'
+    }
+    
 ]
 
 const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
@@ -20,6 +79,14 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
     [
         {
             select: require("@/assets/hawaiiTrue.png"),
+            judge: true
+        },
+        {
+            select: require("@/assets/hinata_true.png"),
+            judge: true
+        },
+        {
+            select: require("@/assets/inu1_true.png"),
             judge: true
         },
         {
@@ -73,11 +140,27 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
         {
             select: require("@/assets/kuti1.png"),
             judge: false
+        },
+        {
+            select: require("@/assets/jojo1_false.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/seiza2_false.png"),
+            judge: false
         }
     ],
     [
         {
             select: require("@/assets/hawaiiFalse2.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/hinata2_false.png"), 
+            judge: false
+        },
+        {
+            select: require("@/assets/inu2_false.png"), 
             judge: false
         },
         {
@@ -129,13 +212,29 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: require("@/assets/oowarai_man.png"),
+            select: require("@/assets/kuti3.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/jojo2_false.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/seiza3_false.png"),
             judge: false
         }
     ],
     [
         {
             select: require("@/assets/hawaiiFalse1.png"),
+            judge: false
+        },
+        {
+            select: require("@/assets/hinata3_false.png"), 
+            judge: false
+        },
+        {
+            select: require("@/assets/inu3_false.png"), 
             judge: false
         },
         {
@@ -187,7 +286,15 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: require("@/assets/kuti3.png"),
+            select: require("@/assets/inu1_true.png"),
+            judge: true
+        },
+        {
+            select: require("@/assets/jojo3_true.png"),
+            judge: true
+        },
+        {
+            select: require("@/assets/seiza1_true.png"),
             judge: true
         }
     ]

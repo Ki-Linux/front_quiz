@@ -5,8 +5,9 @@
             <div class="toNext" v-if="!only"><!-- 次へボタン -->
                 <button @click="change(Random)">{{ NextEnd }}</button>
             </div>
-            <h1>問{{ titleNumber }}: {{ question[Random] }}</h1>
+            <h1>問{{ titleNumber }}: {{ question[Random].question }}</h1>
             <div class="answer" v-show="!only"><!-- 正解か不正解の表示 -->
+                <p>{{ number_true }}</p>
                 <p v-if="showAnswer">◯正解</p>
                 <p v-else>✕不正解</p>
             </div>
@@ -40,8 +41,9 @@
         public trueLength = 0;
         public titleNumber = 1;
         public NextEnd = "次の問題へ";
+        public number_true = "";
 
-        public question: string[] = questionExtra;
+        public question: { question: string; answer: string; }[] = questionExtra;
 
         public Answer: { select: HTMLImageElement; judge: boolean; }[][] = answerExtra;
 
@@ -72,10 +74,11 @@
             if(this.Answer[index][Random].judge === true) {
                 this.showAnswer = true;
                 this.trueLength++;
-                //this.$emit('childTrue', this.trueLength);
+                
             }
             else {
                 this.showAnswer = false;
+                this.number_true = "正解: " + this.question[Random].answer; 
             }
         }
         }
@@ -142,6 +145,10 @@
             #liSecond {
                 font-size: 90px;
             }
+
+            .answer p:first-of-type {
+                font-size: 25px;
+            }
         }
 
         @include tbmax {
@@ -152,6 +159,10 @@
             #liSecond {
                 font-size: 60px;
             }
+
+            .answer p:first-of-type {
+                font-size: 20px;
+            }
         }
 
         @include sp {
@@ -161,6 +172,10 @@
 
             #liSecond {
                 font-size: 50px;
+            }
+
+            .answer p:first-of-type {
+                font-size: 16px;
             }
         }
 
@@ -178,6 +193,9 @@
         .answer p {
             font-size: 30px;
             color: red;
+            &:first-of-type {
+                color: black;
+            }
         }
 
         .select button {
