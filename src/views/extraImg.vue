@@ -1,6 +1,6 @@
 <template>
     <div id="extraImg">
-        <h1>{{ level }}</h1>
+        <h1 class="img_level">{{ level }}</h1>
         <div v-if="this.titleNumber <= 5">
             <div class="toNext" v-if="!only"><!-- 次へボタン -->
                 <button @click="change(Random)">{{ NextEnd }}</button>
@@ -185,6 +185,10 @@
 
         //全体
         padding-top: 30px;
+
+        .img_level {
+            color: rgb(116, 63, 3);
+        }
 
         .toNext button {
             font-size: 30px;

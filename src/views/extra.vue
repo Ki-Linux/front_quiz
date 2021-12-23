@@ -72,3 +72,8 @@ export default class extra extends Vue{
     }
 }
 </script>
+<style scoped lang="scss">
+    #quiz h1 {
+        color: rgb(3, 3, 116);
+    }
+</style>

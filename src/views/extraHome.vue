@@ -122,11 +122,15 @@ export default class extraHome extends Vue {
 <style scoped lang="scss">
 #extraHome {
 
-   .top p {
+   .top {
+      background-color:rgba(214, 214, 214, 0.288);
+
+      p {
          font-size: 20px;
          text-align: right;
          padding: 20px;
-
+         color: rgba(37, 37, 37, 0.836);
+      }
    }
 
 
@@ -157,10 +161,10 @@ ul > li {
 }
 
 .back {
-   margin-top: 30px;
+   
+   background-color:rgba(240, 240, 240, 0.486);
+
 }
-
-
 $colors: (
   b:rgb(3, 3, 116),
   o:rgb(116, 63, 3),
@@ -176,7 +180,7 @@ $colors: (
 
 .extra {
 
-   background-color: rgba(238, 238, 255, 0.514);
+   background-color: rgba(235, 235, 255, 0.514);
    padding-top: 60px;
    padding-bottom: 30px;
 
@@ -192,7 +196,7 @@ $colors: (
 
 .img {
 
-   background-color: rgba(253, 240, 222, 0.568);
+   background-color: rgba(255, 247, 235, 0.568);
    padding-top: 60px;
    padding-bottom: 30px;
 
