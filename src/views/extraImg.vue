@@ -74,7 +74,7 @@
             if(this.Answer[index][Random].judge === true) {
                 this.showAnswer = true;
                 this.trueLength++;
-                
+                this.number_true = "";
             }
             else {
                 this.showAnswer = false;
