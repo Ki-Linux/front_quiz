@@ -72,8 +72,8 @@ const questionBeginner: {question: string; answer: string}[] =  [
         answer: 'カバちゃん',
     },
     {
-        question: 'この中でカフェインが1番多い飲み物は？',
-        answer: '玉露',
+        question: '全く違うのは？',
+        answer: 'クライアント',
     },
     {
         question: 'ラコステのマークは？',
@@ -190,7 +190,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'コーヒー',
+            select:'アイアント',
             judge: false
         },
         {
@@ -304,7 +304,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '抹茶',
+            select: 'キメラアント',
             judge: false
         },
         {
@@ -418,7 +418,7 @@ const answerBeginner: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '玉露',
+            select: 'クライアント',
             judge: true
         },
         {

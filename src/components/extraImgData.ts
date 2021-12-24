@@ -40,6 +40,10 @@ const questionExtra: { question: string; answer: string; }[] =  [
         answer: '2つめ'
     },
     {
+        question: 'AK-47は？',
+        answer: '2つめ'
+    },
+    {
         question: '世界一高いビルはどれ？',
         answer: '2つめ'
     },
@@ -118,6 +122,10 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
             judge: false
         },
         {
+            select: require("@/assets/juu1_false.png"),
+            judge: false
+        },
+        {
             select: require("@/assets/towerF.png"),
             judge: false
         },
@@ -189,6 +197,10 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
         },
         {
             select: require("@/assets/japan.png"),
+            judge: true
+        },
+        {
+            select: require("@/assets/juu2_true.png"),
             judge: true
         },
         {
@@ -266,6 +278,10 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
             judge: false
         },
         {
+            select: require("@/assets/juu3_false.png"),
+            judge: false
+        },
+        {
             select: require("@/assets/towerF2.png"),
             judge: false
         },
@@ -306,7 +322,7 @@ const questionTry = [
     'ハワイの地図は？',
     '八百長とは？',
     'クトゥルフは？',
-    'クラッカーは？',
+    '日向坂46のポーズは？',
     'ミズグモはどれ？'
 ]
 
@@ -326,7 +342,7 @@ const answerTry: { select: HTMLImageElement; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: require("@/assets/hakka.png"),
+            select: require("@/assets/hinata2_false.png"),
             judge: false
         },
         {
@@ -348,7 +364,7 @@ const answerTry: { select: HTMLImageElement; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: require("@/assets/kurakka.png"),
+            select: require("@/assets/hinata_true.png"),
             judge: true
         },
         {
@@ -370,7 +386,7 @@ const answerTry: { select: HTMLImageElement; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: require("@/assets/cookie.png"),
+            select: require("@/assets/hinata3_false.png"),
             judge: false
         },
         {

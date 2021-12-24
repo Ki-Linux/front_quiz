@@ -81,8 +81,8 @@ const questionIntermediate: { question: string; answer: string; }[] = [
     { question: 'アドベンチャーワールドはどこにある？',
       answer:'和歌山県'
     },
-    { question: 'カラットとは？',
-      answer:'宝石の重さ'
+    { question: '鬼滅の刃のOPじゃないのは？',
+      answer:'再会'
     }
 ]
 
@@ -198,7 +198,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '宝石の大きさ',
+            select: '明け星',
             judge: false
         }
     ],
@@ -312,7 +312,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '宝石の価値',
+            select: '残響散歌',
             judge: false
         }
     ],
@@ -426,7 +426,7 @@ const answerIntermediate: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '宝石の重さ',
+            select: '再会',
             judge: true
         }
     ]

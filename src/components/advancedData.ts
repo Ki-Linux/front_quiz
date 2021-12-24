@@ -33,7 +33,7 @@ const questionAdvanced: { question: string; answer: string; }[] = [
     },
     { 
         question: '2009年に公開された映画は？',
-        answer:'崖の上のポニョ'
+        answer:'サマーウォーズ'
     },
     { 
         question: 'YouTubeの登録者数が一番多いのは？',
@@ -150,7 +150,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '崖の上のポニョ',
+            select: 'サマーウォーズ',
             judge: true
         },
         {
@@ -264,7 +264,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: 'サマーウォーズ',
+            select: '崖の上のポニョ',
             judge: false
         },
         {
