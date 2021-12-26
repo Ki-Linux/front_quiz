@@ -23,8 +23,8 @@ const questionExtra: { question: string; answer: string; }[] = [
     { question: '日本で２番目に多いコンビニは？',
       answer:'ファミリーマート'
     },
-    { question: '珍珍珍はなんのお店？',
-      answer:'ラーメン'
+    { question: 'サイゲームスがリリースしているゲームは？',
+      answer:'ウマ娘'
     },
     { question: 'スシローの裏メニューは？',
       answer:'海鮮漬け'
@@ -121,7 +121,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select:'ラーメン',
+            select:'ウマ娘',
             judge: true
         },
         {
@@ -235,7 +235,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'餃子',
+            select:'サイのゲーム',
             judge: false
         },
         {
@@ -349,7 +349,7 @@ const answerExtra: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select:'ビデオ',
+            select:'パズドラ',
             judge: false
         },
         {
