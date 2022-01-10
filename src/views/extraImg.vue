@@ -39,7 +39,7 @@
         private only = true;
         public showAnswer = false;
         public trueLength = 0;
-        public titleNumber = 1;
+        private titleNumber = 1;
         public NextEnd = "次の問題へ";
         public number_true = "";
 

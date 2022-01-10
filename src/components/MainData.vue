@@ -24,10 +24,10 @@ export default class Main extends Vue {
         
     }
 
-    public titleNumber = 1;
+    private titleNumber = 1;
     private only = true;
     public showAnswer = false;
-    private trueLength = 0;
+    public trueLength = 0;
     public NextEnd = "次の問題へ";
     public number_true = "";
 

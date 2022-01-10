@@ -36,7 +36,7 @@ import axios from 'axios';
 export default class Home extends Vue {
   
   //本文
-  public urlName: { levelName: string; url: string; apiA: number; }[] = [  //ボタンとリンクの情報
+  private urlName: { levelName: string; url: string; apiA: number; }[] = [  //ボタンとリンクの情報
     {
       levelName: '初級',
       url: 'https://servicenewquiz.azurewebsites.net/',

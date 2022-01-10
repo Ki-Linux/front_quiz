@@ -28,7 +28,7 @@ export default class add extends Vue {
     public parent_password = "";
     public showNothing = "";
     //すでにユーザーネームがあるかないかの判断
-    public judgeToNextORNot = "";
+    private judgeToNextORNot = "";
     public show_its_same = "";
 
     //ユーザーネームとパスワードのデータ

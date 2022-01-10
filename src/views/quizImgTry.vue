@@ -36,10 +36,10 @@
     })
     export default class tryImg extends Vue {
         public NextEnd = "次の問題へ";
-        public only = true;
+        private only = true;
         public showAnswer = false;
         public trueLength = 0;
-        public titleNumber = 1;
+        private titleNumber = 1;
 
         public question: string[] = questionTry;
 
