@@ -72,8 +72,8 @@ const questionAdvanced: { question: string; answer: string; }[] = [
         answer:'1.316秒'
     },
     { 
-        question:'30秒で股間のチャック上げ下げのギネス記録は？',
-        answer:'204回'
+        question:'ヨギボーとは？',
+        answer:'ソファ'
     },
     { 
         question: 'オスとメスの区別がない生物は？',
@@ -190,7 +190,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '158回',
+            select: 'お菓子',
             judge: false
         },
         {
@@ -304,7 +304,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: true
         },
         {
-            select: '198回',
+            select: 'ぬいぐるみ',
             judge: false
         },
         {
@@ -418,7 +418,7 @@ const answerAdvanced: { select: string; judge: boolean; }[][] = [
             judge: false
         },
         {
-            select: '204回',
+            select: 'ソファ',
             judge: true
         },
         {
