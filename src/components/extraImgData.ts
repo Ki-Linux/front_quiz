@@ -19,10 +19,10 @@ const questionExtra: { question: string; answer: string; }[] =  [
         question: '八百長とは？',
         answer: '1つめ'
     },
-    {
+    /*{
         question: 'ぴょこはどれ？',
         answer: '1つめ'
-    },
+    },*/
     {
         question: 'クトゥルフは？',
         answer: '1つめ'
@@ -67,10 +67,10 @@ const questionExtra: { question: string; answer: string; }[] =  [
         question: '口の開きが1番大きいのは？',
         answer: '3つめ'
     },
-    {
+    /*{
         question: 'キラークイーンのジョジョ立ちは？',
         answer: '3つめ'
-    },
+    },*/
     {
         question: 'おとめ座は？',
         answer: '3つめ'
@@ -101,10 +101,10 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
             select: require("@/assets/race.png"),
             judge: true
         },
-        {
+        /*{
             select: require("@/assets/pyoko.png"),
             judge: true
-        },
+        },*/
         {
             select: require("@/assets/kutwurufu.png"),
             judge: true
@@ -149,10 +149,10 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
             select: require("@/assets/kuti1.png"),
             judge: false
         },
-        {
+        /*{
             select: require("@/assets/jojo1_false.png"),
             judge: false
-        },
+        },*/
         {
             select: require("@/assets/seiza2_false.png"),
             judge: false
@@ -179,10 +179,10 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
             select: require("@/assets/nou.png"),
             judge: false
         },
-        {
+        /*{
             select: require("@/assets/sanji.png"),
             judge: false
-        },
+        },*/
         {
             select: require("@/assets/monster.png"),
             judge: false
@@ -227,10 +227,10 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
             select: require("@/assets/kuti3.png"),
             judge: false
         },
-        {
+        /*{
             select: require("@/assets/jojo2_false.png"),
             judge: false
-        },
+        },*/
         {
             select: require("@/assets/seiza3_false.png"),
             judge: false
@@ -257,10 +257,10 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
             select: require("@/assets/saiya.png"),
             judge: false
         },
-        {
+        /*{
             select: require("@/assets/fugu.png"),
             judge: false
-        },
+        },*/
         {
             select: require("@/assets/chuunibyou.png"),
             judge: false
@@ -305,10 +305,10 @@ const answerExtra: { select: HTMLImageElement; judge: boolean; }[][] = [
             select: require("@/assets/inu1_true.png"),
             judge: true
         },
-        {
+        /*{
             select: require("@/assets/jojo3_true.png"),
             judge: true
-        },
+        },*/
         {
             select: require("@/assets/seiza1_true.png"),
             judge: true
