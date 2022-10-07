@@ -39,17 +39,17 @@ export default class Home extends Vue {
   public urlName: { levelName: string; url: string; apiA: number; }[] = [  //ボタンとリンクの情報
     {
       levelName: '初級',
-      url: 'https://servicenewquiz.azurewebsites.net/',
+      url: '',
       apiA: 0
     },
     {
       levelName: '中級',
-      url: 'https://servicenewquiz.azurewebsites.net/iAPI',
+      url: '',
       apiA: 0
     },
     {
       levelName: '上級',
-      url: 'https://servicenewquiz.azurewebsites.net/adAPI',
+      url: '',
       apiA: 0
     }
   ]
@@ -74,12 +74,19 @@ export default class Home extends Vue {
 
   public mounted(): void {
 
+    const url_box = [];
+    const base_url = process.env.VUE_APP_API_ORIGIN;
+
+    url_box.push(base_url);
+    url_box.push(base_url + 'iAPI');
+    url_box.push(base_url + 'adAPI');
+
     //scroll
     scrollTo(0, 0);
 
     //平均点の表示
     for(let i = 0; i < this.urlName.length; i++){
-      axios.get(this.urlName[i].url)
+      axios.get(url_box[i])
       .then((response) => {
 
         const Api = JSON.parse(JSON.stringify(response.data));
