@@ -39,12 +39,12 @@ export default class login extends Vue {
         }
 
 
-        axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
+        axios.defaults.baseURL = process.env.VUE_APP_API_ORIGIN;
 
         //名前とパスワードのデータを送る
         const nothing_fault = () => {
 
-            axios.post('/post/login', {
+            axios.post('post/login', {
                 post_login_name: this.parent_username,
                 post_login_password: this.parent_password
             })

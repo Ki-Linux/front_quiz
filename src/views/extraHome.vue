@@ -54,9 +54,9 @@ export default class extraHome extends Vue {
       this.user_name = data_name;
 
       
-      axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
+      axios.defaults.baseURL = process.env.VUE_APP_API_ORIGIN;
 
-      axios.post('/post/isdeihofhwioefwlvasknd', {
+      axios.post('post/isdeihofhwioefwlvasknd', {
          select_user_name: this.user_name,
          
       })

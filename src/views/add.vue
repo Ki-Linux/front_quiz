@@ -46,12 +46,12 @@ export default class add extends Vue {
 
         //console.log(this.parent_username + this.parent_password);
 
-        axios.defaults.baseURL = "https://servicenewquiz.azurewebsites.net";
+        axios.defaults.baseURL = process.env.VUE_APP_API_ORIGIN;
 
         //名前とパスワードのデータを送る
 
         const nothing_fault = () => {
-            axios.post('/post/sendUserData2.3',{
+            axios.post('post/sendUserData2.3',{
                 user_name: this.parent_username,
                 user_password: this.parent_password
 
