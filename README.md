@@ -1,29 +1,55 @@
-# new-vue
+# いろいろ3択クイズ
+[こちらがリンクとなります。](https://variousthreequiz.com)
 
-## Project setup
-```
-npm install
-```
+![image](https://countercontainer.s3.ap-northeast-1.amazonaws.com/quiz/quizhome.png)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## なぜこのサイトを作ったのか
+プログラミングをしていく過程で自分の作ったものを多くの人に使ってもらえたらと思いました。多くの人が楽しめるのは多種多様なジャンルを用意したクイズだと思ったため、初めてサーバーにアップするサイトとして簡単なクイズサイトを作りました。
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## 何ができるのか
 
-### Run your unit tests
-```
-npm run test:unit
-```
+初級、中級、上級、画像クイズがあります。
 
-### Lints and fixes files
-```
-npm run lint
-```
+平均正答率を表示しております。
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+ログインでエキストラステージのクイズを楽しむこともできます。
+
+## 使用技術
+
+フロントエンド：Vue.js
+
+バックエンド: Node.js
+
+データベース: MySQL
+
+サーバー: Microsoft Azure
+
+## 人数
+
+個人
+
+## 期間
+
+2022年11月~12月
+
+## アウトプット
+
+技育展2022登壇
+
+## なぜ、フロントエンドにVue.js, バックエンドにNode.jsを用いたのか
+
+当時の私は学習経験のあるプログラミング言語がJavaScriptしかありませんでした。JavaScriptのフレームワークを学習した際にVue.jsの双方向データバインディングが自分にとってとても分かりやすく使いやすかったです。さらにVue.jsはReactに負けないくらいトレンドなフレームワークです。以上の理由からVue.jsを使用しました。Node.jsはバックエンドを選定する際にJavaScriptをバックエンドでも使用できるという利点から使用しました。
+
+## サイトの工夫したポイント
+
+どんな人でも楽しめるように多種多様なジャンルを用意しました。
+
+## 苦労したところ
+
+初めて公開するサイトを作ったため、初めてのことが多かったです。
+Vue.jsやMySQLの学習経験が浅く、Node.jsは使用経験なしでありました。
+API通信も行ったことがなかったため、大変でした。
+
+##秘話
+
+クイズはすべて自分で考えました。面白い問題かつ誰かの利益を侵害しないようなものにしなければならなかったので、大変でした。
