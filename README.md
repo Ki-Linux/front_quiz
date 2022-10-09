@@ -1,4 +1,4 @@
-# いろいろ3択クイズ(フロントエンド)
+# いろいろ3択クイズ(フロントエンド　Vue.js)
 [こちらがリンクとなります。](https://variousthreequiz.com)
 
 ![image](https://countercontainer.s3.ap-northeast-1.amazonaws.com/quiz/quizhome.png)
